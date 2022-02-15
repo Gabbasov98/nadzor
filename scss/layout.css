@@ -1,24 +1,35 @@
 /*
-Error: Undefined variable: "$black".
-        on line 156 of E:\markup\nadzor\scss\reset.scss
+Error: Undefined variable: "$primary".
+        on line 38 of E:\markup\nadzor\scss\layout.scss
 
-151: body {
-152:     font-family: 'Manrope', sans-serif;
-153:     font-weight: 400;
-154:     height: 100%;
-155:     overflow-x: hidden;
-156:     color: $black;
-157:     &.fixed-body {
-158:         overflow-y: hidden;
-159:         .main__slider-pag {
-160:             display: none;
-161:         }
+33:         display: flex;
+34:         align-items: center;
+35:         font-weight: 600;
+36:         font-size: 14px;
+37:         line-height: 19px;
+38:         color: $primary;
+39:         img {
+40:             margin-right: 10px;
+41:             flex-shrink: 0;
+42:         }
+43:     }
 
 Backtrace:
-E:\markup\nadzor\scss\reset.scss:156
+E:\markup\nadzor\scss\layout.scss:38
 C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/script/tree/variable.rb:49:in `_perform'
 C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/script/tree/node.rb:50:in `perform'
 C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:402:in `visit_prop'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/base.rb:36:in `visit'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:162:in `block in visit'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/stack.rb:79:in `block in with_base'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/stack.rb:135:in `with_frame'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/stack.rb:79:in `with_base'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:162:in `visit'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:444:in `block (2 levels) in visit_rule'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:444:in `map'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:444:in `block in visit_rule'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:183:in `with_environment'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:442:in `visit_rule'
 C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/base.rb:36:in `visit'
 C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:162:in `block in visit'
 C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/stack.rb:79:in `block in with_base'
@@ -62,4 +73,4 @@ C:/Program Files (x86)/Koala/bin/sass:22:in `<main>'
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Undefined variable: \"$black\".\A         on line 156 of E:\markup\nadzor\scss\reset.scss\A \A 151: body {\A 152:     font-family: 'Manrope', sans-serif;\A 153:     font-weight: 400;\A 154:     height: 100%;\A 155:     overflow-x: hidden;\A 156:     color: $black;\A 157:     &.fixed-body {\A 158:         overflow-y: hidden;\A 159:         .main__slider-pag {\A 160:             display: none;\A 161:         }"; }
+  content: "Error: Undefined variable: \"$primary\".\A         on line 38 of E:\markup\nadzor\scss\layout.scss\A \A 33:         display: flex;\A 34:         align-items: center;\A 35:         font-weight: 600;\A 36:         font-size: 14px;\A 37:         line-height: 19px;\A 38:         color: $primary;\A 39:         img {\A 40:             margin-right: 10px;\A 41:             flex-shrink: 0;\A 42:         }\A 43:     }"; }

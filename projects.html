@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="css/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="css/jquery.fancybox.min.css">
+    <link rel="stylesheet" href="css/nice-select.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="scss/projects.css">
+    <title>Проекты</title>
+</head>
+
+<body>
+
+    <div class="wrapper">
+
+        <aside class="sidebar">
+            <div class="sidebar__top">
+                <a href="" class="sidebar__logo">
+                    <img src="img/logo.svg" alt="">
+                </a>
+                <a href="tel:+7 (495) 961-31-12" class="sidebar__tel">+7 (495) 961-31-12</a>
+                <button class="sidebar__burger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+
+            <div class="sidebar__bottom">
+                <nav class="nav">
+                    <div class="nav__item">
+                        <div class="nav__item-show">
+                            <span>Услуги и цены</span>
+                            <svg width="11" height="6" viewBox="0 0 11 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M5.5 6L0.73686 5.64421e-08L10.2631 8.89256e-07L5.5 6Z" fill="#282828"/>
+                        </svg>
+                        </div>
+                        <div class="nav__item-hidden">
+                            <a href="" class="nav__item-link">Услуги и цены 2</a>
+                            <a href="" class="nav__item-link">Услуги и цены 3</a>
+                            <a href="" class="nav__item-link">Услуги и цены 4</a>
+                        </div>
+                    </div>
+                    <a href="" class="nav__item">Приёмка квартир</a>
+                    <a href="" class="nav__item">Наши проекты</a>
+                    <a href="" class="nav__item">Блог</a>
+                </nav>
+
+                <div class="sidebar__buttons">
+                    <button class="sidebar__btn btn btn-blue">Обратный звонок</button>
+                    <button class="sidebar__btn btn btn-blue-outline">Личный кабинет</button>
+                </div>
+
+                <a target="_blank" href="https://docs.yandex.ru/docs/view?tm=1644933042&tld=ru&lang=en&name=mike_barrett-sat_prep_black_book_the_most_effectiv_21.pdf&text=sat%20prep%20black%20book%20pdf&url=https%3A%2F%2Fquicklylearningenglish.files.wordpress.com%2F2015%2F06%2Fmike_barrett-sat_prep_black_book_the_most_effectiv_21.pdf&lr=43&mime=pdf&l10n=ru&sign=ae8eb93081adf6130c1320089e7e1f2a&keyno=0&nosw=1&serpParams=tm%3D1644933042%26tld%3Dru%26lang%3Den%26name%3Dmike_barrett-sat_prep_black_book_the_most_effectiv_21.pdf%26text%3Dsat%2Bprep%2Bblack%2Bbook%2Bpdf%26url%3Dhttps%253A%2F%2Fquicklylearningenglish.files.wordpress.com%2F2015%2F06%2Fmike_barrett-sat_prep_black_book_the_most_effectiv_21.pdf%26lr%3D43%26mime%3Dpdf%26l10n%3Dru%26sign%3Dae8eb93081adf6130c1320089e7e1f2a%26keyno%3D0%26nosw%3D1"
+                    class="sidebar__pdf">
+                    <img src="img/download.svg" alt="Скачать">
+                    <span>Выписка из реестра членов СРО</span>
+                </a>
+
+                <div class="sidebar__link sidebar__phone">
+                    <img src="img/phone.svg" alt="Телефон">
+                    <div>
+                        <a href="tel:+7 (495) 961-31-12" class="sidebar__phone-link">+7 (495) 961-31-12</a>
+                        <span>пн-пт 09:00–19:00</span>
+                    </div>
+                </div>
+                <a href="" class="sidebar__link sidebar__email">
+                    <img src="img/email.svg" alt="Почта">
+                    <span>moinadzor@nadzor.com</span>
+                </a>
+                <div class="sidebar__link">
+                    <img src="img/map-pin.svg" alt="Адрес">
+                    <span>Столярный пер., 3, <br> корп. 13, Москва</span>
+                </div>
+
+                <div class="sidebar__socials">
+                    <a href="" class="sidebar__socials-item btn btn-blue">
+                        <img src="img/instagram.svg" alt="">
+                    </a>
+                    <a href="" class="sidebar__socials-item btn btn-blue">
+                        <img src="img/telegram.svg" alt="">
+                    </a>
+                    <a href="" class="sidebar__socials-item btn btn-blue">
+                        <img src="img/whatsapp.svg" alt="">
+                    </a>
+                </div>
+            </div>
+        </aside>
+
+        <main class="content projects-main">
+
+            <section class="projects">
+                <div class="container">
+                    <div class='breadcrumbs'>
+                        <div class='breadcrumbs__wrap'>
+                            <a href="" class="breadcrumbs__item">Главная</a>
+                            <a href="" class="breadcrumbs__item breadcrumbs__item--active">Проекты</a>
+                        </div>
+                    </div>
+                    <div class="projects__inner">
+                        <h2 class="projects__title display1">Реализованные проекты</h2>
+                        <div class="tabs__item">
+                            <div class="projects__tabs tabs">
+                                <div class="tab" data-tab-path="1">Все</div>
+                                <div class="tab" data-tab-path="2">Технический надзор</div>
+                                <div class="tab tab--active" data-tab-path="3">Приемка работ</div>
+                                <div class="tab" data-tab-path="4">Проверка документов</div>
+                                <div class="tab" data-tab-path="5">Приемка квартир</div>
+                            </div>
+                        </div>
+                        <div class="tab__content" data-tab-path="1">
+                            <div class="projects__items">
+                                <div class="projects__item projects-card">
+                                    <div class="projects-card__img">
+                                        <img src="img/projects-img.png" alt="">
+                                    </div>
+                                    <div class="projects-card__desc">
+                                        <div class="projects-card__badges">
+                                            <div class="projects-card__badge">Приемка работ</div>
+                                        </div>
+                                        <p class="projects-card__text">Технический надзор и контроль за производствам отделочных работ</p>
+                                        <span class="projects-card__violation">Выявлено нарушений на 20 000 ₽</span>
+                                        <button class="projects__btn btn btn-blue">Открыть</button>
+                                    </div>
+
+                                </div>
+                                <div class="projects__item projects-card">
+                                    <div class="projects-card__img">
+                                        <img src="img/projects-img.png" alt="">
+                                    </div>
+                                    <div class="projects-card__desc">
+                                        <div class="projects-card__badges">
+                                            <div class="projects-card__badge">Приемка работ</div>
+                                        </div>
+                                        <p class="projects-card__text">Технический надзор и контроль за производствам отделочных работ</p>
+                                        <span class="projects-card__violation">Выявлено нарушений на 20 000 ₽</span>
+                                        <button class="projects__btn btn btn-blue">Открыть</button>
+                                    </div>
+
+                                </div>
+                                <div class="projects__item projects-card">
+                                    <div class="projects-card__img">
+                                        <img src="img/projects-img.png" alt="">
+                                    </div>
+                                    <div class="projects-card__desc">
+                                        <div class="projects-card__badges">
+                                            <div class="projects-card__badge">Приемка работ</div>
+                                        </div>
+                                        <p class="projects-card__text">Технический надзор и контроль за производствам отделочных работ</p>
+                                        <span class="projects-card__violation">Выявлено нарушений на 20 000 ₽</span>
+                                        <button class="projects__btn btn btn-blue">Открыть</button>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab__content" data-tab-path="2">
+                            <div class="projects__items">
+                                <div class="projects__item projects-card">
+                                    <div class="projects-card__img">
+                                        <img src="img/projects-img.png" alt="">
+                                    </div>
+                                    <div class="projects-card__desc">
+                                        <div class="projects-card__badges">
+                                            <div class="projects-card__badge">Приемка работ</div>
+                                        </div>
+                                        <p class="projects-card__text">Технический надзор и контроль за производствам отделочных работ</p>
+                                        <span class="projects-card__violation">Выявлено нарушений на 20 000 ₽</span>
+                                        <button class="projects__btn btn btn-blue">Открыть</button>
+                                    </div>
+
+                                </div>
+                                <div class="projects__item projects-card">
+                                    <div class="projects-card__img">
+                                        <img src="img/projects-img.png" alt="">
+                                    </div>
+                                    <div class="projects-card__desc">
+                                        <div class="projects-card__badges">
+                                            <div class="projects-card__badge">Приемка работ</div>
+                                        </div>
+                                        <p class="projects-card__text">Технический надзор и контроль за производствам отделочных работ</p>
+                                        <span class="projects-card__violation">Выявлено нарушений на 20 000 ₽</span>
+                                        <button class="projects__btn btn btn-blue">Открыть</button>
+                                    </div>
+
+                                </div>
+                                <div class="projects__item projects-card">
+                                    <div class="projects-card__img">
+                                        <img src="img/projects-img.png" alt="">
+                                    </div>
+                                    <div class="projects-card__desc">
+                                        <div class="projects-card__badges">
+                                            <div class="projects-card__badge">Приемка работ</div>
+                                        </div>
+                                        <p class="projects-card__text">Технический надзор и контроль за производствам отделочных работ</p>
+                                        <span class="projects-card__violation">Выявлено нарушений на 20 000 ₽</span>
+                                        <button class="projects__btn btn btn-blue">Открыть</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab__content tab__content--active" data-tab-path="3">
+                            <div class="projects__items">
+                                <div class="projects__item projects-card">
+                                    <div class="projects-card__img">
+                                        <img src="img/projects-img.png" alt="">
+                                    </div>
+                                    <div class="projects-card__desc">
+                                        <div class="projects-card__badges">
+                                            <div class="projects-card__badge">Приемка работ</div>
+                                        </div>
+                                        <p class="projects-card__text">Технический надзор и контроль за производствам отделочных работ</p>
+                                        <span class="projects-card__violation">Выявлено нарушений на 20 000 ₽</span>
+                                        <button class="projects__btn btn btn-blue">Открыть</button>
+                                    </div>
+                                </div>
+                                <div class="projects__item projects-card">
+                                    <div class="projects-card__img">
+                                        <img src="img/projects-img.png" alt="">
+                                    </div>
+                                    <div class="projects-card__desc">
+                                        <div class="projects-card__badges">
+                                            <div class="projects-card__badge">Приемка работ</div>
+                                        </div>
+                                        <p class="projects-card__text">Технический надзор и контроль за производствам отделочных работ</p>
+                                        <span class="projects-card__violation">Выявлено нарушений на 20 000 ₽</span>
+                                        <button class="projects__btn btn btn-blue">Открыть</button>
+                                    </div>
+                                </div>
+                                <div class="projects__item projects-card">
+                                    <div class="projects-card__img">
+                                        <img src="img/projects-img.png" alt="">
+                                    </div>
+                                    <div class="projects-card__desc">
+                                        <div class="projects-card__badges">
+                                            <div class="projects-card__badge">Приемка работ</div>
+                                        </div>
+                                        <p class="projects-card__text">Технический надзор и контроль за производствам отделочных работ</p>
+                                        <span class="projects-card__violation">Выявлено нарушений на 20 000 ₽</span>
+                                        <button class="projects__btn btn btn-blue">Открыть</button>
+                                    </div>
+                                </div>
+                                <div class="projects__item projects-card">
+                                    <div class="projects-card__img">
+                                        <img src="img/projects-img.png" alt="">
+                                    </div>
+                                    <div class="projects-card__desc">
+                                        <div class="projects-card__badges">
+                                            <div class="projects-card__badge">Приемка работ</div>
+                                        </div>
+                                        <p class="projects-card__text">Технический надзор и контроль за производствам отделочных работ</p>
+                                        <span class="projects-card__violation">Выявлено нарушений на 20 000 ₽</span>
+                                        <button class="projects__btn btn btn-blue">Открыть</button>
+                                    </div>
+                                </div>
+                                <div class="projects__item projects-card">
+                                    <div class="projects-card__img">
+                                        <img src="img/projects-img.png" alt="">
+                                    </div>
+                                    <div class="projects-card__desc">
+                                        <div class="projects-card__badges">
+                                            <div class="projects-card__badge">Приемка работ</div>
+                                        </div>
+                                        <p class="projects-card__text">Технический надзор и контроль за производствам отделочных работ</p>
+                                        <span class="projects-card__violation">Выявлено нарушений на 20 000 ₽</span>
+                                        <button class="projects__btn btn btn-blue">Открыть</button>
+                                    </div>
+                                </div>
+                                <div class="projects__item projects-card">
+                                    <div class="projects-card__img">
+                                        <img src="img/projects-img.png" alt="">
+                                    </div>
+                                    <div class="projects-card__desc">
+                                        <div class="projects-card__badges">
+                                            <div class="projects-card__badge">Приемка работ</div>
+                                        </div>
+                                        <p class="projects-card__text">Технический надзор и контроль за производствам отделочных работ</p>
+                                        <span class="projects-card__violation">Выявлено нарушений на 20 000 ₽</span>
+                                        <button class="projects__btn btn btn-blue">Открыть</button>
+                                    </div>
+                                </div>
+                                <div class="projects__item projects-card">
+                                    <div class="projects-card__img">
+                                        <img src="img/projects-img.png" alt="">
+                                    </div>
+                                    <div class="projects-card__desc">
+                                        <div class="projects-card__badges">
+                                            <div class="projects-card__badge">Приемка работ</div>
+                                        </div>
+                                        <p class="projects-card__text">Технический надзор и контроль за производствам отделочных работ</p>
+                                        <span class="projects-card__violation">Выявлено нарушений на 20 000 ₽</span>
+                                        <button class="projects__btn btn btn-blue">Открыть</button>
+                                    </div>
+                                </div>
+                                <div class="projects__item projects-card">
+                                    <div class="projects-card__img">
+                                        <img src="img/projects-img.png" alt="">
+                                    </div>
+                                    <div class="projects-card__desc">
+                                        <div class="projects-card__badges">
+                                            <div class="projects-card__badge">Приемка работ</div>
+                                        </div>
+                                        <p class="projects-card__text">Технический надзор и контроль за производствам отделочных работ</p>
+                                        <span class="projects-card__violation">Выявлено нарушений на 20 000 ₽</span>
+                                        <button class="projects__btn btn btn-blue">Открыть</button>
+                                    </div>
+                                </div>
+                                <div class="projects__item projects-card">
+                                    <div class="projects-card__img">
+                                        <img src="img/projects-img.png" alt="">
+                                    </div>
+                                    <div class="projects-card__desc">
+                                        <div class="projects-card__badges">
+                                            <div class="projects-card__badge">Приемка работ</div>
+                                        </div>
+                                        <p class="projects-card__text">Технический надзор и контроль за производствам отделочных работ</p>
+                                        <span class="projects-card__violation">Выявлено нарушений на 20 000 ₽</span>
+                                        <button class="projects__btn btn btn-blue">Открыть</button>
+                                    </div>
+                                </div>
+                                <div class="projects__item projects-card">
+                                    <div class="projects-card__img">
+                                        <img src="img/projects-img.png" alt="">
+                                    </div>
+                                    <div class="projects-card__desc">
+                                        <div class="projects-card__badges">
+                                            <div class="projects-card__badge">Приемка работ</div>
+                                        </div>
+                                        <p class="projects-card__text">Технический надзор и контроль за производствам отделочных работ</p>
+                                        <span class="projects-card__violation">Выявлено нарушений на 20 000 ₽</span>
+                                        <button class="projects__btn btn btn-blue">Открыть</button>
+                                    </div>
+                                </div>
+                                <div class="projects__item projects-card">
+                                    <div class="projects-card__img">
+                                        <img src="img/projects-img.png" alt="">
+                                    </div>
+                                    <div class="projects-card__desc">
+                                        <div class="projects-card__badges">
+                                            <div class="projects-card__badge">Приемка работ</div>
+                                        </div>
+                                        <p class="projects-card__text">Технический надзор и контроль за производствам отделочных работ</p>
+                                        <span class="projects-card__violation">Выявлено нарушений на 20 000 ₽</span>
+                                        <button class="projects__btn btn btn-blue">Открыть</button>
+                                    </div>
+                                </div>
+                                <div class="projects__item projects-card">
+                                    <div class="projects-card__img">
+                                        <img src="img/projects-img.png" alt="">
+                                    </div>
+                                    <div class="projects-card__desc">
+                                        <div class="projects-card__badges">
+                                            <div class="projects-card__badge">Приемка работ</div>
+                                        </div>
+                                        <p class="projects-card__text">Технический надзор и контроль за производствам отделочных работ</p>
+                                        <span class="projects-card__violation">Выявлено нарушений на 20 000 ₽</span>
+                                        <button class="projects__btn btn btn-blue">Открыть</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab__content" data-tab-path="4">
+                            <div class="projects__items">
+                                <div class="projects__item projects-card">
+                                    <div class="projects-card__img">
+                                        <img src="img/projects-img.png" alt="">
+                                    </div>
+                                    <div class="projects-card__desc">
+                                        <div class="projects-card__badges">
+                                            <div class="projects-card__badge">Приемка работ</div>
+                                        </div>
+                                        <p class="projects-card__text">Технический надзор и контроль за производствам отделочных работ</p>
+                                        <span class="projects-card__violation">Выявлено нарушений на 20 000 ₽</span>
+                                        <button class="projects__btn btn btn-blue">Открыть</button>
+                                    </div>
+                                </div>
+                                <div class="projects__item projects-card">
+                                    <div class="projects-card__img">
+                                        <img src="img/projects-img.png" alt="">
+                                    </div>
+                                    <div class="projects-card__desc">
+                                        <div class="projects-card__badges">
+                                            <div class="projects-card__badge">Приемка работ</div>
+                                        </div>
+                                        <p class="projects-card__text">Технический надзор и контроль за производствам отделочных работ</p>
+                                        <span class="projects-card__violation">Выявлено нарушений на 20 000 ₽</span>
+                                        <button class="projects__btn btn btn-blue">Открыть</button>
+                                    </div>
+                                </div>
+                                <div class="projects__item projects-card">
+                                    <div class="projects-card__img">
+                                        <img src="img/projects-img.png" alt="">
+                                    </div>
+                                    <div class="projects-card__desc">
+                                        <div class="projects-card__badges">
+                                            <div class="projects-card__badge">Приемка работ</div>
+                                        </div>
+                                        <p class="projects-card__text">Технический надзор и контроль за производствам отделочных работ</p>
+                                        <span class="projects-card__violation">Выявлено нарушений на 20 000 ₽</span>
+                                        <button class="projects__btn btn btn-blue">Открыть</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab__content" data-tab-path="5">
+                            <div class="projects__items">
+                                <div class="projects__item projects-card">
+                                    <div class="projects-card__img">
+                                        <img src="img/projects-img.png" alt="">
+                                    </div>
+                                    <div class="projects-card__desc">
+                                        <div class="projects-card__badges">
+                                            <div class="projects-card__badge">Приемка работ</div>
+                                        </div>
+                                        <p class="projects-card__text">Технический надзор и контроль за производствам отделочных работ</p>
+                                        <span class="projects-card__violation">Выявлено нарушений на 20 000 ₽</span>
+                                        <button class="projects__btn btn btn-blue">Открыть</button>
+                                    </div>
+                                </div>
+                                <div class="projects__item projects-card">
+                                    <div class="projects-card__img">
+                                        <img src="img/projects-img.png" alt="">
+                                    </div>
+                                    <div class="projects-card__desc">
+                                        <div class="projects-card__badges">
+                                            <div class="projects-card__badge">Приемка работ</div>
+                                        </div>
+                                        <p class="projects-card__text">Технический надзор и контроль за производствам отделочных работ</p>
+                                        <span class="projects-card__violation">Выявлено нарушений на 20 000 ₽</span>
+                                        <button class="projects__btn btn btn-blue">Открыть</button>
+                                    </div>
+                                </div>
+                                <div class="projects__item projects-card">
+                                    <div class="projects-card__img">
+                                        <img src="img/projects-img.png" alt="">
+                                    </div>
+                                    <div class="projects-card__desc">
+                                        <div class="projects-card__badges">
+                                            <div class="projects-card__badge">Приемка работ</div>
+                                        </div>
+                                        <p class="projects-card__text">Технический надзор и контроль за производствам отделочных работ</p>
+                                        <span class="projects-card__violation">Выявлено нарушений на 20 000 ₽</span>
+                                        <button class="projects__btn btn btn-blue">Открыть</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- <section class="consultation">
+                <div class="container">
+                    <div class="consultation__inner">
+                        <div class="consultation__left">
+                            <form class="consultation__form">
+                                <div class="consultation__title">Получить бесплатную консультацию инженера</div>
+                                <button class="consultation__btn btn btn-blue">Подробнее</button>
+                                <div class="consultation__text">
+                                    Нажимая на кнопку, вы даете согласие на обработку своих персональных данных и соглашаетесь с <span>Политикой конфиденциальности</span>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="consultation__right">
+                            <div class="consultation__img">
+                                <img src="img/consultation-img.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section> -->
+
+        </main>
+
+
+    </div>
+
+
+    <script src="js/jquery-1.11.3.min.js"></script>
+    <script src="js/jquery.maskedinput.min.js"></script>
+    <script src="js/jquery.fancybox.min.js"></script>
+    <script src="js/swiper.js"></script>
+    <script src="js/jquery.nice-select.min.js"></script>
+    <script src="js/index.js"></script>
+
+</body>
+
+</html>
