@@ -380,52 +380,6 @@ input::placeholder {
   }
 }
 
-.tabs {
-  display: flex;
-  align-items: center;
-}
-
-.tab {
-  position: relative;
-  display: flex;
-  align-items: center;
-  font-size: 18px;
-  line-height: 22px;
-  color: #B9B9B9;
-  transition: all .3s;
-}
-.tab:hover {
-  color: #1C1C1C;
-  cursor: pointer;
-}
-.tab:before {
-  content: '';
-  position: absolute;
-  z-index: 1;
-  background-color: #B9B9B9;
-  width: 1px;
-  height: 100%;
-  right: 0;
-  opacity: 0;
-}
-.tab:not(:last-child) {
-  padding-right: 28px;
-  margin-right: 28px;
-}
-.tab:not(:last-child):before {
-  opacity: 1;
-}
-.tab--active {
-  color: #1C1C1C;
-  pointer-events: none;
-}
-.tab__content {
-  display: none;
-}
-.tab__content--active {
-  display: block;
-}
-
 .main {
   background-size: cover;
   padding: 156px 0;
