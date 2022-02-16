@@ -1,24 +1,35 @@
 /*
 Error: Undefined variable: "$primary".
-        on line 65 of D:\work\freelance\nadzor\scss\ux.scss
+        on line 38 of E:\markup\nadzor\scss\layout.scss
 
-60:     font-size: 14px;
-61:     height: 40px;
-62: }
-63: 
-64: .btn-blue {
-65:     background-color: $primary;
-66:     color: #FFFFFF;
-67:     &:hover {
-68:         box-shadow: 0 4px 20px 0 rgba(0, 85, 255, 0.23);
-69:         -webkit-perspective: 2000px;
-70:         perspective: 2000px;
+33:         display: flex;
+34:         align-items: center;
+35:         font-weight: 600;
+36:         font-size: 14px;
+37:         line-height: 19px;
+38:         color: $primary;
+39:         img {
+40:             margin-right: 10px;
+41:             flex-shrink: 0;
+42:         }
+43:     }
 
 Backtrace:
-D:\work\freelance\nadzor\scss\ux.scss:65
+E:\markup\nadzor\scss\layout.scss:38
 C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/script/tree/variable.rb:49:in `_perform'
 C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/script/tree/node.rb:50:in `perform'
 C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:402:in `visit_prop'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/base.rb:36:in `visit'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:162:in `block in visit'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/stack.rb:79:in `block in with_base'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/stack.rb:135:in `with_frame'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/stack.rb:79:in `with_base'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:162:in `visit'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:444:in `block (2 levels) in visit_rule'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:444:in `map'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:444:in `block in visit_rule'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:183:in `with_environment'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:442:in `visit_rule'
 C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/base.rb:36:in `visit'
 C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:162:in `block in visit'
 C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/stack.rb:79:in `block in with_base'
@@ -62,4 +73,4 @@ C:/Program Files (x86)/Koala/bin/sass:22:in `<main>'
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Undefined variable: \"$primary\".\A         on line 65 of D:\work\freelance\nadzor\scss\ux.scss\A \A 60:     font-size: 14px;\A 61:     height: 40px;\A 62: }\A 63: \A 64: .btn-blue {\A 65:     background-color: $primary;\A 66:     color: #FFFFFF;\A 67:     &:hover {\A 68:         box-shadow: 0 4px 20px 0 rgba(0, 85, 255, 0.23);\A 69:         -webkit-perspective: 2000px;\A 70:         perspective: 2000px;"; }
+  content: "Error: Undefined variable: \"$primary\".\A         on line 38 of E:\markup\nadzor\scss\layout.scss\A \A 33:         display: flex;\A 34:         align-items: center;\A 35:         font-weight: 600;\A 36:         font-size: 14px;\A 37:         line-height: 19px;\A 38:         color: $primary;\A 39:         img {\A 40:             margin-right: 10px;\A 41:             flex-shrink: 0;\A 42:         }\A 43:     }"; }
