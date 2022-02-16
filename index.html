@@ -405,7 +405,7 @@
                                     <div class="service-card__desc">Посетим ваш объект для оценки результата, проверки правильности технологий и применения материалов</div>
                                     <div class="service-card__price">от 7 000₽</div>
                                     <div class="service-card__nav">
-                                        <button class="service-card__btn">
+                                        <button onclick="serviceDetail('serviceDetail1')" class="service-card__btn">
                                             <span>Подробнее</span>
                                             <i>
                                                 <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -449,7 +449,7 @@
                                     <div class="service-card__desc">Еженедельно посещаем ваш проект, принимаем работы, материалы, используя для проверки спец. оборудование</div>
                                     <div class="service-card__price">от 7 000₽</div>
                                     <div class="service-card__nav">
-                                        <button class="service-card__btn">
+                                        <button onclick="serviceDetail('serviceDetail2')" class="service-card__btn">
                                             <span>Подробнее</span>
                                             <i>
                                                 <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -469,33 +469,48 @@
                             </div>
                         </div>
                     </div>
-
-                    <div class="service-detail">
+                    <div id="serviceDetail1" class="service-detail service-detail--active">
+                        <div class="service-detail__mob">
+                            <div class="service-detail__mob-top">
+                                <button class="service-detail__close">
+                                    <img src="img/back.svg" alt="">
+                                </button>
+                                <button class="service-detail__close">
+                                    <img src="img/cancel.svg" alt="">
+                                </button>
+                                <div class="service-detail__mob-block">
+                                    <button class="service-detail__mob-btn btn btn-blue">Получить консультацию</button>
+                                </div>
+                            </div>
+                            <div class="service-detail__mob-title">Разовый выезд. Проверка качества работ</div>
+                        </div>
                         <div class="service-detail__top">
                             <div class="service-detail__left">
                                 <div class="service-detail__tabs">
                                     <div class="service-detail__tab service-detail__tab--active" data-tab-path="1">Что включает</div>
                                 </div>
-                                <div class="service-detail__items service-detail__items--active" data-tab-path="1">
-                                    <div class="service-detail__item">
-                                        <img src="img/file-check-2.svg" alt="">
-                                        <span>Изучение проектной документации</span>
-                                    </div>
-                                    <div class="service-detail__item">
-                                        <img src="img/help-circle.svg" alt="">
-                                        <span>Фото- и видеофиксация нарушений/дефектов</span>
-                                    </div>
-                                    <div class="service-detail__item">
-                                        <img src="img/help-circle.svg" alt="">
-                                        <span>Выезд на объект на основание договора, технического задания</span>
-                                    </div>
-                                    <div class="service-detail__item">
-                                        <img src="img/calendar.svg" alt="">
-                                        <span>Составление акта бытового осмотра с замечаниями, указанием нормативной базы и рекомендациями</span>
-                                    </div>
-                                    <div class="service-detail__item">
-                                        <img src="img/coins.svg" alt="">
-                                        <span>Проверка обхема выполненных работ перед оплатой строителям</span>
+                                <div class="service-detail__tab-content service-detail__tab-content--active" data-tab-path="1">
+                                    <div class="service-detail__items">
+                                        <div class="service-detail__item">
+                                            <img src="img/file-check-2.svg" alt="">
+                                            <span>Изучение проектной документации</span>
+                                        </div>
+                                        <div class="service-detail__item">
+                                            <img src="img/help-circle.svg" alt="">
+                                            <span>Фото- и видеофиксация нарушений/дефектов</span>
+                                        </div>
+                                        <div class="service-detail__item">
+                                            <img src="img/bar-chart-2.svg" alt="">
+                                            <span>Выезд на объект на основание договора, технического задания</span>
+                                        </div>
+                                        <div class="service-detail__item">
+                                            <img src="img/calendar.svg" alt="">
+                                            <span>Составление акта бытового осмотра с замечаниями, указанием нормативной базы и рекомендациями</span>
+                                        </div>
+                                        <div class="service-detail__item">
+                                            <img src="img/coins.svg" alt="">
+                                            <span>Проверка обхема выполненных работ перед оплатой строителям</span>
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="service-detail__info">
@@ -568,6 +583,1181 @@
                             </form>
                         </div>
                     </div>
+                    <div id="serviceDetail2" class="service-detail">
+                        <div class="service-detail__mob">
+                            <div class="service-detail__mob-top">
+                                <button class="service-detail__close">
+                                    <img src="img/back.svg" alt="">
+                                </button>
+                                <button class="service-detail__close">
+                                    <img src="img/cancel.svg" alt="">
+                                </button>
+                                <div class="service-detail__mob-block">
+                                    <button class="service-detail__mob-btn btn btn-blue">Получить консультацию</button>
+                                </div>
+
+                            </div>
+                            <div class="service-detail__mob-title">Технический надзор на регулярной основе</div>
+                        </div>
+                        <div class="service-detail__top">
+                            <div class="service-detail__left">
+                                <div class="service-detail__tabs">
+                                    <div class="service-detail__tab service-detail__tab--active" data-tab-path="1">Что включает</div>
+                                    <div class="service-detail__tab" data-tab-path="2">Результат надзора</div>
+                                </div>
+                                <div class="service-detail__tab-content service-detail__tab-content--active" data-tab-path="1">
+                                    <div class="service-detail__items">
+                                        <div class="service-detail__item">
+                                            <img src="img/file-check-2.svg" alt="">
+                                            <span>Изучение проектной документации</span>
+                                        </div>
+                                        <div class="service-detail__item">
+                                            <img src="img/briefcase.svg" alt="">
+                                            <span>Подготовка рекомендации и контроль</span>
+                                        </div>
+                                        <div class="service-detail__item">
+                                            <img src="img/bar-chart-2.svg" alt="">
+                                            <span>Проверка сметной стоимости работ на предмет необоснованного завышения</span>
+                                        </div>
+                                        <div class="service-detail__item">
+                                            <img src="img/check-square.svg" alt="">
+                                            <span>Проверка объема выполненных работ перед оплатой строителям, 2-3 в неделю</span>
+                                        </div>
+                                        <div class="service-detail__item">
+                                            <img src="img/coins.svg" alt="">
+                                            <span>Проверка сметы на материалы на предмет необосноанного завышения</span>
+                                        </div>
+                                        <div class="service-detail__item">
+                                            <img src="img/camera.svg" alt="">
+                                            <span>Еженедельный фото- и видеоотчеты о проделанной работе</span>
+                                        </div>
+                                        <div class="service-detail__item">
+                                            <img src="img/help-circle.svg" alt="">
+                                            <span>Помощь в заключении юридически грамотного договора с подрядчиками</span>
+                                        </div>
+                                        <div class="service-detail__item">
+                                            <img src="img/smartphone.svg" alt="">
+                                            <span>Вся информация о ходе ремонта доступна в приложении со смартфона</span>
+                                        </div>
+                                        <div class="service-detail__item">
+                                            <img src="img/car.svg" alt="">
+                                            <span>Выезд на объект на основании договора, технического задания</span>
+                                        </div>
+                                        <div class="service-detail__item">
+                                            <img src="img/package.svg" alt="">
+                                            <span>Отслеживаем установленные сметой поставки и качество материалов</span>
+                                        </div>
+                                        <div class="service-detail__item">
+                                            <img src="img/shield-check.svg" alt="">
+                                            <span>Контроль реализации проекта в соответствии с техническим заданием</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="service-detail__tab-content" data-tab-path="2">
+                                    <div class="service-detail__items2">
+                                        <div class="service-detail__item2">
+                                            <img src="img/russian-ruble.svg" alt="">
+                                            <div class="service-detail__item2-content">
+                                                <div class="service-detail__item2-title">До 30% бюджета</div>
+                                                <div class="service-detail__item2-desc">Экономии на строительных работах, исключив демонтаж и потерю времени</div>
+                                            </div>
+                                        </div>
+                                        <div class="service-detail__item2">
+                                            <img src="img/search.svg" alt="">
+                                            <div class="service-detail__item2-content">
+                                                <div class="service-detail__item2-title">Честная смета</div>
+                                                <div class="service-detail__item2-desc">Проверяем сметы на предмет намеренного завышения стоимости работ и объема строительных материалов</div>
+                                            </div>
+                                        </div>
+                                        <div class="service-detail__item2">
+                                            <img src="img/home.svg" alt="">
+                                            <div class="service-detail__item2-content">
+                                                <div class="service-detail__item2-title">Ведение под ключ</div>
+                                                <div class="service-detail__item2-desc">Контролируем реализацию проекта в соответствии с техническим заданием, пока вы отсутствуете</div>
+                                            </div>
+                                        </div>
+                                        <div class="service-detail__item2">
+                                            <img src="img/hammer.svg" alt="">
+                                            <div class="service-detail__item2-content">
+                                                <div class="service-detail__item2-title">Входной контроль материалов</div>
+                                                <div class="service-detail__item2-desc">Отслеживаем установленные сметой поставки, качество материалов и сохранность оборудования</div>
+                                            </div>
+                                        </div>
+                                        <div class="service-detail__item2">
+                                            <img src="img/file-text.svg" alt="">
+                                            <div class="service-detail__item2-content">
+                                                <div class="service-detail__item2-title">Документация</div>
+                                                <div class="service-detail__item2-desc">Фиксируем акты завершенных этапов работ с указаеним нарушений, дефектов и отклонений. Остлеживаем их исправление.</div>
+                                            </div>
+                                        </div>
+                                        <div class="service-detail__item2">
+                                            <img src="img/clock-4.svg" alt="">
+                                            <div class="service-detail__item2-content">
+                                                <div class="service-detail__item2-title">Сохраним нервы и время</div>
+                                                <div class="service-detail__item2-desc">Все вопросы со строителями мы берём на себя</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="service-detail__right">
+                                <div class="service-detail__table">
+                                    <table>
+                                        <thead>
+                                            <tr>
+                                                <th>Площадь</th>
+                                                <th>Визиты</th>
+                                                <th>Стоимость</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>до 50</td>
+                                                <td>1</td>
+                                                <td>4500</td>
+                                            </tr>
+                                            <tr>
+                                                <td>от 50 до 70</td>
+                                                <td>1</td>
+                                                <td>6500</td>
+                                            </tr>
+                                            <tr>
+                                                <td>от 70 до 100</td>
+                                                <td>1</td>
+                                                <td>8500</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Более 100</td>
+                                                <td colspan="2">
+                                                    <span class="blue-text">Индивидуальный расчёт</span>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="service-detail__bottom">
+                            <div class="service-detail__bottom-title">
+                                <span>Пригласите нашего инженера</span> для независимого надзора за качеством Вашего ремонта
+                            </div>
+                            <form action="" class="service-detail__form">
+                                <svg id="icon1" class="check-icon" width="48" height="48" viewBox="0 0 48 48" fill="none" stroke="#0723DF" stroke-width="3" stroke-dasharray="100">
+                                    <path class="icon-path" id="check" d="M 12,22 L 22,31 L 36,13"></path>
+                                </svg>
+                                <fieldset class='service-detail__form-group form-group'>
+                                    <input type='text' placeholder="телефон" />
+                                </fieldset>
+                                <fieldset class='service-detail__form-group form-group'>
+                                    <input type='text' placeholder="Ваше имя" />
+                                </fieldset>
+                                <button class="service-detail__btn btn btn-blue">Оставить заявку</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="services services2">
+                    <div class="services__items">
+                        <div class="services__item">
+                            <div class="service-card">
+                                <div class="service-card__img">
+                                    <img src="img/service3.jpg" alt="">
+                                </div>
+                                <div class="service-card__right">
+                                    <div class="service-card__top">
+                                        <div class="service-card__item">
+                                            <div class="service-card__item-title">заказали</div>
+                                            <div class="service-card__item-num">17</div>
+                                            <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M16.5459 14.0366L13.7181 12.1985L14.7842 10.244C15.0328 9.78754 15.1632 9.27618 15.1635 8.75647V5.66235C15.1635 4.50889 14.7053 3.40268 13.8897 2.58706C13.0741 1.77144 11.9679 1.31323 10.8144 1.31323C9.66096 1.31323 8.55475 1.77144 7.73913 2.58706C6.92351 3.40268 6.4653 4.50889 6.4653 5.66235V8.75647C6.46569 9.27619 6.59608 9.78757 6.84461 10.244L7.91073 12.1985L5.0829 14.0366C4.6483 14.3179 4.2912 14.7037 4.04427 15.1588C3.79734 15.6138 3.66846 16.1235 3.66944 16.6412V19.9523H17.9594V16.6412C17.9604 16.1235 17.8315 15.6138 17.5846 15.1588C17.3376 14.7038 16.9805 14.3179 16.5459 14.0366ZM16.7168 18.7097H4.91204V16.6412C4.91146 16.3306 4.98879 16.0248 5.13696 15.7517C5.28513 15.4787 5.4994 15.2472 5.76016 15.0784L9.55244 12.6134L7.9355 9.64901C7.78639 9.37513 7.70815 9.06831 7.70791 8.75647V5.66235C7.70791 4.83845 8.0352 4.0483 8.61778 3.46571C9.20037 2.88313 9.99052 2.55584 10.8144 2.55584C11.6383 2.55584 12.4285 2.88313 13.0111 3.46571C13.5936 4.0483 13.9209 4.83845 13.9209 5.66235V8.75647C13.9207 9.06831 13.8425 9.37513 13.6933 9.64901L12.0764 12.6134L15.8688 15.0784C16.1295 15.2472 16.3438 15.4787 16.4919 15.7518C16.6401 16.0248 16.7174 16.3306 16.7168 16.6412V18.7097Z" fill="#0723DF"/>
+                                            </svg>
+                                        </div>
+                                        <div class="service-card__item">
+                                            <div class="service-card__item-title">рейтинг</div>
+                                            <div class="service-card__item-num">4,6 из 5</div>
+                                        </div>
+                                    </div>
+                                    <div class="service-card__title">
+                                        Приемка квартир <br> в новостройках Москвы
+                                    </div>
+                                    <div class="service-card__price">от 7 000₽</div>
+                                    <div class="service-card__nav">
+                                        <button onclick="serviceDetail('serviceDetail3')" class="service-card__btn">
+                                            <span>Подробнее</span>
+                                            <i>
+                                                <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M0.900093 12.5445L6.58057 6.86407L0.900093 1.18359" stroke="white" stroke-width="1.42012" stroke-linecap="round" stroke-linejoin="round"/>
+                                                </svg>
+                                            </i>
+                                        </button>
+                                        <button class="service-card__more">
+                                            <svg width="35" height="35" viewBox="0 0 35 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M17.4445 18.5744C18.2288 18.5744 18.8647 17.9386 18.8647 17.1542C18.8647 16.3699 18.2288 15.7341 17.4445 15.7341C16.6602 15.7341 16.0244 16.3699 16.0244 17.1542C16.0244 17.9386 16.6602 18.5744 17.4445 18.5744Z" stroke="#AEAEAE" stroke-width="2.84024" stroke-linecap="round" stroke-linejoin="round"/>
+                                                <path d="M17.4445 8.63345C18.2288 8.63345 18.8647 7.99764 18.8647 7.21333C18.8647 6.42902 18.2288 5.79321 17.4445 5.79321C16.6602 5.79321 16.0244 6.42902 16.0244 7.21333C16.0244 7.99764 16.6602 8.63345 17.4445 8.63345Z" stroke="#AEAEAE" stroke-width="2.84024" stroke-linecap="round" stroke-linejoin="round"/>
+                                                <path d="M17.4445 28.5148C18.2288 28.5148 18.8647 27.879 18.8647 27.0947C18.8647 26.3104 18.2288 25.6746 17.4445 25.6746C16.6602 25.6746 16.0244 26.3104 16.0244 27.0947C16.0244 27.879 16.6602 28.5148 17.4445 28.5148Z" stroke="#AEAEAE" stroke-width="2.84024" stroke-linecap="round" stroke-linejoin="round"/>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="services__item">
+                            <div class="service-card">
+                                <div class="service-card__img">
+                                    <img src="img/service4.jpg" alt="">
+                                </div>
+                                <div class="service-card__right">
+                                    <div class="service-card__top">
+                                        <div class="service-card__item">
+                                            <div class="service-card__item-title">заказали</div>
+                                            <div class="service-card__item-num">36</div>
+                                            <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M16.5459 14.0366L13.7181 12.1985L14.7842 10.244C15.0328 9.78754 15.1632 9.27618 15.1635 8.75647V5.66235C15.1635 4.50889 14.7053 3.40268 13.8897 2.58706C13.0741 1.77144 11.9679 1.31323 10.8144 1.31323C9.66096 1.31323 8.55475 1.77144 7.73913 2.58706C6.92351 3.40268 6.4653 4.50889 6.4653 5.66235V8.75647C6.46569 9.27619 6.59608 9.78757 6.84461 10.244L7.91073 12.1985L5.0829 14.0366C4.6483 14.3179 4.2912 14.7037 4.04427 15.1588C3.79734 15.6138 3.66846 16.1235 3.66944 16.6412V19.9523H17.9594V16.6412C17.9604 16.1235 17.8315 15.6138 17.5846 15.1588C17.3376 14.7038 16.9805 14.3179 16.5459 14.0366ZM16.7168 18.7097H4.91204V16.6412C4.91146 16.3306 4.98879 16.0248 5.13696 15.7517C5.28513 15.4787 5.4994 15.2472 5.76016 15.0784L9.55244 12.6134L7.9355 9.64901C7.78639 9.37513 7.70815 9.06831 7.70791 8.75647V5.66235C7.70791 4.83845 8.0352 4.0483 8.61778 3.46571C9.20037 2.88313 9.99052 2.55584 10.8144 2.55584C11.6383 2.55584 12.4285 2.88313 13.0111 3.46571C13.5936 4.0483 13.9209 4.83845 13.9209 5.66235V8.75647C13.9207 9.06831 13.8425 9.37513 13.6933 9.64901L12.0764 12.6134L15.8688 15.0784C16.1295 15.2472 16.3438 15.4787 16.4919 15.7518C16.6401 16.0248 16.7174 16.3306 16.7168 16.6412V18.7097Z" fill="#0723DF"/>
+                                            </svg>
+                                        </div>
+                                        <div class="service-card__item">
+                                            <div class="service-card__item-title">рейтинг</div>
+                                            <div class="service-card__item-num">4,6 из 5</div>
+                                        </div>
+                                    </div>
+                                    <div class="service-card__title">
+                                        Управление ремонтом <br> «от идеи до новоселья»
+                                    </div>
+                                    <div class="service-card__price">от 100 000₽</div>
+                                    <div class="service-card__nav">
+                                        <button onclick="serviceDetail('serviceDetail4')" class="service-card__btn">
+                                            <span>Подробнее</span>
+                                            <i>
+                                                <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M0.900093 12.5445L6.58057 6.86407L0.900093 1.18359" stroke="white" stroke-width="1.42012" stroke-linecap="round" stroke-linejoin="round"/>
+                                                </svg>
+                                            </i>
+                                        </button>
+                                        <button class="service-card__more">
+                                            <svg width="35" height="35" viewBox="0 0 35 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M17.4445 18.5744C18.2288 18.5744 18.8647 17.9386 18.8647 17.1542C18.8647 16.3699 18.2288 15.7341 17.4445 15.7341C16.6602 15.7341 16.0244 16.3699 16.0244 17.1542C16.0244 17.9386 16.6602 18.5744 17.4445 18.5744Z" stroke="#AEAEAE" stroke-width="2.84024" stroke-linecap="round" stroke-linejoin="round"/>
+                                                <path d="M17.4445 8.63345C18.2288 8.63345 18.8647 7.99764 18.8647 7.21333C18.8647 6.42902 18.2288 5.79321 17.4445 5.79321C16.6602 5.79321 16.0244 6.42902 16.0244 7.21333C16.0244 7.99764 16.6602 8.63345 17.4445 8.63345Z" stroke="#AEAEAE" stroke-width="2.84024" stroke-linecap="round" stroke-linejoin="round"/>
+                                                <path d="M17.4445 28.5148C18.2288 28.5148 18.8647 27.879 18.8647 27.0947C18.8647 26.3104 18.2288 25.6746 17.4445 25.6746C16.6602 25.6746 16.0244 26.3104 16.0244 27.0947C16.0244 27.879 16.6602 28.5148 17.4445 28.5148Z" stroke="#AEAEAE" stroke-width="2.84024" stroke-linecap="round" stroke-linejoin="round"/>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="serviceDetail3" class="service-detail">
+                        <div class="service-detail__mob">
+                            <div class="service-detail__mob-top">
+                                <button class="service-detail__close">
+                                    <img src="img/back.svg" alt="">
+                                </button>
+                                <button class="service-detail__close">
+                                    <img src="img/cancel.svg" alt="">
+                                </button>
+                                <div class="service-detail__mob-block">
+                                    <button class="service-detail__mob-btn btn btn-blue">Получить консультацию</button>
+                                </div>
+
+                            </div>
+                            <div class="service-detail__mob-title">Приемка квартир в новостройках Москвы</div>
+                        </div>
+                        <div class="service-detail__top">
+                            <div class="service-detail__left">
+                                <div class="service-detail__tabs">
+                                    <div class="service-detail__tab service-detail__tab--active" data-tab-path="1">Результаты приемки</div>
+                                    <div class="service-detail__tab" data-tab-path="2">Что проверяем?</div>
+                                </div>
+                                <div class="service-detail__tab-content service-detail__tab-content--active" data-tab-path="1">
+                                    <div class="service-detail__items2">
+                                        <div class="service-detail__item2">
+                                            <img src="img/alert-triangle.svg" alt="">
+                                            <div class="service-detail__item2-content">
+                                                <div class="service-detail__item2-title">Выявим все нарушения</div>
+                                                <div class="service-detail__item2-desc">Полностью проверим всю квартиру, включая скрытые работы, на наличие дефектов. Используем профессиональное оборудование </div>
+                                            </div>
+                                        </div>
+                                        <div class="service-detail__item2">
+                                            <img src="img/help-circle.svg" alt="">
+                                            <div class="service-detail__item2-content">
+                                                <div class="service-detail__item2-title">Бесплатно проконсультируем</div>
+                                                <div class="service-detail__item2-desc">По результатам проверки, наш инженер подведет итоги и расскажет, как действовать конкретно в Вашей ситуации, на что можно рассчитывать в том или ином случае.</div>
+                                            </div>
+                                        </div>
+                                        <div class="service-detail__item2">
+                                            <img src="img/file-x.svg" alt="">
+                                            <div class="service-detail__item2-content">
+                                                <div class="service-detail__item2-title">Составим дефектную ведомость</div>
+                                                <div class="service-detail__item2-desc">
+                                                    <p>Составляем Акт осмотра со списком нарушений или дефектную ведомость. </p>
+                                                    <p>Все эти документы предъявляются застройщику для устранения недочетов за его счет.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="service-detail__tab-content" data-tab-path="2">
+                                    <div class="service-detail__items2">
+                                        <div class="service-detail__item2">
+                                            <img src="img/layout.svg" alt="">
+                                            <div class="service-detail__item2-content">
+                                                <div class="service-detail__item2-title">Оконные и дверные конструкции </div>
+                                                <div class="service-detail__item2-desc">Проверка качества монтажа окон и дверей; проверка на предмет целостности, повреждений и работоспособности.</div>
+                                            </div>
+                                        </div>
+                                        <div class="service-detail__item2">
+                                            <img src="img/brush.svg" alt="">
+                                            <div class="service-detail__item2-content">
+                                                <div class="service-detail__item2-title">Качество отделки</div>
+                                                <div class="service-detail__item2-desc">Проверка качества монтажа/оклейки, целостности, напольных и настенных покрытий.</div>
+                                            </div>
+                                        </div>
+                                        <div class="service-detail__item2">
+                                            <img src="img/home.svg" alt="">
+                                            <div class="service-detail__item2-content">
+                                                <div class="service-detail__item2-title">Стены и полы</div>
+                                                <div class="service-detail__item2-desc">Осмотр наружных ограждающих конструкций, железобетонных конструкций, внутренних стен, плит перекрытия</div>
+                                            </div>
+                                        </div>
+                                        <div class="service-detail__item2">
+                                            <img src="img/box-select.svg" alt="">
+                                            <div class="service-detail__item2-content">
+                                                <div class="service-detail__item2-title">Площадь</div>
+                                                <div class="service-detail__item2-desc">Замер и расчет фактической площади помещения. </div>
+                                            </div>
+                                        </div>
+                                        <div class="service-detail__item2">
+                                            <img src="img/settings.svg" alt="">
+                                            <div class="service-detail__item2-content">
+                                                <div class="service-detail__item2-title">Инженерные системы</div>
+                                                <div class="service-detail__item2-desc">Проверка работоспособности вентиляции, электричества, отопления, водоснабжения и канализации.</div>
+                                            </div>
+                                        </div>
+                                        <div class="service-detail__item2">
+                                            <img src="img/plus-circle.svg" alt="">
+                                            <div class="service-detail__item2-content">
+                                                <div class="service-detail__item2-title">Дополнительные услуги</div>
+                                                <div class="service-detail__item2-desc">Тепловизионное обследование.</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="service-detail__right">
+                                <div class="service-detail__table">
+                                    <table>
+                                        <thead>
+                                            <tr>
+                                                <th>Вид работ</th>
+                                                <th>Стоимость</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>Обследование квартиры без отделки</td>
+                                                <td>
+                                                    <span class="blue-text">от 50 р./м²</span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>Обследование квартиры с предчистовой отделкой </td>
+                                                <td>
+                                                    <span class="blue-text">от 60 р./м²</span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>Обследование с отделкой</td>
+                                                <td>
+                                                    <span class="blue-text">от 60 р./м²</span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>Тепловизионное обследование</td>
+                                                <td>
+                                                    <span class="blue-text">от 60 р./м²</span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>Проверка площади квартиры</td>
+                                                <td>
+                                                    <span class="blue-text">от 60 р./м²</span>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="service-detail__bottom">
+                            <div class="service-detail__bottom-title">
+                                <span>Пригласите нашего инженера</span> для независимого надзора за качеством Вашего ремонта
+                            </div>
+                            <form action="" class="service-detail__form">
+                                <svg id="icon1" class="check-icon" width="48" height="48" viewBox="0 0 48 48" fill="none" stroke="#0723DF" stroke-width="3" stroke-dasharray="100">
+                                    <path class="icon-path" id="check" d="M 12,22 L 22,31 L 36,13"></path>
+                                </svg>
+                                <fieldset class='service-detail__form-group form-group'>
+                                    <input type='text' placeholder="телефон" />
+                                </fieldset>
+                                <fieldset class='service-detail__form-group form-group'>
+                                    <input type='text' placeholder="Ваше имя" />
+                                </fieldset>
+                                <button class="service-detail__btn btn btn-blue">Оставить заявку</button>
+                            </form>
+                        </div>
+                    </div>
+                    <div id="serviceDetail4" class="service-detail">
+                        <div class="service-detail__mob">
+                            <div class="service-detail__mob-top">
+                                <button class="service-detail__close">
+                                    <img src="img/back.svg" alt="">
+                                </button>
+                                <button class="service-detail__close">
+                                    <img src="img/cancel.svg" alt="">
+                                </button>
+                                <div class="service-detail__mob-block">
+                                    <button class="service-detail__mob-btn btn btn-blue">Получить консультацию</button>
+                                </div>
+
+                            </div>
+                            <div class="service-detail__mob-title">Управление ремонтом «от идеи до новоселья»</div>
+                        </div>
+                        <div class="service-detail__top">
+                            <div class="service-detail__left">
+                                <div class="service-detail__tabs">
+                                    <div class="service-detail__tab service-detail__tab--active" data-tab-path="1">Результаты приемки</div>
+                                    <div class="service-detail__tab" data-tab-path="2">Что проверяем?</div>
+                                </div>
+                                <div class="service-detail__tab-content service-detail__tab-content--active" data-tab-path="1">
+                                    <div class="service-detail__items2">
+                                        <div class="service-detail__item2">
+                                            <img src="img/alert-triangle.svg" alt="">
+                                            <div class="service-detail__item2-content">
+                                                <div class="service-detail__item2-title">Выявим все нарушения</div>
+                                                <div class="service-detail__item2-desc">Полностью проверим всю квартиру, включая скрытые работы, на наличие дефектов. Используем профессиональное оборудование </div>
+                                            </div>
+                                        </div>
+                                        <div class="service-detail__item2">
+                                            <img src="img/help-circle.svg" alt="">
+                                            <div class="service-detail__item2-content">
+                                                <div class="service-detail__item2-title">Бесплатно проконсультируем</div>
+                                                <div class="service-detail__item2-desc">По результатам проверки, наш инженер подведет итоги и расскажет, как действовать конкретно в Вашей ситуации, на что можно рассчитывать в том или ином случае.</div>
+                                            </div>
+                                        </div>
+                                        <div class="service-detail__item2">
+                                            <img src="img/file-x.svg" alt="">
+                                            <div class="service-detail__item2-content">
+                                                <div class="service-detail__item2-title">Составим дефектную ведомость</div>
+                                                <div class="service-detail__item2-desc">
+                                                    <p>Составляем Акт осмотра со списком нарушений или дефектную ведомость. </p>
+                                                    <p>Все эти документы предъявляются застройщику для устранения недочетов за его счет.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="service-detail__tab-content" data-tab-path="2">
+                                    <div class="service-detail__items2">
+                                        <div class="service-detail__item2">
+                                            <img src="img/layout.svg" alt="">
+                                            <div class="service-detail__item2-content">
+                                                <div class="service-detail__item2-title">Оконные и дверные конструкции </div>
+                                                <div class="service-detail__item2-desc">Проверка качества монтажа окон и дверей; проверка на предмет целостности, повреждений и работоспособности.</div>
+                                            </div>
+                                        </div>
+                                        <div class="service-detail__item2">
+                                            <img src="img/brush.svg" alt="">
+                                            <div class="service-detail__item2-content">
+                                                <div class="service-detail__item2-title">Качество отделки</div>
+                                                <div class="service-detail__item2-desc">Проверка качества монтажа/оклейки, целостности, напольных и настенных покрытий.</div>
+                                            </div>
+                                        </div>
+                                        <div class="service-detail__item2">
+                                            <img src="img/home.svg" alt="">
+                                            <div class="service-detail__item2-content">
+                                                <div class="service-detail__item2-title">Стены и полы</div>
+                                                <div class="service-detail__item2-desc">Осмотр наружных ограждающих конструкций, железобетонных конструкций, внутренних стен, плит перекрытия</div>
+                                            </div>
+                                        </div>
+                                        <div class="service-detail__item2">
+                                            <img src="img/box-select.svg" alt="">
+                                            <div class="service-detail__item2-content">
+                                                <div class="service-detail__item2-title">Площадь</div>
+                                                <div class="service-detail__item2-desc">Замер и расчет фактической площади помещения. </div>
+                                            </div>
+                                        </div>
+                                        <div class="service-detail__item2">
+                                            <img src="img/settings.svg" alt="">
+                                            <div class="service-detail__item2-content">
+                                                <div class="service-detail__item2-title">Инженерные системы</div>
+                                                <div class="service-detail__item2-desc">Проверка работоспособности вентиляции, электричества, отопления, водоснабжения и канализации.</div>
+                                            </div>
+                                        </div>
+                                        <div class="service-detail__item2">
+                                            <img src="img/plus-circle.svg" alt="">
+                                            <div class="service-detail__item2-content">
+                                                <div class="service-detail__item2-title">Дополнительные услуги</div>
+                                                <div class="service-detail__item2-desc">Тепловизионное обследование.</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="service-detail__right">
+                                <div class="service-detail__table">
+                                    <table>
+                                        <thead>
+                                            <tr>
+                                                <th>Вид работ</th>
+                                                <th>Стоимость</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>Обследование квартиры без отделки</td>
+                                                <td>
+                                                    <span class="blue-text">от 50 р./м²</span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>Обследование квартиры с предчистовой отделкой </td>
+                                                <td>
+                                                    <span class="blue-text">от 60 р./м²</span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>Обследование с отделкой</td>
+                                                <td>
+                                                    <span class="blue-text">от 60 р./м²</span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>Тепловизионное обследование</td>
+                                                <td>
+                                                    <span class="blue-text">от 60 р./м²</span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>Проверка площади квартиры</td>
+                                                <td>
+                                                    <span class="blue-text">от 60 р./м²</span>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="service-detail__bottom">
+                            <div class="service-detail__bottom-title">
+                                <span>Пригласите нашего инженера</span> для независимого надзора за качеством Вашего ремонта
+                            </div>
+                            <form action="" class="service-detail__form">
+                                <svg id="icon1" class="check-icon" width="48" height="48" viewBox="0 0 48 48" fill="none" stroke="#0723DF" stroke-width="3" stroke-dasharray="100">
+                                    <path class="icon-path" id="check" d="M 12,22 L 22,31 L 36,13"></path>
+                                </svg>
+                                <fieldset class='service-detail__form-group form-group'>
+                                    <input type='text' placeholder="телефон" />
+                                </fieldset>
+                                <fieldset class='service-detail__form-group form-group'>
+                                    <input type='text' placeholder="Ваше имя" />
+                                </fieldset>
+                                <button class="service-detail__btn btn btn-blue">Оставить заявку</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="services services3">
+                    <div class="services__title display2">Дополнительные услуги</div>
+                    <div class="services__items services__items--dop">
+                        <div class="services__item">
+                            <div class="service-card">
+                                <div class="service-card__img">
+                                    <img src="img/service5.jpg" alt="">
+                                </div>
+                                <div class="service-card__right">
+                                    <div class="service-card__top">
+                                        <div class="service-card__item">
+                                            <div class="service-card__item-title">заказали</div>
+                                            <div class="service-card__item-num">73</div>
+                                            <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M16.5459 14.0366L13.7181 12.1985L14.7842 10.244C15.0328 9.78754 15.1632 9.27618 15.1635 8.75647V5.66235C15.1635 4.50889 14.7053 3.40268 13.8897 2.58706C13.0741 1.77144 11.9679 1.31323 10.8144 1.31323C9.66096 1.31323 8.55475 1.77144 7.73913 2.58706C6.92351 3.40268 6.4653 4.50889 6.4653 5.66235V8.75647C6.46569 9.27619 6.59608 9.78757 6.84461 10.244L7.91073 12.1985L5.0829 14.0366C4.6483 14.3179 4.2912 14.7037 4.04427 15.1588C3.79734 15.6138 3.66846 16.1235 3.66944 16.6412V19.9523H17.9594V16.6412C17.9604 16.1235 17.8315 15.6138 17.5846 15.1588C17.3376 14.7038 16.9805 14.3179 16.5459 14.0366ZM16.7168 18.7097H4.91204V16.6412C4.91146 16.3306 4.98879 16.0248 5.13696 15.7517C5.28513 15.4787 5.4994 15.2472 5.76016 15.0784L9.55244 12.6134L7.9355 9.64901C7.78639 9.37513 7.70815 9.06831 7.70791 8.75647V5.66235C7.70791 4.83845 8.0352 4.0483 8.61778 3.46571C9.20037 2.88313 9.99052 2.55584 10.8144 2.55584C11.6383 2.55584 12.4285 2.88313 13.0111 3.46571C13.5936 4.0483 13.9209 4.83845 13.9209 5.66235V8.75647C13.9207 9.06831 13.8425 9.37513 13.6933 9.64901L12.0764 12.6134L15.8688 15.0784C16.1295 15.2472 16.3438 15.4787 16.4919 15.7518C16.6401 16.0248 16.7174 16.3306 16.7168 16.6412V18.7097Z" fill="#0723DF"/>
+                                            </svg>
+                                        </div>
+                                        <div class="service-card__item">
+                                            <div class="service-card__item-title">рейтинг</div>
+                                            <div class="service-card__item-num">4,6 из 5</div>
+                                        </div>
+                                    </div>
+                                    <div class="service-card__title">
+                                        Проверка <br> дизайн-проекта
+                                    </div>
+                                    <div class="service-card__price">от 5 000₽</div>
+                                    <div class="service-card__nav">
+                                        <button onclick="serviceDetail('serviceDetail5', true)" class="service-card__btn">
+                                            <span>Подробнее</span>
+                                            <i>
+                                                <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M0.900093 12.5445L6.58057 6.86407L0.900093 1.18359" stroke="white" stroke-width="1.42012" stroke-linecap="round" stroke-linejoin="round"/>
+                                                </svg>
+                                            </i>
+                                        </button>
+                                        <button class="service-card__more">
+                                            <svg width="35" height="35" viewBox="0 0 35 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M17.4445 18.5744C18.2288 18.5744 18.8647 17.9386 18.8647 17.1542C18.8647 16.3699 18.2288 15.7341 17.4445 15.7341C16.6602 15.7341 16.0244 16.3699 16.0244 17.1542C16.0244 17.9386 16.6602 18.5744 17.4445 18.5744Z" stroke="#AEAEAE" stroke-width="2.84024" stroke-linecap="round" stroke-linejoin="round"/>
+                                                <path d="M17.4445 8.63345C18.2288 8.63345 18.8647 7.99764 18.8647 7.21333C18.8647 6.42902 18.2288 5.79321 17.4445 5.79321C16.6602 5.79321 16.0244 6.42902 16.0244 7.21333C16.0244 7.99764 16.6602 8.63345 17.4445 8.63345Z" stroke="#AEAEAE" stroke-width="2.84024" stroke-linecap="round" stroke-linejoin="round"/>
+                                                <path d="M17.4445 28.5148C18.2288 28.5148 18.8647 27.879 18.8647 27.0947C18.8647 26.3104 18.2288 25.6746 17.4445 25.6746C16.6602 25.6746 16.0244 26.3104 16.0244 27.0947C16.0244 27.879 16.6602 28.5148 17.4445 28.5148Z" stroke="#AEAEAE" stroke-width="2.84024" stroke-linecap="round" stroke-linejoin="round"/>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="services__item">
+                            <div class="service-card">
+                                <div class="service-card__img">
+                                    <img src="img/service6.jpg" alt="">
+                                </div>
+                                <div class="service-card__right">
+                                    <div class="service-card__top">
+                                        <div class="service-card__item">
+                                            <div class="service-card__item-title">заказали</div>
+                                            <div class="service-card__item-num">73</div>
+                                            <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M16.5459 14.0366L13.7181 12.1985L14.7842 10.244C15.0328 9.78754 15.1632 9.27618 15.1635 8.75647V5.66235C15.1635 4.50889 14.7053 3.40268 13.8897 2.58706C13.0741 1.77144 11.9679 1.31323 10.8144 1.31323C9.66096 1.31323 8.55475 1.77144 7.73913 2.58706C6.92351 3.40268 6.4653 4.50889 6.4653 5.66235V8.75647C6.46569 9.27619 6.59608 9.78757 6.84461 10.244L7.91073 12.1985L5.0829 14.0366C4.6483 14.3179 4.2912 14.7037 4.04427 15.1588C3.79734 15.6138 3.66846 16.1235 3.66944 16.6412V19.9523H17.9594V16.6412C17.9604 16.1235 17.8315 15.6138 17.5846 15.1588C17.3376 14.7038 16.9805 14.3179 16.5459 14.0366ZM16.7168 18.7097H4.91204V16.6412C4.91146 16.3306 4.98879 16.0248 5.13696 15.7517C5.28513 15.4787 5.4994 15.2472 5.76016 15.0784L9.55244 12.6134L7.9355 9.64901C7.78639 9.37513 7.70815 9.06831 7.70791 8.75647V5.66235C7.70791 4.83845 8.0352 4.0483 8.61778 3.46571C9.20037 2.88313 9.99052 2.55584 10.8144 2.55584C11.6383 2.55584 12.4285 2.88313 13.0111 3.46571C13.5936 4.0483 13.9209 4.83845 13.9209 5.66235V8.75647C13.9207 9.06831 13.8425 9.37513 13.6933 9.64901L12.0764 12.6134L15.8688 15.0784C16.1295 15.2472 16.3438 15.4787 16.4919 15.7518C16.6401 16.0248 16.7174 16.3306 16.7168 16.6412V18.7097Z" fill="#0723DF"/>
+                                            </svg>
+                                        </div>
+                                        <div class="service-card__item">
+                                            <div class="service-card__item-title">рейтинг</div>
+                                            <div class="service-card__item-num">4,6 из 5</div>
+                                        </div>
+                                    </div>
+                                    <div class="service-card__title">
+                                        Проверка <br> сметы
+                                    </div>
+                                    <div class="service-card__price">от 5 000₽</div>
+                                    <div class="service-card__nav">
+                                        <button onclick="serviceDetail('serviceDetail6',true)" class="service-card__btn">
+                                            <span>Подробнее</span>
+                                            <i>
+                                                <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M0.900093 12.5445L6.58057 6.86407L0.900093 1.18359" stroke="white" stroke-width="1.42012" stroke-linecap="round" stroke-linejoin="round"/>
+                                                </svg>
+                                            </i>
+                                        </button>
+                                        <button class="service-card__more">
+                                            <svg width="35" height="35" viewBox="0 0 35 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M17.4445 18.5744C18.2288 18.5744 18.8647 17.9386 18.8647 17.1542C18.8647 16.3699 18.2288 15.7341 17.4445 15.7341C16.6602 15.7341 16.0244 16.3699 16.0244 17.1542C16.0244 17.9386 16.6602 18.5744 17.4445 18.5744Z" stroke="#AEAEAE" stroke-width="2.84024" stroke-linecap="round" stroke-linejoin="round"/>
+                                                <path d="M17.4445 8.63345C18.2288 8.63345 18.8647 7.99764 18.8647 7.21333C18.8647 6.42902 18.2288 5.79321 17.4445 5.79321C16.6602 5.79321 16.0244 6.42902 16.0244 7.21333C16.0244 7.99764 16.6602 8.63345 17.4445 8.63345Z" stroke="#AEAEAE" stroke-width="2.84024" stroke-linecap="round" stroke-linejoin="round"/>
+                                                <path d="M17.4445 28.5148C18.2288 28.5148 18.8647 27.879 18.8647 27.0947C18.8647 26.3104 18.2288 25.6746 17.4445 25.6746C16.6602 25.6746 16.0244 26.3104 16.0244 27.0947C16.0244 27.879 16.6602 28.5148 17.4445 28.5148Z" stroke="#AEAEAE" stroke-width="2.84024" stroke-linecap="round" stroke-linejoin="round"/>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="services__item">
+                            <div class="service-card">
+                                <div class="service-card__img">
+                                    <img src="img/service7.jpg" alt="">
+                                </div>
+                                <div class="service-card__right">
+                                    <div class="service-card__top">
+                                        <div class="service-card__item">
+                                            <div class="service-card__item-title">заказали</div>
+                                            <div class="service-card__item-num">73</div>
+                                            <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M16.5459 14.0366L13.7181 12.1985L14.7842 10.244C15.0328 9.78754 15.1632 9.27618 15.1635 8.75647V5.66235C15.1635 4.50889 14.7053 3.40268 13.8897 2.58706C13.0741 1.77144 11.9679 1.31323 10.8144 1.31323C9.66096 1.31323 8.55475 1.77144 7.73913 2.58706C6.92351 3.40268 6.4653 4.50889 6.4653 5.66235V8.75647C6.46569 9.27619 6.59608 9.78757 6.84461 10.244L7.91073 12.1985L5.0829 14.0366C4.6483 14.3179 4.2912 14.7037 4.04427 15.1588C3.79734 15.6138 3.66846 16.1235 3.66944 16.6412V19.9523H17.9594V16.6412C17.9604 16.1235 17.8315 15.6138 17.5846 15.1588C17.3376 14.7038 16.9805 14.3179 16.5459 14.0366ZM16.7168 18.7097H4.91204V16.6412C4.91146 16.3306 4.98879 16.0248 5.13696 15.7517C5.28513 15.4787 5.4994 15.2472 5.76016 15.0784L9.55244 12.6134L7.9355 9.64901C7.78639 9.37513 7.70815 9.06831 7.70791 8.75647V5.66235C7.70791 4.83845 8.0352 4.0483 8.61778 3.46571C9.20037 2.88313 9.99052 2.55584 10.8144 2.55584C11.6383 2.55584 12.4285 2.88313 13.0111 3.46571C13.5936 4.0483 13.9209 4.83845 13.9209 5.66235V8.75647C13.9207 9.06831 13.8425 9.37513 13.6933 9.64901L12.0764 12.6134L15.8688 15.0784C16.1295 15.2472 16.3438 15.4787 16.4919 15.7518C16.6401 16.0248 16.7174 16.3306 16.7168 16.6412V18.7097Z" fill="#0723DF"/>
+                                            </svg>
+                                        </div>
+                                        <div class="service-card__item">
+                                            <div class="service-card__item-title">рейтинг</div>
+                                            <div class="service-card__item-num">4,6 из 5</div>
+                                        </div>
+                                    </div>
+                                    <div class="service-card__title">
+                                        Тепловизионное <br> обследование
+                                    </div>
+                                    <div class="service-card__price">от 5 000₽</div>
+                                    <div class="service-card__nav">
+                                        <button onclick="serviceDetail('serviceDetail7',true)" class="service-card__btn">
+                                            <span>Подробнее</span>
+                                            <i>
+                                                <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M0.900093 12.5445L6.58057 6.86407L0.900093 1.18359" stroke="white" stroke-width="1.42012" stroke-linecap="round" stroke-linejoin="round"/>
+                                                </svg>
+                                            </i>
+                                        </button>
+                                        <button class="service-card__more">
+                                            <svg width="35" height="35" viewBox="0 0 35 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M17.4445 18.5744C18.2288 18.5744 18.8647 17.9386 18.8647 17.1542C18.8647 16.3699 18.2288 15.7341 17.4445 15.7341C16.6602 15.7341 16.0244 16.3699 16.0244 17.1542C16.0244 17.9386 16.6602 18.5744 17.4445 18.5744Z" stroke="#AEAEAE" stroke-width="2.84024" stroke-linecap="round" stroke-linejoin="round"/>
+                                                <path d="M17.4445 8.63345C18.2288 8.63345 18.8647 7.99764 18.8647 7.21333C18.8647 6.42902 18.2288 5.79321 17.4445 5.79321C16.6602 5.79321 16.0244 6.42902 16.0244 7.21333C16.0244 7.99764 16.6602 8.63345 17.4445 8.63345Z" stroke="#AEAEAE" stroke-width="2.84024" stroke-linecap="round" stroke-linejoin="round"/>
+                                                <path d="M17.4445 28.5148C18.2288 28.5148 18.8647 27.879 18.8647 27.0947C18.8647 26.3104 18.2288 25.6746 17.4445 25.6746C16.6602 25.6746 16.0244 26.3104 16.0244 27.0947C16.0244 27.879 16.6602 28.5148 17.4445 28.5148Z" stroke="#AEAEAE" stroke-width="2.84024" stroke-linecap="round" stroke-linejoin="round"/>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="serviceDetail5" class="service-detail">
+                        <div class="service-detail__mob">
+                            <div class="service-detail__mob-top">
+                                <button class="service-detail__close">
+                                    <img src="img/back.svg" alt="">
+                                </button>
+                                <button class="service-detail__close">
+                                    <img src="img/cancel.svg" alt="">
+                                </button>
+                                <div class="service-detail__mob-block">
+                                    <button class="service-detail__mob-btn btn btn-blue">Получить консультацию</button>
+                                </div>
+
+                            </div>
+                            <div class="service-detail__mob-title">Проверка дизайн-проекта</div>
+                        </div>
+                        <div class="service-detail__top">
+                            <div class="service-detail__left">
+                                <div class="service-detail__tabs">
+                                    <div class="service-detail__tab service-detail__tab--active" data-tab-path="1">Виды обмана</div>
+                                    <div class="service-detail__tab" data-tab-path="2">Этапы проверки</div>
+                                </div>
+                                <div class="service-detail__tab-content service-detail__tab-content--active" data-tab-path="1">
+                                    <div class="service-detail__items">
+                                        <div class="service-detail__item3">
+                                            <div class="service-detail__item3-num">01</div>
+                                            <div class="service-detail__item3-desc">Включение в cмету лишних работ</div>
+                                        </div>
+                                        <div class="service-detail__item3">
+                                            <div class="service-detail__item3-num">02</div>
+                                            <div class="service-detail__item3-desc">Завышение объемов, используемых материалов </div>
+                                        </div>
+                                        <div class="service-detail__item3">
+                                            <div class="service-detail__item3-num">03</div>
+                                            <div class="service-detail__item3-desc">Занижение стоимость для победы в тендере</div>
+                                        </div>
+                                        <div class="service-detail__item3">
+                                            <div class="service-detail__item3-num">04</div>
+                                            <div class="service-detail__item3-desc">Дублирование отдельными строчками работ с использованием разных наименований </div>
+                                        </div>
+                                        <div class="service-detail__item3">
+                                            <div class="service-detail__item3-num">05</div>
+                                            <div class="service-detail__item3-desc">Некорректное применение коэффициентов удорожания, тарифных сеток на заработную плату рабочим</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="service-detail__tab-content" data-tab-path="2">
+                                    <div class="service-detail__items service-detail__items4">
+                                        <div class="service-detail__item3">
+                                            <div class="service-detail__item3-num">01</div>
+                                            <div class="service-detail__item3-desc">Анализ сметной документации после подписания договора</div>
+                                        </div>
+                                        <div class="service-detail__item3">
+                                            <div class="service-detail__item3-num">02</div>
+                                            <div class="service-detail__item3-desc">Перерасчет стоимости строительства/ремонта в случае выявления ошибок</div>
+                                        </div>
+                                        <div class="service-detail__item3">
+                                            <div class="service-detail__item3-num">03</div>
+                                            <div class="service-detail__item3-desc">Защита выявленных ошибок перед подрядчиками</div>
+                                        </div>
+                                        <div class="service-detail__item3">
+                                            <div class="service-detail__item3-num">04</div>
+                                            <div class="service-detail__item3-desc">Выдача заключения о ходе проведенной проверки, с указанием суммы завышения или занижения стоимости и подробные рекомендации по корректировке</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="service-detail__right">
+                                <div class="service-detail__table">
+                                    <table>
+                                        <thead>
+                                            <tr>
+                                                <th>Услуга</th>
+                                                <th>Стоимость</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>Проверка сметы на материалы</td>
+                                                <td>
+                                                    <span class="blue-text">от 5 000 ₽</span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>Проверка сметы на услуги</td>
+                                                <td>
+                                                    <span class="blue-text">от 5 000 ₽</span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>Составление сметы на услуги</td>
+                                                <td>
+                                                    <span class="blue-text">от 15 000 ₽</span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>Составление сметы на материалы</td>
+                                                <td>
+                                                    <span class="blue-text">от 15 000 ₽</span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>Проверка проектных решений</td>
+                                                <td>
+                                                    <span class="blue-text">от 20 000 ₽</span>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="service-detail__bottom">
+                            <div class="service-detail__bottom-title">
+                                <span>Пригласите нашего инженера</span> для независимого надзора за качеством Вашего ремонта
+                            </div>
+                            <form action="" class="service-detail__form">
+                                <svg id="icon1" class="check-icon" width="48" height="48" viewBox="0 0 48 48" fill="none" stroke="#0723DF" stroke-width="3" stroke-dasharray="100">
+                                    <path class="icon-path" id="check" d="M 12,22 L 22,31 L 36,13"></path>
+                                </svg>
+                                <fieldset class='service-detail__form-group form-group'>
+                                    <input type='text' placeholder="телефон" />
+                                </fieldset>
+                                <fieldset class='service-detail__form-group form-group'>
+                                    <input type='text' placeholder="Ваше имя" />
+                                </fieldset>
+                                <button class="service-detail__btn btn btn-blue">Оставить заявку</button>
+                            </form>
+                        </div>
+                    </div>
+                    <div id="serviceDetail6" class="service-detail">
+                        <div class="service-detail__mob">
+                            <div class="service-detail__mob-top">
+                                <button class="service-detail__close">
+                                    <img src="img/back.svg" alt="">
+                                </button>
+                                <button class="service-detail__close">
+                                    <img src="img/cancel.svg" alt="">
+                                </button>
+                                <div class="service-detail__mob-block">
+                                    <button class="service-detail__mob-btn btn btn-blue">Получить консультацию</button>
+                                </div>
+
+                            </div>
+                            <div class="service-detail__mob-title">Проверка сметы</div>
+                        </div>
+                        <div class="service-detail__top">
+                            <div class="service-detail__left">
+                                <div class="service-detail__tabs">
+                                    <div class="service-detail__tab service-detail__tab--active" data-tab-path="1">Виды обмана</div>
+                                    <div class="service-detail__tab" data-tab-path="2">Этапы проверки</div>
+                                </div>
+                                <div class="service-detail__tab-content service-detail__tab-content--active" data-tab-path="1">
+                                    <div class="service-detail__items">
+                                        <div class="service-detail__item3">
+                                            <div class="service-detail__item3-num">01</div>
+                                            <div class="service-detail__item3-desc">Включение в cмету лишних работ</div>
+                                        </div>
+                                        <div class="service-detail__item3">
+                                            <div class="service-detail__item3-num">02</div>
+                                            <div class="service-detail__item3-desc">Завышение объемов, используемых материалов </div>
+                                        </div>
+                                        <div class="service-detail__item3">
+                                            <div class="service-detail__item3-num">03</div>
+                                            <div class="service-detail__item3-desc">Занижение стоимость для победы в тендере</div>
+                                        </div>
+                                        <div class="service-detail__item3">
+                                            <div class="service-detail__item3-num">04</div>
+                                            <div class="service-detail__item3-desc">Дублирование отдельными строчками работ с использованием разных наименований </div>
+                                        </div>
+                                        <div class="service-detail__item3">
+                                            <div class="service-detail__item3-num">05</div>
+                                            <div class="service-detail__item3-desc">Некорректное применение коэффициентов удорожания, тарифных сеток на заработную плату рабочим</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="service-detail__tab-content" data-tab-path="2">
+                                    <div class="service-detail__items service-detail__items4">
+                                        <div class="service-detail__item3">
+                                            <div class="service-detail__item3-num">01</div>
+                                            <div class="service-detail__item3-desc">Анализ сметной документации после подписания договора</div>
+                                        </div>
+                                        <div class="service-detail__item3">
+                                            <div class="service-detail__item3-num">02</div>
+                                            <div class="service-detail__item3-desc">Перерасчет стоимости строительства/ремонта в случае выявления ошибок</div>
+                                        </div>
+                                        <div class="service-detail__item3">
+                                            <div class="service-detail__item3-num">03</div>
+                                            <div class="service-detail__item3-desc">Защита выявленных ошибок перед подрядчиками</div>
+                                        </div>
+                                        <div class="service-detail__item3">
+                                            <div class="service-detail__item3-num">04</div>
+                                            <div class="service-detail__item3-desc">Выдача заключения о ходе проведенной проверки, с указанием суммы завышения или занижения стоимости и подробные рекомендации по корректировке</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="service-detail__right">
+                                <div class="service-detail__table">
+                                    <table>
+                                        <thead>
+                                            <tr>
+                                                <th>Услуга</th>
+                                                <th>Стоимость</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>Проверка сметы на материалы</td>
+                                                <td>
+                                                    <span class="blue-text">от 5 000 ₽</span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>Проверка сметы на услуги</td>
+                                                <td>
+                                                    <span class="blue-text">от 5 000 ₽</span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>Составление сметы на услуги</td>
+                                                <td>
+                                                    <span class="blue-text">от 15 000 ₽</span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>Составление сметы на материалы</td>
+                                                <td>
+                                                    <span class="blue-text">от 15 000 ₽</span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>Проверка проектных решений</td>
+                                                <td>
+                                                    <span class="blue-text">от 20 000 ₽</span>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="service-detail__bottom">
+                            <div class="service-detail__bottom-title">
+                                <span>Пригласите нашего инженера</span> для независимого надзора за качеством Вашего ремонта
+                            </div>
+                            <form action="" class="service-detail__form">
+                                <svg id="icon1" class="check-icon" width="48" height="48" viewBox="0 0 48 48" fill="none" stroke="#0723DF" stroke-width="3" stroke-dasharray="100">
+                                    <path class="icon-path" id="check" d="M 12,22 L 22,31 L 36,13"></path>
+                                </svg>
+                                <fieldset class='service-detail__form-group form-group'>
+                                    <input type='text' placeholder="телефон" />
+                                </fieldset>
+                                <fieldset class='service-detail__form-group form-group'>
+                                    <input type='text' placeholder="Ваше имя" />
+                                </fieldset>
+                                <button class="service-detail__btn btn btn-blue">Оставить заявку</button>
+                            </form>
+                        </div>
+                    </div>
+                    <div id="serviceDetail7" class="service-detail">
+                        <div class="service-detail__mob">
+                            <div class="service-detail__mob-top">
+                                <button class="service-detail__close">
+                                    <img src="img/back.svg" alt="">
+                                </button>
+                                <button class="service-detail__close">
+                                    <img src="img/cancel.svg" alt="">
+                                </button>
+                                <div class="service-detail__mob-block">
+                                    <button class="service-detail__mob-btn btn btn-blue">Получить консультацию</button>
+                                </div>
+                            </div>
+                            <div class="service-detail__mob-title">Тепловизионное обследование</div>
+                        </div>
+                        <div class="service-detail__top">
+                            <div class="service-detail__left">
+                                <div class="service-detail__tabs">
+                                    <div class="service-detail__tab service-detail__tab--active" data-tab-path="1">Результаты обследования</div>
+                                    <div class="service-detail__tab" data-tab-path="2">Зачем проводить ТО?</div>
+                                </div>
+                                <div class="service-detail__tab-content service-detail__tab-content--active" data-tab-path="1">
+                                    <div class="service-detail__text">
+                                        <div class="service-detail__text-title">Всего через несколько часов тепловизионного обследования квартир можно будет точно указать:</div>
+                                        <ul class="service-detail__list">
+                                            <li>Причину снижения температуры в помещении</li>
+                                            <li>Причину образования плесени и грибков</li>
+                                            <li>Причину образования сквозняков и высокой влажности</li>
+                                        </ul>
+                                        <div class="service-detail__text-hint blue-text">Услугу необходимо заказывать непосредственно перед началом ремонта</div>
+                                    </div>
+                                </div>
+                                <div class="service-detail__tab-content" data-tab-path="2">
+                                    <div class="service-detail__items">
+                                        <div class="service-detail__item">
+                                            <img src="img/search.svg" alt="">
+                                            <span>Обнаружим тепловые утечки</span>
+                                        </div>
+                                        <div class="service-detail__item">
+                                            <img src="img/thermometer-snowflake.svg" alt="">
+                                            <span>Установим причину низкой температуры в городской квартире</span>
+                                        </div>
+                                        <div class="service-detail__item">
+                                            <img src="img/thermometer-sun.svg" alt="">
+                                            <span>Выявим участки с недостаточной теплоизоляцией</span>
+                                        </div>
+                                        <div class="service-detail__item">
+                                            <img src="img/alert-triangle.svg" alt="">
+                                            <span>Обнаружим источник развития губительных грибков и плесени</span>
+                                        </div>
+                                        <div class="service-detail__item">
+                                            <img src="img/layout.svg" alt="">
+                                            <span>Определим качество установки оконных рам</span>
+                                        </div>
+                                        <div class="service-detail__item">
+                                            <img src="img/clipboard-check.svg" alt="">
+                                            <span>Проверим швы многоэтажных панельных конструкций</span>
+                                        </div>
+                                        <div class="service-detail__item">
+                                            <img src="img/home.svg" alt="">
+                                            <span>Оценим качество теплоизоляции крыши, стен, перекрытий</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="service-detail__right">
+                                <div class="service-detail__table">
+                                    <table>
+                                        <thead>
+                                            <tr>
+                                                <th>Площадь</th>
+                                                <th>Стоимость</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>до 50 м²</td>
+                                                <td>от 15 500 ₽</td>
+                                            </tr>
+                                            <tr>
+                                                <td>до 80 м²</td>
+                                                <td>от 17 000 ₽</td>
+                                            </tr>
+                                            <tr>
+                                                <td>до 100 м²</td>
+                                                <td>от 18 000 ₽</td>
+                                            </tr>
+                                            <tr>
+                                                <td>от 100 м²</td>
+                                                <td>от 31 500 ₽</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="service-detail__bottom">
+                            <div class="service-detail__bottom-title">
+                                <span>Пригласите нашего инженера</span> для независимого надзора за качеством Вашего ремонта
+                            </div>
+                            <form action="" class="service-detail__form">
+                                <svg id="icon1" class="check-icon" width="48" height="48" viewBox="0 0 48 48" fill="none" stroke="#0723DF" stroke-width="3" stroke-dasharray="100">
+                                    <path class="icon-path" id="check" d="M 12,22 L 22,31 L 36,13"></path>
+                                </svg>
+                                <fieldset class='service-detail__form-group form-group'>
+                                    <input type='text' placeholder="телефон" />
+                                </fieldset>
+                                <fieldset class='service-detail__form-group form-group'>
+                                    <input type='text' placeholder="Ваше имя" />
+                                </fieldset>
+                                <button class="service-detail__btn btn btn-blue">Оставить заявку</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="quality">
+                    <div class="quality__left">
+                        <div class="quality__title display2">
+                            Для точной проверки <br> качества работ мы используем <br>
+                            <span>специальное оборудование</span>
+                        </div>
+                        <div class="quality__right">
+                            <div class='swiper-container'>
+                                <div class='swiper-wrapper'>
+                                    <div onclick="modal('qualityModal1')" class="swiper-slide quality__item">
+                                        <div class="quality__item-img">
+                                            <img src="img/quality1.png" alt="">
+                                        </div>
+                                        <div class="quality__item-title">Гигрометр </div>
+                                    </div>
+                                    <div onclick="modal('qualityModal2')" class="swiper-slide quality__item">
+                                        <div class="quality__item-img">
+                                            <img src="img/quality2.png" alt="">
+                                        </div>
+                                        <div class="quality__item-title">Гигрометр </div>
+                                    </div>
+                                    <div onclick="modal('qualityModal3')" class="swiper-slide quality__item">
+                                        <div class="quality__item-img">
+                                            <img src="img/quality3.png" alt="">
+                                        </div>
+                                        <div class="quality__item-title"> Анимометр</div>
+                                    </div>
+                                    <div onclick="modal('qualityModal4')" class="swiper-slide quality__item">
+                                        <div class="quality__item-img">
+                                            <img src="img/quality4.png" alt="">
+                                        </div>
+                                        <div class="quality__item-title">Влагомер</div>
+                                    </div>
+                                    <div onclick="modal('qualityModal5')" class="swiper-slide quality__item">
+                                        <div class="quality__item-img">
+                                            <img src="img/quality5.png" alt="">
+                                        </div>
+                                        <div class="quality__item-title">Тестер разеток УЗО</div>
+                                    </div>
+                                    <div onclick="modal('qualityModal6')" class="swiper-slide quality__item">
+                                        <div class="quality__item-img">
+                                            <img src="img/quality6.png" alt="">
+                                        </div>
+                                        <div class="quality__item-title">Тепловизор</div>
+                                    </div>
+                                    <div onclick="modal('qualityModal7')" class="swiper-slide quality__item">
+                                        <div class="quality__item-img">
+                                            <img src="img/quality7.png" alt="">
+                                        </div>
+                                        <div class="quality__item-title">Гигрометр </div>
+                                    </div>
+                                    <div onclick="modal('qualityModal8')" class="swiper-slide quality__item">
+                                        <div class="quality__item-img">
+                                            <img src="img/quality8.png" alt="">
+                                        </div>
+                                        <div class="quality__item-title">Малярная лампа</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="quality__nav">
+                                <div class='quality__prev swiper-button-prev'>
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M15 18L9 12L15 6" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                                </div>
+                                <div class='quality__next swiper-button-next'>
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M9 18L15 12L9 6" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="quality__desc">
+                            <p>Мы изучаем каждый см вашей квартиры и исключаем оценку «на глаз», выявляя внешние и скрытые дефекты.</p>
+                            <p>Типичными примерами скрытых дефектов являются: негерметичная канализации, скрытая плесень гипсокартоном, затекание/протекание воды, влажность и осыпающаяся плитка, недочёты в конструкции и т.п</p>
+                            <p>Каждый инженер имеет комплект инструментов, стоимостью 457 000 руб., которое точно не предоставит застройщик или бригада рабочих</p>
+                        </div>
+                        <button class="quality__btn btn btn-blue">Заказать проверку  профессиональным инструментом</button>
+                    </div>
 
                 </div>
             </div>
@@ -575,8 +1765,371 @@
         </main>
 
 
+
     </div>
 
+    <div id="qualityModal1" class="modal">
+        <div class="modal__mob-top">
+            <button class="modal__close">
+                <img src="img/back.svg" alt="">
+            </button>
+            <button class="modal__close">
+                <img src="img/cancel.svg" alt="">
+            </button>
+        </div>
+        <div class="modal__title">Гигрометр</div>
+        <div class="modal__wrap">
+            <div class="modal__img">
+                <img src="img/quality1.png" alt="">
+            </div>
+            <div class="modal__text">
+                <div class="modal__text-group">
+                    <div class="modal__text-title">Описание задач, решаемых при использовании инструмента</div>
+                    <div class="modal__text-desc">Очевидно, что фабула имеет самодостаточный классический реализм. Художественное опосредование диссонирует первоначальный романтизм. Калокагатия, по определению, монотонно представляет собой конструктивный принцип артистизма, так Г.Корф
+                        формулирует собственную антитезу.</div>
+                </div>
+                <div class="modal__text-group">
+                    <div class="modal__text-title">Описание результата использования</div>
+                    <div class="modal__text-desc">Очевидно, что фабула имеет самодостаточный классический реализм. Художественное опосредование диссонирует первоначальный романтизм. Калокагатия, по определению, монотонно представляет собой конструктивный принцип артистизма, так Г.Корф
+                        формулирует собственную антитезу.</div>
+                </div>
+            </div>
+        </div>
+        <div class="modal__bottom">
+            <div class="modal__bottom-title">
+                <span>Пригласите нашего инженера</span> для независимого надзора за качеством Вашего ремонта
+            </div>
+            <form action="" class="modal__form">
+                <svg id="icon1" class="check-icon" width="48" height="48" viewBox="0 0 48 48" fill="none" stroke="#0723DF" stroke-width="3" stroke-dasharray="100">
+                    <path class="icon-path" id="check" d="M 12,22 L 22,31 L 36,13"></path>
+                </svg>
+                <fieldset class='modal__form-group form-group'>
+                    <input type='text' placeholder="телефон" />
+                </fieldset>
+                <fieldset class='modal__form-group form-group'>
+                    <input type='text' placeholder="Ваше имя" />
+                </fieldset>
+                <button class="modal__btn btn btn-blue">Оставить заявку</button>
+            </form>
+        </div>
+    </div>
+    <div id="qualityModal2" class="modal">
+        <div class="modal__mob-top">
+            <button class="modal__close">
+                <img src="img/back.svg" alt="">
+            </button>
+            <button class="modal__close">
+                <img src="img/cancel.svg" alt="">
+            </button>
+        </div>
+        <div class="modal__title">Гигрометр</div>
+        <div class="modal__wrap">
+            <div class="modal__img">
+                <img src="img/quality2.png" alt="">
+            </div>
+            <div class="modal__text">
+                <div class="modal__text-group">
+                    <div class="modal__text-title">Описание задач, решаемых при использовании инструмента</div>
+                    <div class="modal__text-desc">Очевидно, что фабула имеет самодостаточный классический реализм. Художественное опосредование диссонирует первоначальный романтизм. Калокагатия, по определению, монотонно представляет собой конструктивный принцип артистизма, так Г.Корф
+                        формулирует собственную антитезу.</div>
+                </div>
+                <div class="modal__text-group">
+                    <div class="modal__text-title">Описание результата использования</div>
+                    <div class="modal__text-desc">Очевидно, что фабула имеет самодостаточный классический реализм. Художественное опосредование диссонирует первоначальный романтизм. Калокагатия, по определению, монотонно представляет собой конструктивный принцип артистизма, так Г.Корф
+                        формулирует собственную антитезу.</div>
+                </div>
+            </div>
+        </div>
+        <div class="modal__bottom">
+            <div class="modal__bottom-title">
+                <span>Пригласите нашего инженера</span> для независимого надзора за качеством Вашего ремонта
+            </div>
+            <form action="" class="modal__form">
+                <svg id="icon1" class="check-icon" width="48" height="48" viewBox="0 0 48 48" fill="none" stroke="#0723DF" stroke-width="3" stroke-dasharray="100">
+                    <path class="icon-path" id="check" d="M 12,22 L 22,31 L 36,13"></path>
+                </svg>
+                <fieldset class='modal__form-group form-group'>
+                    <input type='text' placeholder="телефон" />
+                </fieldset>
+                <fieldset class='modal__form-group form-group'>
+                    <input type='text' placeholder="Ваше имя" />
+                </fieldset>
+                <button class="modal__btn btn btn-blue">Оставить заявку</button>
+            </form>
+        </div>
+    </div>
+    <div id="qualityModal3" class="modal">
+        <div class="modal__mob-top">
+            <button class="modal__close">
+                <img src="img/back.svg" alt="">
+            </button>
+            <button class="modal__close">
+                <img src="img/cancel.svg" alt="">
+            </button>
+        </div>
+        <div class="modal__title">Анимометр</div>
+        <div class="modal__wrap">
+            <div class="modal__img">
+                <img src="img/quality3.png" alt="">
+            </div>
+            <div class="modal__text">
+                <div class="modal__text-group">
+                    <div class="modal__text-title">Описание задач, решаемых при использовании инструмента</div>
+                    <div class="modal__text-desc">Очевидно, что фабула имеет самодостаточный классический реализм. Художественное опосредование диссонирует первоначальный романтизм. Калокагатия, по определению, монотонно представляет собой конструктивный принцип артистизма, так Г.Корф
+                        формулирует собственную антитезу.</div>
+                </div>
+                <div class="modal__text-group">
+                    <div class="modal__text-title">Описание результата использования</div>
+                    <div class="modal__text-desc">Очевидно, что фабула имеет самодостаточный классический реализм. Художественное опосредование диссонирует первоначальный романтизм. Калокагатия, по определению, монотонно представляет собой конструктивный принцип артистизма, так Г.Корф
+                        формулирует собственную антитезу.</div>
+                </div>
+            </div>
+        </div>
+        <div class="modal__bottom">
+            <div class="modal__bottom-title">
+                <span>Пригласите нашего инженера</span> для независимого надзора за качеством Вашего ремонта
+            </div>
+            <form action="" class="modal__form">
+                <svg id="icon1" class="check-icon" width="48" height="48" viewBox="0 0 48 48" fill="none" stroke="#0723DF" stroke-width="3" stroke-dasharray="100">
+                    <path class="icon-path" id="check" d="M 12,22 L 22,31 L 36,13"></path>
+                </svg>
+                <fieldset class='modal__form-group form-group'>
+                    <input type='text' placeholder="телефон" />
+                </fieldset>
+                <fieldset class='modal__form-group form-group'>
+                    <input type='text' placeholder="Ваше имя" />
+                </fieldset>
+                <button class="modal__btn btn btn-blue">Оставить заявку</button>
+            </form>
+        </div>
+    </div>
+    <div id="qualityModal4" class="modal">
+        <div class="modal__mob-top">
+            <button class="modal__close">
+                <img src="img/back.svg" alt="">
+            </button>
+            <button class="modal__close">
+                <img src="img/cancel.svg" alt="">
+            </button>
+        </div>
+        <div class="modal__title">Влагомер</div>
+        <div class="modal__wrap">
+            <div class="modal__img">
+                <img src="img/quality4.png" alt="">
+            </div>
+            <div class="modal__text">
+                <div class="modal__text-group">
+                    <div class="modal__text-title">Описание задач, решаемых при использовании инструмента</div>
+                    <div class="modal__text-desc">Очевидно, что фабула имеет самодостаточный классический реализм. Художественное опосредование диссонирует первоначальный романтизм. Калокагатия, по определению, монотонно представляет собой конструктивный принцип артистизма, так Г.Корф
+                        формулирует собственную антитезу.</div>
+                </div>
+                <div class="modal__text-group">
+                    <div class="modal__text-title">Описание результата использования</div>
+                    <div class="modal__text-desc">Очевидно, что фабула имеет самодостаточный классический реализм. Художественное опосредование диссонирует первоначальный романтизм. Калокагатия, по определению, монотонно представляет собой конструктивный принцип артистизма, так Г.Корф
+                        формулирует собственную антитезу.</div>
+                </div>
+            </div>
+        </div>
+        <div class="modal__bottom">
+            <div class="modal__bottom-title">
+                <span>Пригласите нашего инженера</span> для независимого надзора за качеством Вашего ремонта
+            </div>
+            <form action="" class="modal__form">
+                <svg id="icon1" class="check-icon" width="48" height="48" viewBox="0 0 48 48" fill="none" stroke="#0723DF" stroke-width="3" stroke-dasharray="100">
+                    <path class="icon-path" id="check" d="M 12,22 L 22,31 L 36,13"></path>
+                </svg>
+                <fieldset class='modal__form-group form-group'>
+                    <input type='text' placeholder="телефон" />
+                </fieldset>
+                <fieldset class='modal__form-group form-group'>
+                    <input type='text' placeholder="Ваше имя" />
+                </fieldset>
+                <button class="modal__btn btn btn-blue">Оставить заявку</button>
+            </form>
+        </div>
+    </div>
+    <div id="qualityModal5" class="modal">
+        <div class="modal__mob-top">
+            <button class="modal__close">
+                <img src="img/back.svg" alt="">
+            </button>
+            <button class="modal__close">
+                <img src="img/cancel.svg" alt="">
+            </button>
+        </div>
+        <div class="modal__title">Тестер разеток УЗО</div>
+        <div class="modal__wrap">
+            <div class="modal__img">
+                <img src="img/quality5.png" alt="">
+            </div>
+            <div class="modal__text">
+                <div class="modal__text-group">
+                    <div class="modal__text-title">Описание задач, решаемых при использовании инструмента</div>
+                    <div class="modal__text-desc">Очевидно, что фабула имеет самодостаточный классический реализм. Художественное опосредование диссонирует первоначальный романтизм. Калокагатия, по определению, монотонно представляет собой конструктивный принцип артистизма, так Г.Корф
+                        формулирует собственную антитезу.</div>
+                </div>
+                <div class="modal__text-group">
+                    <div class="modal__text-title">Описание результата использования</div>
+                    <div class="modal__text-desc">Очевидно, что фабула имеет самодостаточный классический реализм. Художественное опосредование диссонирует первоначальный романтизм. Калокагатия, по определению, монотонно представляет собой конструктивный принцип артистизма, так Г.Корф
+                        формулирует собственную антитезу.</div>
+                </div>
+            </div>
+        </div>
+        <div class="modal__bottom">
+            <div class="modal__bottom-title">
+                <span>Пригласите нашего инженера</span> для независимого надзора за качеством Вашего ремонта
+            </div>
+            <form action="" class="modal__form">
+                <svg id="icon1" class="check-icon" width="48" height="48" viewBox="0 0 48 48" fill="none" stroke="#0723DF" stroke-width="3" stroke-dasharray="100">
+                    <path class="icon-path" id="check" d="M 12,22 L 22,31 L 36,13"></path>
+                </svg>
+                <fieldset class='modal__form-group form-group'>
+                    <input type='text' placeholder="телефон" />
+                </fieldset>
+                <fieldset class='modal__form-group form-group'>
+                    <input type='text' placeholder="Ваше имя" />
+                </fieldset>
+                <button class="modal__btn btn btn-blue">Оставить заявку</button>
+            </form>
+        </div>
+    </div>
+    <div id="qualityModal6" class="modal">
+        <div class="modal__mob-top">
+            <button class="modal__close">
+                <img src="img/back.svg" alt="">
+            </button>
+            <button class="modal__close">
+                <img src="img/cancel.svg" alt="">
+            </button>
+        </div>
+        <div class="modal__title">Тепловизор</div>
+        <div class="modal__wrap">
+            <div class="modal__img">
+                <img src="img/quality6.png" alt="">
+            </div>
+            <div class="modal__text">
+                <div class="modal__text-group">
+                    <div class="modal__text-title">Описание задач, решаемых при использовании инструмента</div>
+                    <div class="modal__text-desc">Очевидно, что фабула имеет самодостаточный классический реализм. Художественное опосредование диссонирует первоначальный романтизм. Калокагатия, по определению, монотонно представляет собой конструктивный принцип артистизма, так Г.Корф
+                        формулирует собственную антитезу.</div>
+                </div>
+                <div class="modal__text-group">
+                    <div class="modal__text-title">Описание результата использования</div>
+                    <div class="modal__text-desc">Очевидно, что фабула имеет самодостаточный классический реализм. Художественное опосредование диссонирует первоначальный романтизм. Калокагатия, по определению, монотонно представляет собой конструктивный принцип артистизма, так Г.Корф
+                        формулирует собственную антитезу.</div>
+                </div>
+            </div>
+        </div>
+        <div class="modal__bottom">
+            <div class="modal__bottom-title">
+                <span>Пригласите нашего инженера</span> для независимого надзора за качеством Вашего ремонта
+            </div>
+            <form action="" class="modal__form">
+                <svg id="icon1" class="check-icon" width="48" height="48" viewBox="0 0 48 48" fill="none" stroke="#0723DF" stroke-width="3" stroke-dasharray="100">
+                    <path class="icon-path" id="check" d="M 12,22 L 22,31 L 36,13"></path>
+                </svg>
+                <fieldset class='modal__form-group form-group'>
+                    <input type='text' placeholder="телефон" />
+                </fieldset>
+                <fieldset class='modal__form-group form-group'>
+                    <input type='text' placeholder="Ваше имя" />
+                </fieldset>
+                <button class="modal__btn btn btn-blue">Оставить заявку</button>
+            </form>
+        </div>
+    </div>
+    <div id="qualityModal7" class="modal">
+        <div class="modal__mob-top">
+            <button class="modal__close">
+                <img src="img/back.svg" alt="">
+            </button>
+            <button class="modal__close">
+                <img src="img/cancel.svg" alt="">
+            </button>
+        </div>
+        <div class="modal__title">Гигрометр</div>
+        <div class="modal__wrap">
+            <div class="modal__img">
+                <img src="img/quality7.png" alt="">
+            </div>
+            <div class="modal__text">
+                <div class="modal__text-group">
+                    <div class="modal__text-title">Описание задач, решаемых при использовании инструмента</div>
+                    <div class="modal__text-desc">Очевидно, что фабула имеет самодостаточный классический реализм. Художественное опосредование диссонирует первоначальный романтизм. Калокагатия, по определению, монотонно представляет собой конструктивный принцип артистизма, так Г.Корф
+                        формулирует собственную антитезу.</div>
+                </div>
+                <div class="modal__text-group">
+                    <div class="modal__text-title">Описание результата использования</div>
+                    <div class="modal__text-desc">Очевидно, что фабула имеет самодостаточный классический реализм. Художественное опосредование диссонирует первоначальный романтизм. Калокагатия, по определению, монотонно представляет собой конструктивный принцип артистизма, так Г.Корф
+                        формулирует собственную антитезу.</div>
+                </div>
+            </div>
+        </div>
+        <div class="modal__bottom">
+            <div class="modal__bottom-title">
+                <span>Пригласите нашего инженера</span> для независимого надзора за качеством Вашего ремонта
+            </div>
+            <form action="" class="modal__form">
+                <svg id="icon1" class="check-icon" width="48" height="48" viewBox="0 0 48 48" fill="none" stroke="#0723DF" stroke-width="3" stroke-dasharray="100">
+                    <path class="icon-path" id="check" d="M 12,22 L 22,31 L 36,13"></path>
+                </svg>
+                <fieldset class='modal__form-group form-group'>
+                    <input type='text' placeholder="телефон" />
+                </fieldset>
+                <fieldset class='modal__form-group form-group'>
+                    <input type='text' placeholder="Ваше имя" />
+                </fieldset>
+                <button class="modal__btn btn btn-blue">Оставить заявку</button>
+            </form>
+        </div>
+    </div>
+    <div id="qualityModal8" class="modal">
+        <div class="modal__mob-top">
+            <button class="modal__close">
+                <img src="img/back.svg" alt="">
+            </button>
+            <button class="modal__close">
+                <img src="img/cancel.svg" alt="">
+            </button>
+        </div>
+        <div class="modal__title">Малярная лампа</div>
+        <div class="modal__wrap">
+            <div class="modal__img">
+                <img src="img/quality8.png" alt="">
+            </div>
+            <div class="modal__text">
+                <div class="modal__text-group">
+                    <div class="modal__text-title">Описание задач, решаемых при использовании инструмента</div>
+                    <div class="modal__text-desc">Очевидно, что фабула имеет самодостаточный классический реализм. Художественное опосредование диссонирует первоначальный романтизм. Калокагатия, по определению, монотонно представляет собой конструктивный принцип артистизма, так Г.Корф
+                        формулирует собственную антитезу.</div>
+                </div>
+                <div class="modal__text-group">
+                    <div class="modal__text-title">Описание результата использования</div>
+                    <div class="modal__text-desc">Очевидно, что фабула имеет самодостаточный классический реализм. Художественное опосредование диссонирует первоначальный романтизм. Калокагатия, по определению, монотонно представляет собой конструктивный принцип артистизма, так Г.Корф
+                        формулирует собственную антитезу.</div>
+                </div>
+            </div>
+        </div>
+        <div class="modal__bottom">
+            <div class="modal__bottom-title">
+                <span>Пригласите нашего инженера</span> для независимого надзора за качеством Вашего ремонта
+            </div>
+            <form action="" class="modal__form">
+                <svg id="icon1" class="check-icon" width="48" height="48" viewBox="0 0 48 48" fill="none" stroke="#0723DF" stroke-width="3" stroke-dasharray="100">
+                    <path class="icon-path" id="check" d="M 12,22 L 22,31 L 36,13"></path>
+                </svg>
+                <fieldset class='modal__form-group form-group'>
+                    <input type='text' placeholder="телефон" />
+                </fieldset>
+                <fieldset class='modal__form-group form-group'>
+                    <input type='text' placeholder="Ваше имя" />
+                </fieldset>
+                <button class="modal__btn btn btn-blue">Оставить заявку</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- <div class="backdrop"></div> -->
 
     <script src="js/jquery-1.11.3.min.js"></script>
     <script src="js/jquery.maskedinput.min.js"></script>

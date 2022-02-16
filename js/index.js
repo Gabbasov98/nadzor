@@ -31,16 +31,47 @@ function whenHelpSlider() {
     })
 }
 
+function qualitySlider() {
+    var swiper = new Swiper('.quality .swiper-container', {
+        slidesPerView: 'auto',
+        spaceBetween: 23,
+        navigation: {
+            nextEl: '.quality .swiper-button-next',
+            prevEl: '.quality .swiper-button-prev',
+        },
+        breakpoints: {
+
+        }
+    })
+}
+
 $(document).ready(function() {
     trustSlider()
 
     $(window).resize(function() {
+        if (window.innerWidth < 1255) {
+            $(".services3 .services__items").removeClass("services__items--dop")
+        } else {
+            $(".services3 .services__items").addClass("services__items--dop")
+        }
         if (window.innerWidth < 992) {
             whenHelpSlider()
+            qualitySlider()
         }
+        if (window.innerWidth < 768) {
+            $(".service-detail").removeClass("service-detail--active")
+        }
+
     });
+    if (window.innerWidth < 1255) {
+        $(".services__items").removeClass("services__items--dop")
+    }
     if (window.innerWidth < 992) {
         whenHelpSlider()
+        qualitySlider()
+    }
+    if (window.innerWidth < 768) {
+        $(".service-detail").removeClass("service-detail--active")
     }
 
     $(".select").niceSelect()
@@ -86,4 +117,72 @@ $(document).ready(function() {
 
     });
 
+
+    $(".service-detail__tab").click(function() {
+        let path = $(this).attr("data-tab-path")
+        let parentTabs = $(this).parent(".service-detail__tabs")
+        console.log($(parentTabs))
+        $(parentTabs).children(".service-detail__tab").removeClass("service-detail__tab--active")
+        $(this).addClass("service-detail__tab--active")
+        $(parentTabs).siblings(".service-detail__tab-content").removeClass("service-detail__tab-content--active")
+        $(parentTabs).siblings(`.service-detail__tab-content[data-tab-path='${path}']`).addClass("service-detail__tab-content--active")
+    })
+
+
+
+
 })
+
+
+function serviceDetail(id, dop = false) {
+    if (window.innerWidth > 768 && dop) {
+        $(".services3 .service-detail").removeClass("service-detail--active")
+    } else {
+        $(".service-detail").removeClass("service-detail--active")
+    }
+    $(`#${id}`).addClass("service-detail--active")
+
+
+
+    if (window.innerWidth < 768) {
+        $("body").append(`<div class="backdrop"></div>`)
+        $("body").addClass("fixed-body")
+    }
+    $(".backdrop").click(function() {
+        $(".service-detail").removeClass("service-detail--active")
+        $(".backdrop").remove()
+        $("body").removeClass("fixed-body")
+    })
+    $(".service-detail__close").click(function() {
+        $(".service-detail").removeClass("service-detail--active")
+        $(".backdrop").remove()
+        $("body").removeClass("fixed-body")
+    })
+
+
+    if (window.innerWidth > 768) {
+        let scrollTo = $(`#${id}`).offset().top;
+        $(document).scrollTop(scrollTo);
+    }
+
+}
+
+function modal(id) {
+
+    $("body").append(`<div class="backdrop"></div>`)
+    $("body").addClass("fixed-body")
+    $(".modal").removeClass("modal--active")
+    $(`#${id}`).addClass("modal--active")
+
+    $(".backdrop").click(function() {
+        $(".modal").removeClass("modal--active")
+        $(".backdrop").remove()
+        $("body").removeClass("fixed-body")
+    })
+    $(".modal__close").click(function() {
+        $(".modal").removeClass("modal--active")
+        $(".backdrop").remove()
+        $("body").removeClass("fixed-body")
+    })
+
+}
