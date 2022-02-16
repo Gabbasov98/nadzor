@@ -12,10 +12,20 @@ function trustSlider() {
             clickable: true,
         },
         breakpoints: {
-            // 320: {
-            //     slidesPerView: 2,
-            //     spaceBetween: 20
-            // },
+
+        }
+    })
+}
+
+function whenHelpSlider() {
+    var swiper = new Swiper('.when-help .swiper-container', {
+        slidesPerView: 'auto',
+        spaceBetween: -1,
+        navigation: {
+            nextEl: '.when-help .swiper-button-next',
+            prevEl: '.when-help .swiper-button-prev',
+        },
+        breakpoints: {
 
         }
     })
@@ -23,6 +33,15 @@ function trustSlider() {
 
 $(document).ready(function() {
     trustSlider()
+
+    $(window).resize(function() {
+        if (window.innerWidth < 992) {
+            whenHelpSlider()
+        }
+    });
+    if (window.innerWidth < 992) {
+        whenHelpSlider()
+    }
 
     $(".select").niceSelect()
     $('input[type="tel"]').mask('+7 (999) 999-9999', { placeholder: '+7 (   )    -    ' });
@@ -50,5 +69,21 @@ $(document).ready(function() {
     })
 
 
+
+
+    var $whatHelpElements = $('.when-help__item');
+    $(window).scroll(function() {
+        var scroll = $(window).scrollTop() + $(window).height();
+
+        $whatHelpElements.each(function(i, el) {
+            var offset = $(el).offset().top + $(el).height()
+            if (scroll > offset) {
+                $(el).addClass("when-help__item--animate")
+            } else {
+                $(el).removeClass("when-help__item--animate")
+            }
+        });
+
+    });
 
 })
