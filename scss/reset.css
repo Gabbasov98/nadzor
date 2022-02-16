@@ -1,21 +1,21 @@
 /*
 Error: Undefined variable: "$black".
-        on line 156 of D:\work\freelance\nadzor\scss\reset.scss
+        on line 115 of D:\work\freelance\nadzor\scss\reset.scss
 
-151: body {
-152:     font-family: 'Manrope', sans-serif;
-153:     font-weight: 400;
-154:     height: 100%;
-155:     overflow-x: hidden;
-156:     color: $black;
-157:     &.fixed-body {
-158:         overflow-y: hidden;
-159:         .main__slider-pag {
-160:             display: none;
-161:         }
+110: body {
+111:     font-family: 'Manrope', sans-serif;
+112:     font-weight: 400;
+113:     height: 100%;
+114:     overflow-x: hidden;
+115:     color: $black;
+116:     &.fixed-body {
+117:         overflow-y: hidden;
+118:         .main__slider-pag {
+119:             display: none;
+120:         }
 
 Backtrace:
-D:\work\freelance\nadzor\scss\reset.scss:156
+D:\work\freelance\nadzor\scss\reset.scss:115
 C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/script/tree/variable.rb:49:in `_perform'
 C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/script/tree/node.rb:50:in `perform'
 C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:402:in `visit_prop'
@@ -62,4 +62,4 @@ C:/Program Files (x86)/Koala/bin/sass:22:in `<main>'
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Undefined variable: \"$black\".\A         on line 156 of D:\work\freelance\nadzor\scss\reset.scss\A \A 151: body {\A 152:     font-family: 'Manrope', sans-serif;\A 153:     font-weight: 400;\A 154:     height: 100%;\A 155:     overflow-x: hidden;\A 156:     color: $black;\A 157:     &.fixed-body {\A 158:         overflow-y: hidden;\A 159:         .main__slider-pag {\A 160:             display: none;\A 161:         }"; }
+  content: "Error: Undefined variable: \"$black\".\A         on line 115 of D:\work\freelance\nadzor\scss\reset.scss\A \A 110: body {\A 111:     font-family: 'Manrope', sans-serif;\A 112:     font-weight: 400;\A 113:     height: 100%;\A 114:     overflow-x: hidden;\A 115:     color: $black;\A 116:     &.fixed-body {\A 117:         overflow-y: hidden;\A 118:         .main__slider-pag {\A 119:             display: none;\A 120:         }"; }

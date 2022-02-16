@@ -10,9 +10,9 @@ Error: Undefined variable: "$primary".
 64:     background-color: $primary;
 65:     color: #FFFFFF;
 66:     &:hover {
-67:         border-radius: 5px;
-68:         box-shadow: 0 4px 20px 0 rgba(0, 85, 255, 0.23);
-69:         -webkit-perspective: 2000px;
+67:         box-shadow: 0 4px 20px 0 rgba(0, 85, 255, 0.23);
+68:         -webkit-perspective: 2000px;
+69:         perspective: 2000px;
 
 Backtrace:
 D:\work\freelance\nadzor\scss\ux.scss:64
@@ -62,4 +62,4 @@ C:/Program Files (x86)/Koala/bin/sass:22:in `<main>'
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Undefined variable: \"$primary\".\A         on line 64 of D:\work\freelance\nadzor\scss\ux.scss\A \A 59:     font-size: 14px;\A 60:     height: 40px;\A 61: }\A 62: \A 63: .btn-blue {\A 64:     background-color: $primary;\A 65:     color: #FFFFFF;\A 66:     &:hover {\A 67:         border-radius: 5px;\A 68:         box-shadow: 0 4px 20px 0 rgba(0, 85, 255, 0.23);\A 69:         -webkit-perspective: 2000px;"; }
+  content: "Error: Undefined variable: \"$primary\".\A         on line 64 of D:\work\freelance\nadzor\scss\ux.scss\A \A 59:     font-size: 14px;\A 60:     height: 40px;\A 61: }\A 62: \A 63: .btn-blue {\A 64:     background-color: $primary;\A 65:     color: #FFFFFF;\A 66:     &:hover {\A 67:         box-shadow: 0 4px 20px 0 rgba(0, 85, 255, 0.23);\A 68:         -webkit-perspective: 2000px;\A 69:         perspective: 2000px;"; }
