@@ -39,24 +39,6 @@
             grid-template-columns: 1fr;
             margin-top: 30px;
             gap: 20px;
-            .projects-card {
-                border-radius: 5px;
-                &__desc {
-                    padding: 25px 15px 15px 15px;
-                }
-                &__badge {
-                    padding: 4px 8px;
-                    font-size: 10px;
-                }
-                &__text {
-                    font-size: 14px;
-                    margin-top: 15px;
-                }
-                &__violation {
-                    font-size: 12px;
-                    margin-top: 15px;
-                }
-            }
         }
         &__btn {
             width: 100px;

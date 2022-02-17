@@ -512,6 +512,10 @@ input[type="date"]:valid::before {
         line-height: 120%;
         color: #3B4146;
         margin-top: 20px;
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
     }
     &__violation {
         font-size: 18px;
@@ -529,6 +533,27 @@ input[type="date"]:valid::before {
         }
         &__violation {
             font-size: 16px;
+        }
+    }
+    @media screen and (max-width: 768px) {
+        border-radius: 5px;
+        &__text {
+            font-size: 14px;
+            margin-top: 14px;
+        }
+        &__img {
+            height: 200px;
+        }
+        &__badge {
+            padding: 4px 8px;
+            font-size: 10px;
+        }
+        &__desc {
+            padding: 24px 14px 14px;
+        }
+        &__violation {
+            font-size: 12px;
+            margin-top: 14px;
         }
     }
 }

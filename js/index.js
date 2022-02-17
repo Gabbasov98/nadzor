@@ -11,9 +11,17 @@ function trustSlider() {
             type: 'bullets',
             clickable: true,
         },
-        breakpoints: {
+    })
+}
 
-        }
+function projectSlider() {
+    var swiper = new Swiper('.index-projects .swiper-container', {
+        slidesPerView: 'auto',
+        spaceBetween: 20,
+        navigation: {
+            nextEl: '.index-projects .swiper-button-next',
+            prevEl: '.index-projects .swiper-button-prev',
+        },
     })
 }
 
@@ -25,9 +33,6 @@ function whenHelpSlider() {
             nextEl: '.when-help .swiper-button-next',
             prevEl: '.when-help .swiper-button-prev',
         },
-        breakpoints: {
-
-        }
     })
 }
 
@@ -39,14 +44,12 @@ function qualitySlider() {
             nextEl: '.quality .swiper-button-next',
             prevEl: '.quality .swiper-button-prev',
         },
-        breakpoints: {
-
-        }
     })
 }
 
 $(document).ready(function() {
     trustSlider()
+    projectSlider()
 
     $(window).resize(function() {
         if (window.innerWidth < 1255) {
@@ -226,7 +229,7 @@ function modal(id) {
 
 
 function consultModal(id, formInfo = null) {
-    console.log(id)
+    $(".modal").removeClass("modal--active")
     $("body").append(`<div class="backdrop"></div>`)
     $("body").addClass("fixed-body")
     $(".consult-modal").removeClass("consult-modal--active")
