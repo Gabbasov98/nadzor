@@ -1,4 +1,5 @@
 .articles {
+    padding-bottom: 95px;
     &__card-time {
         flex-wrap: wrap;
     }
@@ -130,8 +131,11 @@
             margin-top: 40px;
         }
         &-images {
+            width: calc(50% - 14px);
+            overflow: hidden;
             img {
                 width: 100%;
+                min-height: 100%;
             }
             &:not(:last-child) {
                 margin-right: 28px;
@@ -173,7 +177,6 @@
         line-height: 130%;
         padding-top: 30px;
         position: relative;
-        margin-top: 190px;
         margin-bottom: 70px;
         &::before {
             content: '';
@@ -191,8 +194,15 @@
     }
 }
 
+.articles-bottom {
+    padding: 95px 0 0;
+}
+
 @media screen and (max-width: 1255px) {
     .articles {
+        &__title {
+            font-size: 35px;
+        }
         &__item {
             &-text {
                 width: 100%;
@@ -232,6 +242,7 @@
 
 @media screen and (max-width: 992px) {
     .articles {
+        padding-bottom: 25px;
         &__breadcrumbs {
             margin-bottom: 0;
         }
@@ -357,8 +368,8 @@
             font-weight: 600;
             font-size: 18px;
             line-height: 25px;
-            margin-top: 50px;
             margin-bottom: 25px;
+            padding: 0;
             &::before {
                 display: none;
             }
@@ -378,5 +389,8 @@
         &-news__card {
             margin-top: 25px;
         }
+    }
+    .articles-bottom {
+        padding-top: 30px;
     }
 }

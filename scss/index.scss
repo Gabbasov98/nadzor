@@ -1091,6 +1091,15 @@
             height: 55px;
             margin-left: 5px;
         }
+        &__item {
+            &-content {
+                padding: 16px 100px 16px 16px;
+            }
+        }
+        &__nav {
+            right: 16px;
+            bottom: 25px;
+        }
     }
 }
 
@@ -1253,10 +1262,6 @@
             &-prof {
                 display: none;
             }
-        }
-        &__nav {
-            right: 16px;
-            bottom: 25px;
         }
     }
 }

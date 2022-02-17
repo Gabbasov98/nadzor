@@ -47,6 +47,28 @@ function qualitySlider() {
     })
 }
 
+function projectSlider2() {
+    var swiper = new Swiper('.project .swiper-container', {
+        spaceBetween: 0,
+        navigation: {
+            nextEl: '.project .swiper-button-next',
+            prevEl: '.project .swiper-button-prev',
+        },
+        breakpoints: {
+            320: {
+                slidesPerView: 1,
+                allowSlidePrev: true,
+                allowSlideNext: true,
+            },
+            992: {
+                slidesPerView: 'auto',
+                allowSlidePrev: false,
+                allowSlideNext: false,
+            },
+        }
+    })
+}
+
 function gallery() {
     var swiper = new Swiper(".workers .mySwiper", {
         spaceBetween: 0,
@@ -73,6 +95,16 @@ $(document).ready(function() {
     trustSlider()
     projectSlider()
     gallery()
+    projectSlider2()
+
+    $('.articles__link').click(function() {
+        var $temp = $("<input>");
+        $("body").append($temp);
+        $temp.val($('.articles__link').attr("data-link")).select();
+        document.execCommand("copy");
+        $temp.remove();
+        // $(this).text('Тест скопирован!');
+    });
 
     $(window).resize(function() {
         if (window.innerWidth < 1255) {
@@ -218,6 +250,24 @@ $(document).ready(function() {
         $(this).parent(".questions__item-show").siblings(".questions__item-hidden").slideToggle()
     })
 
+    $(".project__gallery").click(function() {
+        $("body").append(`<div class="backdrop"></div>`)
+        $(".gallery-modal").addClass("gallery-modal--active")
+        $("body").addClass("fixed-body")
+
+        $(".backdrop").click(function() {
+            $(".gallery-modal").removeClass("gallery-modal--active")
+            $(".backdrop").remove()
+            $("body").removeClass("fixed-body")
+        })
+    })
+
+
+    $(".gallery-modal__close").click(function() {
+        $(".gallery-modal").removeClass("gallery-modal--active")
+        $(".backdrop").remove()
+        $("body").removeClass("fixed-body")
+    })
 })
 
 

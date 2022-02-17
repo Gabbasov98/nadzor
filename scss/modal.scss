@@ -594,6 +594,10 @@
         &-desc {
             font-size: 12px;
             line-height: 150%;
+            p {
+                margin-bottom: 5px;
+                line-height: 150%;
+            }
         }
         &-title {
             font-weight: bold;
@@ -667,7 +671,7 @@
         transform: translate(0, 0);
         left: 0;
         width: 100%;
-        height: calc(100% - 108px);
+        height: calc(100vh - 108px);
         padding: 16px;
         display: flex;
         flex-direction: column;
@@ -709,7 +713,7 @@
         }
         &__text {
             width: 100%;
-            margin-top: 20px;
+            margin-top: 15px;
         }
         &__bottom {
             display: none;

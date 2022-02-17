@@ -8,7 +8,6 @@
     <link rel="stylesheet" href="css/jquery.fancybox.min.css">
     <link rel="stylesheet" href="css/nice-select.css">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="scss/articles.css">
     <title>Детальная новости</title>
 </head>
 
@@ -91,9 +90,10 @@
         </aside>
 
         <main class="content articles-main">
+            <div class="container">
 
-            <div class="articles">
-                <div class="container">
+
+                <div class="articles">
                     <div class='breadcrumbs articles__breadcrumbs'>
                         <div class='breadcrumbs__wrap'>
                             <a href="" class="breadcrumbs__item">Главная</a>
@@ -105,13 +105,13 @@
                         <div class="news__card-time articles__card-time">
                             <span class="news__date articles__date">25 Марта, 2021</span>
                             <span class="news__reading articles__reading">Читать 11 минут</span>
-                            <a class="articles__link" href="">
+                            <button class="articles__link" data-link="instagram.com">
                                 <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M6.66602 8.66672C6.95232 9.04948 7.31759 9.36618 7.73705 9.59535C8.15651 9.82452 8.62035 9.9608 9.09712 9.99495C9.57388 10.0291 10.0524 9.9603 10.5002 9.79325C10.9481 9.62619 11.3548 9.36477 11.6927 9.02672L13.6927 7.02672C14.2999 6.39805 14.6359 5.55604 14.6283 4.68205C14.6207 3.80806 14.2701 2.97202 13.6521 2.354C13.0341 1.73597 12.198 1.38541 11.324 1.37781C10.45 1.37022 9.60802 1.7062 8.97935 2.31339L7.83268 3.45339" stroke="#0723DF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                                     <path d="M9.33347 7.33332C9.04716 6.95057 8.68189 6.63387 8.26243 6.40469C7.84297 6.17552 7.37913 6.03924 6.90237 6.0051C6.4256 5.97095 5.94707 6.03974 5.49924 6.2068C5.0514 6.37386 4.64472 6.63527 4.3068 6.97332L2.3068 8.97332C1.69961 9.60199 1.36363 10.444 1.37122 11.318C1.37881 12.192 1.72938 13.028 2.3474 13.646C2.96543 14.2641 3.80147 14.6146 4.67546 14.6222C5.54945 14.6298 6.39146 14.2938 7.02013 13.6867L8.16013 12.5467" stroke="#0723DF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                                 </svg>
                                 <span>Поделиться ссылкой</span>
-                            </a>
+                            </button>
                         </div>
                         <h1 class="articles__title">Принято участие в совещании для операторов аэродромов Иркутской области в Восточно-Сибирском МТУ</h1>
                         <div class="articles__item">
@@ -132,11 +132,11 @@
                         <div class="articles__description">
                             <div class="articles__description-img">
                                 <svg width="44" height="38" viewBox="0 0 44 38" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <rect y="18.2065" width="18.9653" height="18.9653" fill="#C0C4CE"/>
-                                    <path d="M9.07524 0L0 18.2067H9.83385L18.2067 0H9.07524Z" fill="#C0C4CE"/>
-                                    <rect x="25.0332" y="18.2065" width="18.9653" height="18.9653" fill="#C0C4CE"/>
-                                    <path d="M34.1084 0L25.0332 18.2067H34.8671L43.2399 0H34.1084Z" fill="#C0C4CE"/>
-                                </svg>
+                                <rect y="18.2065" width="18.9653" height="18.9653" fill="#C0C4CE"/>
+                                <path d="M9.07524 0L0 18.2067H9.83385L18.2067 0H9.07524Z" fill="#C0C4CE"/>
+                                <rect x="25.0332" y="18.2065" width="18.9653" height="18.9653" fill="#C0C4CE"/>
+                                <path d="M34.1084 0L25.0332 18.2067H34.8671L43.2399 0H34.1084Z" fill="#C0C4CE"/>
+                            </svg>
                             </div>
                             <p class="articles__quote">По реализации ФЗ-135 «О внесении изменений в отдельные законодательные акты РФ в части совершенствования порядка установления и использования приаэродромной территории и санитарно-защитной зоне» в части проблем и вопросов реализации
                                 ФЗ-135
@@ -209,50 +209,78 @@
                                 </li>
                             </ol>
                         </div>
-                        <div class="articles__title-reading">Читайте также</div>
-                        <div class="articles__items">
-                            <div class="news-card articles-news__card">
-                                <div class="news-card__img articles__card-removal">
-                                    <img src="img/articles-img8.png" alt="">
-                                </div>
-                                <div class="news-card__desc articles-card__desc">
-                                    <div class="news-card__time">
-                                        <span class="news-card__date">25 Марта, 2021</span>
-                                        <span class="news-card__reading">Читать 11 минут</span>
-                                    </div>
-                                    <h2 class="news-card__title articles__card-title">Испытательная лаборатория провела работыпри эксплуатации аэродрома Омск (Центральный)</h2>
-                                    <a class="news-card__link articles__card-removal" href="">Читать полностью</a>
-                                </div>
+                    </div>
+
+                </div>
+                <div class="articles-bottom">
+                    <div class="articles__title-reading">Читайте также</div>
+                    <div class="articles__items">
+                        <div class="news-card articles-news__card">
+                            <div class="news-card__img articles__card-removal">
+                                <img src="img/articles-img8.png" alt="">
                             </div>
-                            <div class="news-card articles-news__card">
-                                <div class="news-card__img articles__card-removal">
-                                    <img src="img/articles-img9.png" alt="">
+                            <div class="news-card__desc articles-card__desc">
+                                <div class="news-card__time">
+                                    <span class="news-card__date">25 Марта, 2021</span>
+                                    <span class="news-card__reading">Читать 11 минут</span>
                                 </div>
-                                <div class="news-card__desc articles-card__desc">
-                                    <div class="news-card__time">
-                                        <span class="news-card__date">25 Марта, 2021</span>
-                                        <span class="news-card__reading">Читать 11 минут</span>
-                                    </div>
-                                    <h2 class="news-card__title articles__card-title">Испытательная лаборатория провела работыпри эксплуатации аэродрома Омск (Центральный)</h2>
-                                    <a class="news-card__link articles__card-removal" href="">Читать полностью</a>
-                                </div>
+                                <h2 class="news-card__title articles__card-title">Испытательная лаборатория провела работыпри эксплуатации аэродрома Омск (Центральный)</h2>
+                                <a class="news-card__link articles__card-removal" href="">Читать полностью</a>
                             </div>
-                            <div class="news-card articles-news__card">
-                                <div class="news-card__img articles__card-removal">
-                                    <img src="img/articles-img10.png" alt="">
+                        </div>
+                        <div class="news-card articles-news__card">
+                            <div class="news-card__img articles__card-removal">
+                                <img src="img/articles-img9.png" alt="">
+                            </div>
+                            <div class="news-card__desc articles-card__desc">
+                                <div class="news-card__time">
+                                    <span class="news-card__date">25 Марта, 2021</span>
+                                    <span class="news-card__reading">Читать 11 минут</span>
                                 </div>
-                                <div class="news-card__desc articles-card__desc">
-                                    <div class="news-card__time">
-                                        <span class="news-card__date">25 Марта, 2021</span>
-                                        <span class="news-card__reading">Читать 11 минут</span>
-                                    </div>
-                                    <h2 class="news-card__title articles__card-title">Испытательная лаборатория провела работыпри эксплуатации аэродрома Омск (Центральный)</h2>
-                                    <a class="news-card__link articles__card-removal" href="">Читать полностью</a>
+                                <h2 class="news-card__title articles__card-title">Испытательная лаборатория провела работыпри эксплуатации аэродрома Омск (Центральный)</h2>
+                                <a class="news-card__link articles__card-removal" href="">Читать полностью</a>
+                            </div>
+                        </div>
+                        <div class="news-card articles-news__card">
+                            <div class="news-card__img articles__card-removal">
+                                <img src="img/articles-img10.png" alt="">
+                            </div>
+                            <div class="news-card__desc articles-card__desc">
+                                <div class="news-card__time">
+                                    <span class="news-card__date">25 Марта, 2021</span>
+                                    <span class="news-card__reading">Читать 11 минут</span>
                                 </div>
+                                <h2 class="news-card__title articles__card-title">Испытательная лаборатория провела работыпри эксплуатации аэродрома Омск (Центральный)</h2>
+                                <a class="news-card__link articles__card-removal" href="">Читать полностью</a>
                             </div>
                         </div>
                     </div>
                 </div>
+
+                <div class="consultation">
+                    <div class="consultation__left">
+                        <div class="consultation__title display2">Получить бесплатную консультацию инженера</div>
+                        <form class="consultation__form">
+                            <form action="" class="consultation__form">
+                                <fieldset class='consultation__form-group form-group'>
+                                    <input type='text' placeholder="телефон" />
+                                </fieldset>
+                                <fieldset class='consultation__form-group form-group'>
+                                    <input type='text' placeholder="Имя" />
+                                </fieldset>
+                                <button class="consultation__btn btn btn-blue">Подробнее</button>
+                            </form>
+
+                            <div class="consultation__text">
+                                Нажимая на кнопку, вы даете согласие на обработку своих персональных данных и соглашаетесь с <a href="">Политикой конфиденциальности</a>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="consultation__right">
+                        <img src="img/consultation-img.png" alt="">
+                    </div>
+                </div>
+
             </div>
 
         </main>
@@ -260,6 +288,66 @@
 
     </div>
 
+    <div id="consultModal1" class="consult-modal">
+        <div class="consult-modal__mob-top">
+            <button class="consult-modal__close">
+                <img src="img/back.svg" alt="">
+            </button>
+            <button class="consult-modal__close consult-modal__close2">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M5 5L19 19" stroke="#0723DF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M5 19L19 5" stroke="#0723DF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </button>
+        </div>
+        <div class="consult-modal__img">
+            <img src="img/modal.jpg" alt="">
+        </div>
+        <div class="consult-modal__title">Получить бесплатную <br> консультацию инженера</div>
+        <form action="" class="consult-modal__form">
+            <fieldset class='consult-modal__form-group form-group'>
+                <input type='text' placeholder="телефон" />
+            </fieldset>
+            <fieldset class='consult-modal__form-group form-group'>
+                <input type='text' placeholder="Имя" />
+            </fieldset>
+            <button class="consult-modal__form-btn btn btn-blue">Отправить</button>
+            <div class="consult-modal__hint">Нажимая на кнопку, вы даете согласие на обработку своих персональных данных и <a href="">соглашаетесь с Политикой конфиденциальности</a></div>
+        </form>
+    </div>
+    <div id="consultModal2" class="consult-modal">
+        <div class="consult-modal__mob-top">
+            <button class="consult-modal__close">
+                <img src="img/back.svg" alt="">
+            </button>
+            <button class="consult-modal__close consult-modal__close2">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M5 5L19 19" stroke="#95A6BF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M5 19L19 5" stroke="#95A6BF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </button>
+        </div>
+        <div class="consult-modal__title">
+            <p><span>Спасибо за обращение</span> <br> в международную инжиниринговую компанию «Атлант» </p>
+            <p>Наш инжерер свяжется с вами <span> <br>в течении 15 минут</span></p>
+        </div>
+
+        <div class="consult-modal__news">
+            <div class="news-card">
+                <div class="news-card__img">
+                    <img src="img/news2.png" alt="">
+                </div>
+                <div class="news-card__desc">
+                    <div class="news-card__time">
+                        <span class="news-card__date">25 Марта, 2021</span>
+                        <span class="news-card__reading">Читать 11 минут</span>
+                    </div>
+                    <h2 class="news-card__title">Испытательная лаборатория ООО «ЦЭБ ГА» провела работы по измерению…</h2>
+                    <a class="news-card__link" href="">Читать полностью</a>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <script src="js/jquery-1.11.3.min.js"></script>
     <script src="js/jquery.maskedinput.min.js"></script>
