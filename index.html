@@ -120,7 +120,7 @@
                             </svg>
                             <span>Мы обеспечим вам комфортное управление ремонтом из любой точки мира</span>
                         </div>
-                        <button class="main__btn btn btn-blue">Поставить задачу</button>
+                        <button onclick="consultModal('consultModal1', {title:'Технический надзор за ремонтом квартир',button: 'Поставить задачу'})" class="main__btn btn btn-blue">Поставить задачу</button>
                     </div>
                     <div class="main__info caveat">
                         <div class="main__info-title">по 370</div>
@@ -1756,9 +1756,226 @@
                             <p>Типичными примерами скрытых дефектов являются: негерметичная канализации, скрытая плесень гипсокартоном, затекание/протекание воды, влажность и осыпающаяся плитка, недочёты в конструкции и т.п</p>
                             <p>Каждый инженер имеет комплект инструментов, стоимостью 457 000 руб., которое точно не предоставит застройщик или бригада рабочих</p>
                         </div>
-                        <button class="quality__btn btn btn-blue">Заказать проверку  профессиональным инструментом</button>
+                        <button onclick="consultModal('consultModal1', {title:'Для точной проверки качества работ мы используем специальное оборудование',button: 'Заказать проверку  профессиональным инструментом'})" class="quality__btn btn btn-blue">Заказать проверку  профессиональным инструментом</button>
                     </div>
 
+                </div>
+
+                <div class="types">
+                    <div class="types__title display2">Виды проверяемых работ</div>
+                    <div class="types__tabs">
+                        <div class="types__tab types__tab--active" data-tab-path="1">Электрика</div>
+                        <div class="types__tab" data-tab-path="2">Вентиляция</div>
+                        <div class="types__tab" data-tab-path="3">Водоснабжение</div>
+                        <div class="types__tab" data-tab-path="4">Отопление</div>
+                        <div class="types__tab" data-tab-path="5">Канализация</div>
+                        <div class="types__tab" data-tab-path="6">Окна</div>
+                        <div class="types__tab" data-tab-path="7">Двери</div>
+                        <div class="types__tab" data-tab-path="8">Полы, стены, потолки</div>
+                    </div>
+                    <div class="types__area">
+                        <div class="types__area-item">
+                            <img src="img/types1.jpg" alt="">
+                        </div>
+                        <div class="types__area-item">
+                            <img src="img/types2.jpg" alt="">
+                        </div>
+                        <div class="types__group types__group1">
+                            <div class="types__group-point" data-tab-path="1"></div>
+                            <div class="types__group-modal types__group-modal1 types__group-modal--active" data-tab-path="1">
+                                <div class="types__group-title">Электрика</div>
+                                <div class="types__group-items">
+                                    <div class="types__group-item">
+                                        <span class="blue-text">01.</span> Контроль за распределением электроточек согласно проекту.
+                                    </div>
+                                    <div class="types__group-item">
+                                        <span class="blue-text">02.</span> Проверяем наличие напряжения и заземления во всех электроточках.
+                                    </div>
+                                    <div class="types__group-item">
+                                        <span class="blue-text">03.</span> Проверяем правильность монтажа проводки, распределительного узла, УЗО и автоматов на предмет работоспособности.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="types__group types__group2">
+                            <div class="types__group-point" data-tab-path="2"></div>
+                            <div class="types__group-modal types__group-modal2" data-tab-path="2">
+                                <div class="types__group-title">Вентиляция</div>
+                                <div class="types__group-items">
+                                    <div class="types__group-item">
+                                        <span class="blue-text">01.</span> Контроль монтажа согласно проектной документации
+                                    </div>
+                                    <div class="types__group-item">
+                                        <span class="blue-text">02.</span> Контроль правильного разведения по объекту. Проверка воздухообмена в помещение, наличие или отсутствие тяги, обратная тяга.
+                                    </div>
+                                    <div class="types__group-item">
+                                        <span class="blue-text">03.</span> Контроль за расходом материалов
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="types__group types__group3">
+                            <div class="types__group-point" data-tab-path="3"></div>
+                            <div class="types__group-modal types__group-modal3" data-tab-path="3">
+                                <div class="types__group-title">Водоснабжение</div>
+                                <div class="types__group-items">
+                                    <div class="types__group-item">
+                                        <span class="blue-text">01.</span> Следим за правильностью выполнения дренажных работ и работ по понижению уровня грунтовых вод, участка
+                                    </div>
+                                    <div class="types__group-item">
+                                        <span class="blue-text">02.</span> Контроль соответствующего разведения согласно проекту. Проверяем на наличие и функциональность запорной арматуры, кранов терморегуляторов, фильтров, теплоизоляции.
+                                    </div>
+                                    <div class="types__group-item">
+                                        <span class="blue-text">03.</span> Проверяем на отсутствие течи и контроль за установкой счетчиков потребления воды, опломбировка.
+                                    </div>
+                                    <div class="types__group-item">
+                                        <span class="blue-text">04.</span> Проверяем правильность установки сантехнического оборудования
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="types__group types__group4">
+                            <div class="types__group-point" data-tab-path="4"></div>
+                            <div class="types__group-modal types__group-modal4" data-tab-path="4">
+                                <div class="types__group-title">Отопление</div>
+                                <div class="types__group-items">
+                                    <div class="types__group-item">
+                                        <span class="blue-text">01.</span> Сопровождаем демонтажные/монтажные работы при внесении изменений.
+                                    </div>
+                                    <div class="types__group-item">
+                                        <span class="blue-text">02.</span> Проверяем на наличие течи в местах соединения, скрытых повреждений, проверка функционирования запорной и регулировочной арматуры, качество крепления радиаторов, отклонение от вертикали
+                                        и горизонтали
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="types__group types__group5">
+                            <div class="types__group-point" data-tab-path="5"></div>
+                            <div class="types__group-modal types__group-modal5" data-tab-path="5">
+                                <div class="types__group-title">Канализация</div>
+                                <div class="types__group-items">
+                                    <div class="types__group-item">
+                                        <span class="blue-text">01.</span> Контролируем разведение, монтаж и соответствие уклона системы при разведении канализации по объекту
+                                    </div>
+                                    <div class="types__group-item">
+                                        <span class="blue-text">02.</span> Проверяем высоту установки тройников канализации, наличие заглушек и течи
+                                    </div>
+                                    <div class="types__group-item">
+                                        <span class="blue-text">03.</span> Проверка установки сантехнического оборудования
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="types__group types__group6">
+                            <div class="types__group-point" data-tab-path="6"></div>
+                            <div class="types__group-modal types__group-modal6" data-tab-path="6">
+                                <div class="types__group-title">Окна</div>
+                                <div class="types__group-items">
+                                    <div class="types__group-item">
+                                        <span class="blue-text">01.</span> Контролируем проведения работ по отделки откосов.
+                                    </div>
+                                    <div class="types__group-item">
+                                        <span class="blue-text">02.</span> Проверяем целостность рам и створок на наличие повреждение и несоответствие в монтаже.
+                                    </div>
+                                    <div class="types__group-item">
+                                        <span class="blue-text">03.</span> Проверяем стеклопакетов на предмет повреждения и работоспособности фурнитуры.
+                                    </div>
+                                    <div class="types__group-item">
+                                        <span class="blue-text">04.</span> Проверяем на отклонение по вертикали/горизонтали, проверка монтажного шва на отсутствие «мостиков холода», наличие фасонных частей (заглушки петель, подоконников).
+                                    </div>
+                                    <div class="types__group-item">
+                                        <span class="blue-text">05.</span> Проверка уплотнителей и притвора
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="types__group types__group7">
+                            <div class="types__group-point" data-tab-path="7"></div>
+                            <div class="types__group-modal types__group-modal7" data-tab-path="7">
+                                <div class="types__group-title">Двери</div>
+                                <div class="types__group-items">
+                                    <div class="types__group-item">
+                                        <span class="blue-text">01.</span> Проверяем на соответствие вертикали/горизонтали, контролируем за установкой дверной фурнитуры.
+                                    </div>
+                                    <div class="types__group-item">
+                                        <span class="blue-text">02.</span> Проверяем на отсутствие повреждений дверного полотна, коробки, наличие фасонных частей (заглушки, наличники, декоративные элементы)
+                                    </div>
+                                    <div class="types__group-item">
+                                        <span class="blue-text">03.</span> Проверка уплотнителей
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="types__group types__group8">
+                            <div class="types__group-point" data-tab-path="8"></div>
+                            <div class="types__group-modal types__group-modal8" data-tab-path="8">
+                                <div class="types__group-title">Полы</div>
+                                <div class="types__group-items">
+                                    <div class="types__group-item">
+                                        <span class="blue-text">01.</span> Контролируем выставление маяков, грунтование, оштукатуривание, шпатлевание, заливку стяжки, установку демпферной ленты. Контролируем соблюдение технологии и процессов.
+                                    </div>
+                                    <div class="types__group-item">
+                                        <span class="blue-text">02.</span> Проверяем на наличие трещин, наплывов, неровностей, пустот, демонтаж маяков, проверка на отклонение по вертикали/горизонтали, проверка углов, проверка дверных проемов по размерам,
+                                        а также по вертикали/горизонтали
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="types-mob">
+                    <div class="types-mob__title display2">Технический надзор <br> за ремонтом квартиры </div>
+                    <div class="types-mob__wrap">
+                        <div class="types-mob__item" onclick="modal('mobTypesModal')">
+                            <div class="types-mob__item-icon">
+                                <img src="img/layout-white.svg" alt="">
+                            </div>
+                            <div class="types-mob__item-title">Окна</div>
+                        </div>
+                        <div class="types-mob__item" onclick="modal('mobTypesModal')">
+                            <div class="types-mob__item-icon">
+                                <img src="img/wind.svg" alt="">
+                            </div>
+                            <div class="types-mob__item-title">Вентиляция</div>
+                        </div>
+                        <div class="types-mob__item" onclick="modal('mobTypesModal')">
+                            <div class="types-mob__item-icon">
+                                <img src="img/droplets.svg" alt="">
+                            </div>
+                            <div class="types-mob__item-title">Водоснабжение</div>
+                        </div>
+                        <div class="types-mob__item" onclick="modal('mobTypesModal')">
+                            <div class="types-mob__item-icon">
+                                <img src="img/shovel.svg" alt="">
+                            </div>
+                            <div class="types-mob__item-title">Канализация</div>
+                        </div>
+                        <div class="types-mob__item" onclick="modal('mobTypesModal')">
+                            <div class="types-mob__item-icon">
+                                <img src="img/log-in.svg" alt="">
+                            </div>
+                            <div class="types-mob__item-title">Двери</div>
+                        </div>
+                        <div class="types-mob__item" onclick="modal('mobTypesModal')">
+                            <div class="types-mob__item-icon">
+                                <img src="img/sun.svg" alt="">
+                            </div>
+                            <div class="types-mob__item-title">Отопление</div>
+                        </div>
+                        <div class="types-mob__item" onclick="modal('mobTypesModal')">
+                            <div class="types-mob__item-icon">
+                                <img src="img/home-white.svg" alt="">
+                            </div>
+                            <div class="types-mob__item-title">Полы/стены/потолки</div>
+                        </div>
+                        <div class="types-mob__item" onclick="modal('mobTypesModal')">
+                            <div class="types-mob__item-icon">
+                                <img src="img/lightbulb.svg" alt="">
+                            </div>
+                            <div class="types-mob__item-title">Электрика</div>
+                        </div>
+                    </div>
                 </div>
             </div>
 
@@ -2127,6 +2344,99 @@
                 <button class="modal__btn btn btn-blue">Оставить заявку</button>
             </form>
         </div>
+    </div>
+    <div id="consultModal1" class="consult-modal">
+        <div class="consult-modal__mob-top">
+            <button class="consult-modal__close">
+                <img src="img/back.svg" alt="">
+            </button>
+            <button class="consult-modal__close consult-modal__close2">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M5 5L19 19" stroke="#0723DF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M5 19L19 5" stroke="#0723DF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </button>
+        </div>
+        <div class="consult-modal__img">
+            <img src="img/modal.jpg" alt="">
+        </div>
+        <div class="consult-modal__title">Получить бесплатную <br> консультацию инженера</div>
+        <form action="" class="consult-modal__form">
+            <fieldset class='consult-modal__form-group form-group'>
+                <input type='text' placeholder="телефон" />
+            </fieldset>
+            <fieldset class='consult-modal__form-group form-group'>
+                <input type='text' placeholder="Имя" />
+            </fieldset>
+            <button class="consult-modal__form-btn btn btn-blue">Отправить</button>
+            <div class="consult-modal__hint">Нажимая на кнопку, вы даете согласие на обработку своих персональных данных и <a href="">соглашаетесь с Политикой конфиденциальности</a></div>
+        </form>
+    </div>
+    <div id="consultModal2" class="consult-modal">
+        <div class="consult-modal__mob-top">
+            <button class="consult-modal__close">
+                <img src="img/back.svg" alt="">
+            </button>
+            <button class="consult-modal__close consult-modal__close2">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M5 5L19 19" stroke="#95A6BF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M5 19L19 5" stroke="#95A6BF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </button>
+        </div>
+        <div class="consult-modal__title">
+            <p><span>Спасибо за обращение</span> <br> в международную инжиниринговую компанию «Атлант» </p>
+            <p>Наш инжерер свяжется с вами <span> <br>в течении 15 минут</span></p>
+        </div>
+
+        <div class="consult-modal__news">
+            <div class="news-card">
+                <div class="news-card__img">
+                    <img src="img/news2.png" alt="">
+                </div>
+                <div class="news-card__desc">
+                    <div class="news-card__time">
+                        <span class="news-card__date">25 Марта, 2021</span>
+                        <span class="news-card__reading">Читать 11 минут</span>
+                    </div>
+                    <h2 class="news-card__title">Испытательная лаборатория ООО «ЦЭБ ГА» провела работы по измерению…</h2>
+                    <a class="news-card__link" href="">Читать полностью</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="mobTypesModal" class="types-modal modal">
+        <div class="modal__mob-top">
+            <button class="modal__close">
+                <img src="img/back.svg" alt="">
+            </button>
+            <button class="modal__close">
+                <img src="img/cancel.svg" alt="">
+            </button>
+        </div>
+        <div class="modal__title">Электрика</div>
+        <div class="types-modal__img">
+            <img src="img/quality1.png" alt="">
+        </div>
+        <div class="types-modal__text">
+            <div class="types-modal__text-title">Что мы проверяем?</div>
+            <div class="types-modal__list">
+                <div class="types-modal__item">
+                    <span>1.</span>
+                    <span>Контроль за распределением электроточек согласно проекту.</span>
+                </div>
+                <div class="types-modal__item">
+                    <span>2.</span>
+                    <span>Проверяем наличие напряжения и заземления во всех электроточках.</span>
+                </div>
+                <div class="types-modal__item">
+                    <span>3.</span>
+                    <span>Проверяем правильность монтажа проводки, распределительного узла, УЗО и автоматов на предмет работоспособности.</span>
+                </div>
+            </div>
+
+        </div>
+        <button class="types-modal__btn btn btn-blue">Заказать проверку  профессиональным инструментом</button>
     </div>
 
     <!-- <div class="backdrop"></div> -->

@@ -93,10 +93,13 @@ $(document).ready(function() {
 
     $(".tab").click(function() {
         let path = $(this).attr("data-tab-path")
-        $(".tab").removeClass("tab--active")
+        let parentTabs = $(this).parent(".tabs")
+        $(parentTabs).children(".tab").removeClass("tab--active")
         $(this).addClass("tab--active")
-        $(".tab__content").removeClass("tab__content--active")
-        $(`.tab__content[data-tab-path="${path}"]`).addClass("tab__content--active")
+        $(parentTabs).siblings(".tab__content").removeClass("tab__content--active")
+        $(parentTabs).siblings(`.tab__content[data-tab-path='${path}']`).addClass("tab__content--active")
+
+        $('.tabs').animate({ scrollLeft: $(this).position().left }, 500);
     })
 
 
@@ -128,8 +131,40 @@ $(document).ready(function() {
         $(parentTabs).siblings(`.service-detail__tab-content[data-tab-path='${path}']`).addClass("service-detail__tab-content--active")
     })
 
+    $(".service-detail__btn").click(function(e) {
+        e.preventDefault();
+        consultModal("consultModal2")
+    })
+    $(".consult-modal__form-btn").click(function(e) {
+        e.preventDefault();
+        consultModal("consultModal2")
+    })
 
+    $(".types__tab").click(function() {
+        let path = $(this).attr("data-tab-path")
+        $(".types__tab").removeClass("types__tab--active")
+        $(this).addClass("types__tab--active")
+        $(".types__group-modal").removeClass("types__group-modal--active")
+        $(`.types__group-modal[data-tab-path="${path}"]`).addClass("types__group-modal--active")
+    })
 
+    $(".types__group-point").click(function() {
+        let path = $(this).attr("data-tab-path")
+        $(".types__group-point").removeClass("types__group-point--active")
+        $(this).addClass("types__group-point--active")
+        $(".types__tab").removeClass("types__tab--active")
+        $(`.types__tab[data-tab-path="${path}"]`).addClass("types__tab--active")
+        $(".types__group-modal").removeClass("types__group-modal--active")
+        $(`.types__group-modal[data-tab-path="${path}"]`).addClass("types__group-modal--active")
+    })
+
+    $(".tab-title").click(function() {
+        let path = $(this).attr("data-title-path");
+        $(".tab-title").removeClass("tab-title--active");
+        $(this).addClass("tab-title--active");
+        $(".news__inner-content").removeClass("news__inner-content--active");
+        $(`.news__inner-content[data-title-path="${path}"]`).addClass("news__inner-content--active");
+    })
 
 })
 
@@ -184,5 +219,39 @@ function modal(id) {
         $(".backdrop").remove()
         $("body").removeClass("fixed-body")
     })
+
+
+
+}
+
+
+function consultModal(id, formInfo = null) {
+    console.log(id)
+    $("body").append(`<div class="backdrop"></div>`)
+    $("body").addClass("fixed-body")
+    $(".consult-modal").removeClass("consult-modal--active")
+    $(`#${id}`).addClass("consult-modal--active")
+
+    $(".backdrop").click(function() {
+        $(".consult-modal").removeClass("consult-modal--active")
+        $(".backdrop").remove()
+        $("body").removeClass("fixed-body")
+    })
+    $(".consult-modal__close").click(function() {
+        $(".consult-modal").removeClass("consult-modal--active")
+        $(".backdrop").remove()
+        $("body").removeClass("fixed-body")
+    })
+
+    if (formInfo) {
+        let insertedInput = `
+            <input type="text" name="formTilte" style="display:none" value="${formInfo.title}">
+            <input type="text" name="formButton" style="display:none" value="${formInfo.button}">
+        `
+        $(".consult-modal__form").prepend(insertedInput)
+    }
+
+
+
 
 }
