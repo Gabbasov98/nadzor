@@ -47,9 +47,32 @@ function qualitySlider() {
     })
 }
 
+function gallery() {
+    var swiper = new Swiper(".workers .mySwiper", {
+        spaceBetween: 0,
+        slidesPerView: 'auto',
+        freeMode: true,
+        watchSlidesProgress: true,
+        allowSlidePrev: false,
+        allowSlideNext: false,
+    });
+    var swiper2 = new Swiper(".workers .mySwiper2", {
+        spaceBetween: 10,
+        effect: 'fade',
+        navigation: {
+            nextEl: ".workers .swiper-button-next",
+            prevEl: ".workers .swiper-button-prev",
+        },
+        thumbs: {
+            swiper: swiper,
+        },
+    });
+}
+
 $(document).ready(function() {
     trustSlider()
     projectSlider()
+    gallery()
 
     $(window).resize(function() {
         if (window.innerWidth < 1255) {
@@ -123,6 +146,23 @@ $(document).ready(function() {
 
     });
 
+    var $serviceCards = $('.service-card');
+    $(window).scroll(function() {
+        var scroll = $(window).scrollTop() + $(window).height();
+
+        $serviceCards.each(function(i, el) {
+            var offset = $(el).offset().top + $(el).height()
+            if (scroll > offset) {
+                $(el).addClass("service-card--animate")
+            } else {
+                $(el).removeClass("service-card--animate")
+            }
+        });
+
+    });
+
+
+
 
     $(".service-detail__tab").click(function() {
         let path = $(this).attr("data-tab-path")
@@ -139,6 +179,10 @@ $(document).ready(function() {
         consultModal("consultModal2")
     })
     $(".consult-modal__form-btn").click(function(e) {
+        e.preventDefault();
+        consultModal("consultModal2")
+    })
+    $(".consultation__btn").click(function(e) {
         e.preventDefault();
         consultModal("consultModal2")
     })
@@ -167,6 +211,11 @@ $(document).ready(function() {
         $(this).addClass("tab-title--active");
         $(".news__inner-content").removeClass("news__inner-content--active");
         $(`.news__inner-content[data-title-path="${path}"]`).addClass("news__inner-content--active");
+    })
+
+    $(".questions__item-btn").click(function() {
+        $(this).toggleClass("questions__item-btn--active")
+        $(this).parent(".questions__item-show").siblings(".questions__item-hidden").slideToggle()
     })
 
 })

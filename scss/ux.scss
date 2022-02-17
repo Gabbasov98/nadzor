@@ -148,6 +148,15 @@ input[type="date"]:valid::before {
     overflow: hidden;
     display: flex;
     height: 100%;
+    transition: all .5s;
+    -webkit-transform: translateY(40px);
+    -ms-transform: translateY(40px);
+    transform: translateY(40px);
+    &--animate {
+        -webkit-transform: translateY(0px);
+        -ms-transform: translateY(0px);
+        transform: translateY(0px);
+    }
     &__img {
         width: 142px;
         overflow: hidden;
@@ -356,6 +365,9 @@ input[type="date"]:valid::before {
         &::placeholder {
             color: calc(#3B4146, 0.5);
         }
+        &:hover {
+            border-color: $primary;
+        }
     }
 }
 
@@ -501,7 +513,7 @@ input[type="date"]:valid::before {
     &__badge {
         font-size: 14px;
         line-height: 130%;
-        color: #0723DF;
+        color: $primary;
         background: #E6EEFF;
         border-radius: 5px;
         padding: 6px 10px;
@@ -520,7 +532,7 @@ input[type="date"]:valid::before {
     &__violation {
         font-size: 18px;
         line-height: 130%;
-        color: #0723DF;
+        color: $primary;
         margin-top: 20px;
         display: block;
     }
