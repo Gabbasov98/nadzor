@@ -510,8 +510,8 @@ input[type="date"]:valid::before {
     padding: 0 36px 9px 0;
   }
   .service-card__btn i {
-    width: 33.05px;
-    height: 33.05px;
+    width: 33px;
+    height: 33px;
     margin-left: 7px;
   }
   .service-card__btn span {
@@ -526,7 +526,7 @@ input[type="date"]:valid::before {
   }
   .service-card__nav {
     margin-top: 10px;
-    height: 33.05px;
+    height: 33px;
   }
 }
 

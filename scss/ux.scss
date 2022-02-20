@@ -339,8 +339,8 @@ input[type="date"]:valid::before {
             justify-content: flex-end;
             padding: 0 36px 9px 0;
             i {
-                width: 33.05px;
-                height: 33.05px;
+                width: 33px;
+                height: 33px;
                 margin-left: 7px;
             }
             span {
@@ -358,7 +358,7 @@ input[type="date"]:valid::before {
         }
         &__nav {
             margin-top: 10px;
-            height: 33.05px;
+            height: 33px;
         }
     }
 }
