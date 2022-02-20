@@ -272,7 +272,22 @@
                 </div>
 
                 <div class="when-help">
-                    <div class="when-help__title display2">В каких ситуациях мы вам поможем?</div>
+                    <div class="when-help__top">
+                        <div class="when-help__title display2">В каких ситуациях <span>мы вам поможем?</span></div>
+                        <div class="when-help__nav">
+                            <div class='when-help__prev swiper-button-prev'>
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M15 18L9 12L15 6" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            </div>
+                            <div class='when-help__next swiper-button-next'>
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M9 18L15 12L9 6" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            </div>
+                        </div>
+                    </div>
+
                     <div class='swiper-container'>
                         <div class='swiper-wrapper'>
                             <div class="swiper-slide when-help__item">
@@ -363,18 +378,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="when-help__nav">
-                        <div class='when-help__prev swiper-button-prev'>
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M15 18L9 12L15 6" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                        </div>
-                        <div class='when-help__next swiper-button-next'>
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M9 18L15 12L9 6" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                        </div>
-                    </div>
+
                 </div>
 
                 <div class="services">
@@ -1753,7 +1757,8 @@
                         </div>
                         <div class="quality__desc">
                             <p>Мы изучаем каждый см вашей квартиры и исключаем оценку «на глаз», выявляя внешние и скрытые дефекты.</p>
-                            <p>Типичными примерами скрытых дефектов являются: негерметичная канализации, скрытая плесень гипсокартоном, затекание/протекание воды, влажность и осыпающаяся плитка, недочёты в конструкции и т.п</p>
+                            <p>
+                                <span>Типичными примерами скрытых дефектов являются:</span> <br> негерметичная канализации, скрытая плесень гипсокартоном, затекание/протекание воды, влажность и осыпающаяся плитка, недочёты в конструкции и т.п</p>
                             <p>Каждый инженер имеет комплект инструментов, стоимостью 457 000 руб., которое точно не предоставит застройщик или бригада рабочих</p>
                         </div>
                         <button onclick="consultModal('consultModal1', {title:'Для точной проверки качества работ мы используем специальное оборудование',button: 'Заказать проверку  профессиональным инструментом'})" class="quality__btn btn btn-blue">Заказать проверку  профессиональным инструментом</button>
@@ -2014,6 +2019,19 @@
                             <div class="online__rect online__rect--blue"></div>
                             <div class="online__rect"></div>
                             <div class="online__phone">
+                                <div class='swiper-container'>
+                                    <div class='swiper-wrapper'>
+                                        <div class='swiper-slide'>
+                                            <img src="img/articles-img.png" alt="">
+                                        </div>
+                                        <div class='swiper-slide'>
+                                            <img src="img/articles-img2.png" alt="">
+                                        </div>
+                                        <div class='swiper-slide'>
+                                            <img src="img/articles-img3.png" alt="">
+                                        </div>
+                                    </div>
+                                </div>
                                 <img src="img/phone.png" alt="">
                             </div>
                             <div class="online__chart online__chart1">
@@ -2022,12 +2040,12 @@
                             <div class="online__chart online__chart2">
                                 <img src="img/chart.png" alt="">
                             </div>
-                            <button class="online__prev btn">
+                            <button class="swiper-button-prev online__prev btn">
                                 <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M12.5 15L7.5 10L12.5 5" stroke="#0723DF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                                 </svg>
                             </button>
-                            <button class="online__next btn">
+                            <button class="swiper-button-next online__next btn">
                                 <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M7.5 15L12.5 10L7.5 5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                                 </svg>

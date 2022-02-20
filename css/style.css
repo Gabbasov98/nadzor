@@ -343,9 +343,6 @@ input[type="date"]:valid::before {
 .service-card__img img {
   min-height: 100%;
   width: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
 }
 .service-card__right {
   padding: 25px 15px 20px 25px;
@@ -469,6 +466,8 @@ input[type="date"]:valid::before {
 @media screen and (max-width: 576px) {
   .service-card {
     border-width: 1.40659px;
+    max-height: 167px;
+    position: relative;
   }
   .service-card__img {
     width: 101px;
@@ -499,13 +498,26 @@ input[type="date"]:valid::before {
   .service-card__btn {
     font-size: 7.03297px;
   }
+  .service-card__btn span:before {
+    content: '';
+    position: absolute;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    top: 0;
+    left: 0;
+    cursor: pointer;
+    display: block;
+  }
   .service-card__btn i {
     width: 33.05px;
     height: 33.05px;
     margin-left: 7px;
   }
   .service-card__btn svg {
-    width: 6px;
+    width: 4px;
+    height: auto;
   }
   .service-card__more svg {
     width: 17px;
@@ -671,6 +683,9 @@ input[type="date"]:valid::before {
   -ms-transform: translate(0px, -10px);
   transform: translate(0px, -10px);
   border-color: rgba(0, 85, 255, 0.22);
+}
+.projects-card__img {
+  overflow: hidden;
 }
 .projects-card__img img {
   width: 100%;
@@ -902,6 +917,14 @@ input[type="date"]:valid::before {
   .breadcrumbs__item:not(:first-child):before {
     top: 7px;
   }
+}
+
+.fancybox-can-drag .fancybox-content {
+  width: 90% !important;
+  height: 90% !important;
+  left: 50% !important;
+  top: 50% !important;
+  transform: translate(-50%, -50%) scale(1, 1) !important;
 }
 
 .main {
@@ -1279,10 +1302,14 @@ input[type="date"]:valid::before {
     font-size: 12px;
   }
 }
+.quality__desc p span {
+  color: #0723DF;
+}
 .quality__btn {
   margin-top: 85px;
-  padding: 0 37px;
+  padding: 13px 37px;
   font-size: 17px;
+  min-height: 61px;
 }
 .quality .swiper-wrapper {
   display: grid;
@@ -1330,6 +1357,9 @@ input[type="date"]:valid::before {
   line-height: 140%;
   color: #FFFFFF;
   z-index: 3;
+}
+.quality__nav {
+  display: none;
 }
 
 .types {
@@ -1550,6 +1580,7 @@ input[type="date"]:valid::before {
 }
 .online__right {
   width: 374px;
+  flex-shrink: 0;
 }
 .online__desc {
   font-weight: 200;
@@ -1588,15 +1619,27 @@ input[type="date"]:valid::before {
   top: 50%;
   transform: translate(-50%, -50%);
   z-index: 3;
+  width: 235px;
 }
 .online__phone img {
   filter: drop-shadow(12px 12px 44px rgba(0, 0, 0, 0.25));
+  width: 100%;
 }
 .online__phone-block {
   flex-shrink: 0;
   display: grid;
   grid-template-columns: 1fr 1fr;
   position: relative;
+}
+.online .swiper-container {
+  width: 80%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.online .swiper-slide img {
+  width: 100%;
 }
 .online__chart {
   position: absolute;
@@ -1644,7 +1687,6 @@ input[type="date"]:valid::before {
   justify-content: space-between;
 }
 .index-projects__slider {
-  margin-top: 60px;
   width: calc(100% + 75px);
 }
 @media screen and (max-width: 1255px) {
@@ -1656,6 +1698,9 @@ input[type="date"]:valid::before {
   .index-projects__slider {
     width: calc(100% + 16px);
   }
+}
+.index-projects__slider .swiper-container {
+  padding-top: 60px;
 }
 .index-projects__nav {
   display: flex;
@@ -2467,12 +2512,27 @@ input[type="date"]:valid::before {
     display: flex;
     align-items: center;
   }
+  .when-help__top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 15px;
+  }
+  .when-help__title {
+    margin-bottom: 0;
+  }
+}
+@media screen and (max-width: 992px) and (max-width: 768px) {
+  .when-help__title {
+    max-width: 185px;
+  }
+}
+@media screen and (max-width: 992px) {
   .when-help__prev, .when-help__next {
     width: unset;
     height: unset;
     position: static;
-    margin: 0 10px 0 0;
-    margin-top: 15px;
+    margin: 0 0 0 10px;
   }
 
   .services {
@@ -2583,8 +2643,8 @@ input[type="date"]:valid::before {
   .index-projects {
     padding: 30px 0;
   }
-  .index-projects__slider {
-    margin-top: 30px;
+  .index-projects .swiper-container {
+    padding-top: 30px;
   }
   .index-projects__nav {
     display: none;
@@ -2736,7 +2796,7 @@ input[type="date"]:valid::before {
     font-size: 14px;
   }
   .online__right {
-    margin-top: 40px;
+    margin: 40px auto 0;
   }
 
   .workers {

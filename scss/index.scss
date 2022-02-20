@@ -373,12 +373,16 @@
             @media screen and (max-width: 768px) {
                 font-size: 12px;
             }
+            span {
+                color: $primary;
+            }
         }
     }
     &__btn {
         margin-top: 85px;
-        padding: 0 37px;
+        padding: 13px 37px;
         font-size: 17px;
+        min-height: 61px;
     }
     .swiper-wrapper {
         display: grid;
@@ -427,6 +431,9 @@
             color: #FFFFFF;
             z-index: 3;
         }
+    }
+    &__nav {
+        display: none;
     }
 }
 
@@ -639,6 +646,7 @@
     }
     &__right {
         width: 374px;
+        flex-shrink: 0;
     }
     &__desc {
         font-weight: 200;
@@ -679,14 +687,28 @@
         top: 50%;
         transform: translate(-50%, -50%);
         z-index: 3;
+        width: 235px;
         img {
             filter: drop-shadow(12px 12px 44px rgba(0, 0, 0, 0.25));
+            width: 100%;
         }
         &-block {
             flex-shrink: 0;
             display: grid;
             grid-template-columns: 1fr 1fr;
             position: relative;
+        }
+    }
+    .swiper-container {
+        width: 80%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    .swiper-slide {
+        img {
+            width: 100%;
         }
     }
     &__chart {
@@ -736,13 +758,15 @@
         justify-content: space-between;
     }
     &__slider {
-        margin-top: 60px;
         width: calc(100% + 75px);
         @media screen and (max-width: 1255px) {
             width: calc(100% + 25px);
         }
         @media screen and (max-width: 992px) {
             width: calc(100% + 16px);
+        }
+        .swiper-container {
+            padding-top: 60px;
         }
     }
     &__nav {
@@ -1602,13 +1626,24 @@
             display: flex;
             align-items: center;
         }
+        &__top {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 15px;
+        }
+        &__title {
+            margin-bottom: 0;
+            @media screen and (max-width: 768px) {
+                max-width: 185px;
+            }
+        }
         &__prev,
         &__next {
             width: unset;
             height: unset;
             position: static;
-            margin: 0 10px 0 0;
-            margin-top: 15px;
+            margin: 0 0 0 10px;
         }
     }
     .services {
@@ -1716,8 +1751,8 @@
     }
     .index-projects {
         padding: 30px 0;
-        &__slider {
-            margin-top: 30px;
+        .swiper-container {
+            padding-top: 30px;
         }
         &__nav {
             display: none;
@@ -1866,7 +1901,7 @@
             font-size: 14px;
         }
         &__right {
-            margin-top: 40px;
+            margin: 40px auto 0;
         }
     }
     .workers {
