@@ -521,6 +521,9 @@ input[type="date"]:valid::before {
     width: 4px;
     height: auto;
   }
+  .service-card__more {
+    height: 33px;
+  }
   .service-card__more svg {
     width: 17px;
   }
