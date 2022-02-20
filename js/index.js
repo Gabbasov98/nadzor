@@ -206,6 +206,11 @@ $(document).ready(function() {
 
     });
 
+    $(".service-card").click(function() {
+        let attr = $(this).find(".service-card__btn").attr("data-btn-target")
+        let attr2 = $(this).find(".service-card__btn").attr("data-btn-target2")
+        serviceDetail(attr, attr2)
+    })
 
 
 

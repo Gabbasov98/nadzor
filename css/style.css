@@ -407,9 +407,6 @@ input[type="date"]:valid::before {
   font-weight: 500;
   font-size: 14.2012px;
   color: #0723DF;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 .service-card__btn i {
   width: 66.75px;
@@ -469,12 +466,11 @@ input[type="date"]:valid::before {
 @media screen and (max-width: 576px) {
   .service-card {
     border-width: 1.40659px;
-    height: 167px;
+    max-height: 167px;
     position: relative;
   }
   .service-card__img {
     width: 101px;
-    height: unset;
   }
   .service-card__item-title {
     font-size: 7px;
@@ -501,36 +497,22 @@ input[type="date"]:valid::before {
   }
   .service-card__btn {
     font-size: 7.03297px;
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    width: 100%;
-    height: 100%;
-    align-items: flex-end;
-    justify-content: flex-end;
-    padding: 0 36px 9px 0;
   }
   .service-card__btn i {
-    width: 33px;
-    height: 33px;
+    width: 33.05px;
+    height: 33.05px;
     margin-left: 7px;
-  }
-  .service-card__btn span {
-    margin-bottom: 10px;
   }
   .service-card__btn svg {
     width: 4px;
     height: auto;
-  }
-  .service-card__more {
-    height: 33px;
   }
   .service-card__more svg {
     width: 17px;
   }
   .service-card__nav {
     margin-top: 10px;
-    height: 33px;
+    height: 33.05px;
   }
 }
 
