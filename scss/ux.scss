@@ -230,6 +230,9 @@ input[type="date"]:valid::before {
         font-weight: 500;
         font-size: 14.2012px;
         color: $primary;
+        display: flex;
+        align-items: center;
+        justify-content: center;
         i {
             width: 66.75px;
             height: 66.75px;
