@@ -504,7 +504,7 @@ input[type="date"]:valid::before {
     height: 100%;
     align-items: flex-end;
     justify-content: flex-end;
-    padding: 0 36px 18px 0;
+    padding: 0 36px 9px 0;
   }
   .service-card__btn i {
     width: 33.05px;
