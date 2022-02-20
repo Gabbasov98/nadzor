@@ -297,10 +297,17 @@ input[type="date"]:valid::before {
     }
     @media screen and (max-width: 576px) {
         border-width: 1.40659px;
-        max-height: 167px;
+        height: 167px;
         position: relative;
+        // height: unset;
         &__img {
             width: 101px;
+            height: unset;
+            img {
+                // max-height: 100%;
+                // height: unset;
+                // min-height: unset;
+            }
         }
         &__item {
             &-title {
