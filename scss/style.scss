@@ -1,12 +1,14 @@
 $black:#282828;
 $primary:#0723DF;
 $secondary: #F5F5F5;
+// Global styles start
 @import 'reset';
 @import 'ux';
+// Global styles end
 @import 'index';
-@import 'modals';
 @import 'layout';
 @import 'modal';
 @import 'news';
 @import 'projects';
 @import 'articles';
+@import 'quiz';

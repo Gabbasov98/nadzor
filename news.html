@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <link rel="stylesheet" href="css/swiper-bundle.min.css" />
     <link rel="stylesheet" href="css/jquery.fancybox.min.css">
-    <link rel="stylesheet" href="css/nice-select.css">
+    <link rel="stylesheet" href="css/nice-select.min.css">
     <link rel="stylesheet" href="css/style.css">
     <!-- <link rel="stylesheet" href="scss/news.css"> -->
     <!-- <link rel="stylesheet" href="scss/projects.css"> -->
@@ -22,12 +22,14 @@
                 <a href="" class="sidebar__logo">
                     <img src="img/logo.svg" alt="">
                 </a>
-                <a href="tel:+7 (495) 961-31-12" class="sidebar__tel">+7 (495) 961-31-12</a>
-                <button class="sidebar__burger">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
+                <div class="sidebar__top-right">
+                    <a href="tel:+7 (495) 961-31-12" class="sidebar__tel">+7 (495) 961-31-12</a>
+                    <button class="sidebar__burger">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
             </div>
 
             <div class="sidebar__bottom">
@@ -40,9 +42,12 @@
                         </svg>
                         </div>
                         <div class="nav__item-hidden">
-                            <a href="" class="nav__item-link">Услуги и цены 2</a>
-                            <a href="" class="nav__item-link">Услуги и цены 3</a>
-                            <a href="" class="nav__item-link">Услуги и цены 4</a>
+                            <a href="" class="nav__item-link">Технический надзор</a>
+                            <a href="" class="nav__item-link">Приемка квартир</a>
+                            <a href="" class="nav__item-link">Разовый выезд</a>
+                            <a href="" class="nav__item-link">Проверка смет</a>
+                            <a href="" class="nav__item-link">Проверка дизайн-проекта</a>
+                            <a href="" class="nav__item-link">Тепловизионное обследование</a>
                         </div>
                     </div>
                     <a href="" class="nav__item">Приёмка квартир</a>
@@ -51,7 +56,10 @@
                 </nav>
 
                 <div class="sidebar__buttons">
-                    <button class="sidebar__btn btn btn-blue">Обратный звонок</button>
+                    <button class="sidebar__btn btn btn-blue" onclick="consultModal('consultModal1', {
+                        title:'Кнопка на сайдбаре',
+                        button: 'Обратный звонок'}
+                        )">Обратный звонок</button>
                     <button class="sidebar__btn btn btn-blue-outline">Личный кабинет</button>
                 </div>
 
@@ -125,7 +133,7 @@
                                     </div>
                                     <h2 class="news__card-title">Испытательная лаборатория провела работы при эксплуатации аэродрома Омск (Центральный)</h2>
                                     <p class="news__card-text">Испытательная лаборатория ООО «ЦЭБ ГА» провела работы по измерению авиационного шума при эксплуатации аэродрома Омск (Центральный)</p>
-                                    <a class="news__card-link" href="">Читать полностью</a>
+                                    <a class="news__card-link" href="article.html">Читать полностью</a>
                                 </div>
                             </div>
                             <div class="news__select">
@@ -146,7 +154,7 @@
                                             <span class="news-card__reading">Читать 11 минут</span>
                                         </div>
                                         <h2 class="news-card__title">Испытательная лаборатория ООО «ЦЭБ ГА» провела работы по измерению…</h2>
-                                        <a class="news-card__link" href="">Читать полностью</a>
+                                        <a class="news-card__link" href="article.html">Читать полностью</a>
                                     </div>
                                 </div>
                                 <div class="news-card">
@@ -159,7 +167,7 @@
                                             <span class="news-card__reading">Читать 11 минут</span>
                                         </div>
                                         <h2 class="news-card__title">ООО "ЦЭБ ГА " представило систему мониторинга авиационного шума</h2>
-                                        <a class="news-card__link" href="">Читать полностью</a>
+                                        <a class="news-card__link" href="article.html">Читать полностью</a>
                                     </div>
                                 </div>
                                 <div class="news-card">
@@ -172,7 +180,7 @@
                                             <span class="news-card__reading">Читать 11 минут</span>
                                         </div>
                                         <h2 class="news-card__title">На приаэродромной территории аэродрома Внуково введено …</h2>
-                                        <a class="news-card__link" href="">Читать полностью</a>
+                                        <a class="news-card__link" href="article.html">Читать полностью</a>
                                     </div>
                                 </div>
                                 <div class="news-card">
@@ -185,7 +193,7 @@
                                             <span class="news-card__reading">Читать 11 минут</span>
                                         </div>
                                         <h2 class="news-card__title">Испытательная лаборатория ООО «ЦЭБ ГА» провела работы по измерению…</h2>
-                                        <a class="news-card__link" href="">Читать полностью</a>
+                                        <a class="news-card__link" href="article.html">Читать полностью</a>
                                     </div>
                                 </div>
                                 <div class="news-card">
@@ -198,7 +206,7 @@
                                             <span class="news-card__reading">Читать 11 минут</span>
                                         </div>
                                         <h2 class="news-card__title">ООО "ЦЭБ ГА " представило систему мониторинга авиационного шума</h2>
-                                        <a class="news-card__link" href="">Читать полностью</a>
+                                        <a class="news-card__link" href="article.html">Читать полностью</a>
                                     </div>
                                 </div>
                                 <div class="news-card">
@@ -211,7 +219,7 @@
                                             <span class="news-card__reading">Читать 11 минут</span>
                                         </div>
                                         <h2 class="news-card__title">На приаэродромной территории аэродрома Внуково введено …</h2>
-                                        <a class="news-card__link" href="">Читать полностью</a>
+                                        <a class="news-card__link" href="article.html">Читать полностью</a>
                                     </div>
                                 </div>
                                 <div class="news-card news-card--big">
@@ -225,7 +233,7 @@
                                         </div>
                                         <h2 class="news-card__title">На приаэродромной территории аэродрома Внуково введено …</h2>
                                         <p class="news-card__text">Сотрудниками компании ООО "ЦЭБ ГА" был проведен длительный мониторинг авиационного шума на протежении двух недель на приаэродромной территории аэродрома Рязань (Дягилево)</p>
-                                        <a class="news-card__link" href="">Читать полностью</a>
+                                        <a class="news-card__link" href="article.html">Читать полностью</a>
                                     </div>
                                 </div>
                                 <div class="news-card">
@@ -238,7 +246,7 @@
                                             <span class="news-card__reading">Читать 11 минут</span>
                                         </div>
                                         <h2 class="news-card__title">Испытательная лаборатория ООО «ЦЭБ ГА» провела работы по измерению…</h2>
-                                        <a class="news-card__link" href="">Читать полностью</a>
+                                        <a class="news-card__link" href="article.html">Читать полностью</a>
                                     </div>
                                 </div>
                                 <div class="news-card">
@@ -251,7 +259,7 @@
                                             <span class="news-card__reading">Читать 11 минут</span>
                                         </div>
                                         <h2 class="news-card__title">ООО "ЦЭБ ГА " представило систему мониторинга авиационного шума</h2>
-                                        <a class="news-card__link" href="">Читать полностью</a>
+                                        <a class="news-card__link" href="article.html">Читать полностью</a>
                                     </div>
                                 </div>
                                 <div class="news-card">
@@ -264,7 +272,7 @@
                                             <span class="news-card__reading">Читать 11 минут</span>
                                         </div>
                                         <h2 class="news-card__title">На приаэродромной территории аэродрома Внуково введено …</h2>
-                                        <a class="news-card__link" href="">Читать полностью</a>
+                                        <a class="news-card__link" href="article.html">Читать полностью</a>
                                     </div>
                                 </div>
                                 <div class="news-card">
@@ -277,7 +285,7 @@
                                             <span class="news-card__reading">Читать 11 минут</span>
                                         </div>
                                         <h2 class="news-card__title">Испытательная лаборатория ООО «ЦЭБ ГА» провела работы по измерению…</h2>
-                                        <a class="news-card__link" href="">Читать полностью</a>
+                                        <a class="news-card__link" href="article.html">Читать полностью</a>
                                     </div>
                                 </div>
                                 <div class="news-card">
@@ -290,7 +298,7 @@
                                             <span class="news-card__reading">Читать 11 минут</span>
                                         </div>
                                         <h2 class="news-card__title">ООО "ЦЭБ ГА " представило систему мониторинга авиационного шума</h2>
-                                        <a class="news-card__link" href="">Читать полностью</a>
+                                        <a class="news-card__link" href="article.html">Читать полностью</a>
                                     </div>
                                 </div>
                                 <div class="news-card">
@@ -303,7 +311,7 @@
                                             <span class="news-card__reading">Читать 11 минут</span>
                                         </div>
                                         <h2 class="news-card__title">На приаэродромной территории аэродрома Внуково введено …</h2>
-                                        <a class="news-card__link" href="">Читать полностью</a>
+                                        <a class="news-card__link" href="article.html">Читать полностью</a>
                                     </div>
                                 </div>
                             </div>
@@ -325,15 +333,13 @@
                                     </div>
                                     <h2 class="news__card-title">Испытательная лаборатория провела работы при эксплуатации аэродрома Омск (Центральный)</h2>
                                     <p class="news__card-text">Испытательная лаборатория ООО «ЦЭБ ГА» провела работы по измерению авиационного шума при эксплуатации аэродрома Омск (Центральный)</p>
-                                    <a class="news__card-link" href="">Читать полностью</a>
+                                    <a class="news__card-link" href="article.html">Читать полностью</a>
                                 </div>
                             </div>
                             <div class="news__select">
                                 <select class="select">
-                                <option value="">Сначала новые</option>
-                                <option value="">Сначала новые2</option>
-                                <option value="">Сначала новые3</option>
-                                <option value="">Сначала новые4</option>
+                                <option>Сначала новые</option>
+                                <option>Популярные</option>
                             </select>
                             </div>
                             <div class="news__items">
@@ -347,7 +353,7 @@
                                             <span class="news-card__reading">Читать 11 минут</span>
                                         </div>
                                         <h2 class="news-card__title">Испытательная лаборатория ООО «ЦЭБ ГА» провела работы по измерению…</h2>
-                                        <a class="news-card__link" href="">Читать полностью</a>
+                                        <a class="news-card__link" href="article.html">Читать полностью</a>
                                     </div>
                                 </div>
                                 <div class="news-card">
@@ -360,7 +366,7 @@
                                             <span class="news-card__reading">Читать 11 минут</span>
                                         </div>
                                         <h2 class="news-card__title">ООО "ЦЭБ ГА " представило систему мониторинга авиационного шума</h2>
-                                        <a class="news-card__link" href="">Читать полностью</a>
+                                        <a class="news-card__link" href="article.html">Читать полностью</a>
                                     </div>
                                 </div>
                                 <div class="news-card">
@@ -373,7 +379,7 @@
                                             <span class="news-card__reading">Читать 11 минут</span>
                                         </div>
                                         <h2 class="news-card__title">Испытательная лаборатория ООО «ЦЭБ ГА» провела работы по измерению…</h2>
-                                        <a class="news-card__link" href="">Читать полностью</a>
+                                        <a class="news-card__link" href="article.html">Читать полностью</a>
                                     </div>
                                 </div>
                                 <div class="news-card">
@@ -386,7 +392,7 @@
                                             <span class="news-card__reading">Читать 11 минут</span>
                                         </div>
                                         <h2 class="news-card__title">На приаэродромной территории аэродрома Внуково введено …</h2>
-                                        <a class="news-card__link" href="">Читать полностью</a>
+                                        <a class="news-card__link" href="article.html">Читать полностью</a>
                                     </div>
                                 </div>
                             </div>
@@ -408,15 +414,13 @@
                                     </div>
                                     <h2 class="news__card-title">Испытательная лаборатория провела работы при эксплуатации аэродрома Омск (Центральный)</h2>
                                     <p class="news__card-text">Испытательная лаборатория ООО «ЦЭБ ГА» провела работы по измерению авиационного шума при эксплуатации аэродрома Омск (Центральный)</p>
-                                    <a class="news__card-link" href="">Читать полностью</a>
+                                    <a class="news__card-link" href="article.html">Читать полностью</a>
                                 </div>
                             </div>
                             <div class="news__select">
                                 <select class="select">
-                                <option value="">Сначала новые</option>
-                                <option value="">Сначала новые2</option>
-                                <option value="">Сначала новые3</option>
-                                <option value="">Сначала новые4</option>
+                                <option>Сначала новые</option>
+                                <option>Популярные</option>
                             </select>
                             </div>
                             <div class="news__items">
@@ -430,7 +434,7 @@
                                             <span class="news-card__reading">Читать 11 минут</span>
                                         </div>
                                         <h2 class="news-card__title">Испытательная лаборатория ООО «ЦЭБ ГА» провела работы по измерению…</h2>
-                                        <a class="news-card__link" href="">Читать полностью</a>
+                                        <a class="news-card__link" href="article.html">Читать полностью</a>
                                     </div>
                                 </div>
                                 <div class="news-card">
@@ -443,7 +447,7 @@
                                             <span class="news-card__reading">Читать 11 минут</span>
                                         </div>
                                         <h2 class="news-card__title">ООО "ЦЭБ ГА " представило систему мониторинга авиационного шума</h2>
-                                        <a class="news-card__link" href="">Читать полностью</a>
+                                        <a class="news-card__link" href="article.html">Читать полностью</a>
                                     </div>
                                 </div>
                                 <div class="news-card">
@@ -456,7 +460,7 @@
                                             <span class="news-card__reading">Читать 11 минут</span>
                                         </div>
                                         <h2 class="news-card__title">Испытательная лаборатория ООО «ЦЭБ ГА» провела работы по измерению…</h2>
-                                        <a class="news-card__link" href="">Читать полностью</a>
+                                        <a class="news-card__link" href="article.html">Читать полностью</a>
                                     </div>
                                 </div>
                             </div>
@@ -478,15 +482,13 @@
                                     </div>
                                     <h2 class="news__card-title">Испытательная лаборатория провела работы при эксплуатации аэродрома Омск (Центральный)</h2>
                                     <p class="news__card-text">Испытательная лаборатория ООО «ЦЭБ ГА» провела работы по измерению авиационного шума при эксплуатации аэродрома Омск (Центральный)</p>
-                                    <a class="news__card-link" href="">Читать полностью</a>
+                                    <a class="news__card-link" href="article.html">Читать полностью</a>
                                 </div>
                             </div>
                             <div class="news__select">
                                 <select class="select">
-                                <option value="">Сначала новые</option>
-                                <option value="">Сначала новые2</option>
-                                <option value="">Сначала новые3</option>
-                                <option value="">Сначала новые4</option>
+                                <option>Сначала новые</option>
+                                <option>Популярные</option>
                             </select>
                             </div>
                             <div class="news__items">
@@ -500,7 +502,7 @@
                                             <span class="news-card__reading">Читать 11 минут</span>
                                         </div>
                                         <h2 class="news-card__title">Испытательная лаборатория ООО «ЦЭБ ГА» провела работы по измерению…</h2>
-                                        <a class="news-card__link" href="">Читать полностью</a>
+                                        <a class="news-card__link" href="article.html">Читать полностью</a>
                                     </div>
                                 </div>
                                 <div class="news-card">
@@ -513,7 +515,7 @@
                                             <span class="news-card__reading">Читать 11 минут</span>
                                         </div>
                                         <h2 class="news-card__title">ООО "ЦЭБ ГА " представило систему мониторинга авиационного шума</h2>
-                                        <a class="news-card__link" href="">Читать полностью</a>
+                                        <a class="news-card__link" href="article.html">Читать полностью</a>
                                     </div>
                                 </div>
                                 <div class="news-card">
@@ -526,7 +528,7 @@
                                             <span class="news-card__reading">Читать 11 минут</span>
                                         </div>
                                         <h2 class="news-card__title">Испытательная лаборатория ООО «ЦЭБ ГА» провела работы по измерению…</h2>
-                                        <a class="news-card__link" href="">Читать полностью</a>
+                                        <a class="news-card__link" href="article.html">Читать полностью</a>
                                     </div>
                                 </div>
                                 <div class="news-card">
@@ -539,7 +541,7 @@
                                             <span class="news-card__reading">Читать 11 минут</span>
                                         </div>
                                         <h2 class="news-card__title">На приаэродромной территории аэродрома Внуково введено …</h2>
-                                        <a class="news-card__link" href="">Читать полностью</a>
+                                        <a class="news-card__link" href="article.html">Читать полностью</a>
                                     </div>
                                 </div>
                             </div>
@@ -571,15 +573,13 @@
                                     </div>
                                     <h2 class="news__card-title">Испытательная лаборатория провела работы при эксплуатации аэродрома Омск (Центральный)</h2>
                                     <p class="news__card-text">Испытательная лаборатория ООО «ЦЭБ ГА» провела работы по измерению авиационного шума при эксплуатации аэродрома Омск (Центральный)</p>
-                                    <a class="news__card-link" href="">Читать полностью</a>
+                                    <a class="news__card-link" href="article.html">Читать полностью</a>
                                 </div>
                             </div>
                             <div class="news__select">
                                 <select class="select">
-                                <option value="">Сначала новые</option>
-                                <option value="">Сначала новые2</option>
-                                <option value="">Сначала новые3</option>
-                                <option value="">Сначала новые4</option>
+                                <option>Сначала новые</option>
+                                <option>Популярные</option>
                             </select>
                             </div>
                             <div class="news__items">
@@ -593,7 +593,7 @@
                                             <span class="news-card__reading">Читать 11 минут</span>
                                         </div>
                                         <h2 class="news-card__title">Испытательная лаборатория ООО «ЦЭБ ГА» провела работы по измерению…</h2>
-                                        <a class="news-card__link" href="">Читать полностью</a>
+                                        <a class="news-card__link" href="article.html">Читать полностью</a>
                                     </div>
                                 </div>
                                 <div class="news-card">
@@ -606,7 +606,7 @@
                                             <span class="news-card__reading">Читать 11 минут</span>
                                         </div>
                                         <h2 class="news-card__title">ООО "ЦЭБ ГА " представило систему мониторинга авиационного шума</h2>
-                                        <a class="news-card__link" href="">Читать полностью</a>
+                                        <a class="news-card__link" href="article.html">Читать полностью</a>
                                     </div>
                                 </div>
                                 <div class="news-card">
@@ -619,7 +619,7 @@
                                             <span class="news-card__reading">Читать 11 минут</span>
                                         </div>
                                         <h2 class="news-card__title">На приаэродромной территории аэродрома Внуково введено …</h2>
-                                        <a class="news-card__link" href="">Читать полностью</a>
+                                        <a class="news-card__link" href="article.html">Читать полностью</a>
                                     </div>
                                 </div>
                                 <div class="news-card news-card--big">
@@ -633,7 +633,7 @@
                                         </div>
                                         <h2 class="news-card__title">На приаэродромной территории аэродрома Внуково введено …</h2>
                                         <p class="news-card__text">Сотрудниками компании ООО "ЦЭБ ГА" был проведен длительный мониторинг авиационного шума на протежении двух недель на приаэродромной территории аэродрома Рязань (Дягилево)</p>
-                                        <a class="news-card__link" href="">Читать полностью</a>
+                                        <a class="news-card__link" href="article.html">Читать полностью</a>
                                     </div>
                                 </div>
                                 <div class="news-card">
@@ -646,7 +646,7 @@
                                             <span class="news-card__reading">Читать 11 минут</span>
                                         </div>
                                         <h2 class="news-card__title">Испытательная лаборатория ООО «ЦЭБ ГА» провела работы по измерению…</h2>
-                                        <a class="news-card__link" href="">Читать полностью</a>
+                                        <a class="news-card__link" href="article.html">Читать полностью</a>
                                     </div>
                                 </div>
                                 <div class="news-card">
@@ -659,7 +659,7 @@
                                             <span class="news-card__reading">Читать 11 минут</span>
                                         </div>
                                         <h2 class="news-card__title">ООО "ЦЭБ ГА " представило систему мониторинга авиационного шума</h2>
-                                        <a class="news-card__link" href="">Читать полностью</a>
+                                        <a class="news-card__link" href="article.html">Читать полностью</a>
                                     </div>
                                 </div>
                                 <div class="news-card">
@@ -672,7 +672,7 @@
                                             <span class="news-card__reading">Читать 11 минут</span>
                                         </div>
                                         <h2 class="news-card__title">На приаэродромной территории аэродрома Внуково введено …</h2>
-                                        <a class="news-card__link" href="">Читать полностью</a>
+                                        <a class="news-card__link" href="article.html">Читать полностью</a>
                                     </div>
                                 </div>
                                 <div class="news-card">
@@ -685,7 +685,7 @@
                                             <span class="news-card__reading">Читать 11 минут</span>
                                         </div>
                                         <h2 class="news-card__title">Испытательная лаборатория ООО «ЦЭБ ГА» провела работы по измерению…</h2>
-                                        <a class="news-card__link" href="">Читать полностью</a>
+                                        <a class="news-card__link" href="article.html">Читать полностью</a>
                                     </div>
                                 </div>
                                 <div class="news-card">
@@ -698,7 +698,7 @@
                                             <span class="news-card__reading">Читать 11 минут</span>
                                         </div>
                                         <h2 class="news-card__title">ООО "ЦЭБ ГА " представило систему мониторинга авиационного шума</h2>
-                                        <a class="news-card__link" href="">Читать полностью</a>
+                                        <a class="news-card__link" href="article.html">Читать полностью</a>
                                     </div>
                                 </div>
                                 <div class="news-card">
@@ -711,7 +711,7 @@
                                             <span class="news-card__reading">Читать 11 минут</span>
                                         </div>
                                         <h2 class="news-card__title">На приаэродромной территории аэродрома Внуково введено …</h2>
-                                        <a class="news-card__link" href="">Читать полностью</a>
+                                        <a class="news-card__link" href="article.html">Читать полностью</a>
                                     </div>
                                 </div>
                             </div>
@@ -733,15 +733,13 @@
                                     </div>
                                     <h2 class="news__card-title">Испытательная лаборатория провела работы при эксплуатации аэродрома Омск (Центральный)</h2>
                                     <p class="news__card-text">Испытательная лаборатория ООО «ЦЭБ ГА» провела работы по измерению авиационного шума при эксплуатации аэродрома Омск (Центральный)</p>
-                                    <a class="news__card-link" href="">Читать полностью</a>
+                                    <a class="news__card-link" href="article.html">Читать полностью</a>
                                 </div>
                             </div>
                             <div class="news__select">
                                 <select class="select">
-                                <option value="">Сначала новые</option>
-                                <option value="">Сначала новые2</option>
-                                <option value="">Сначала новые3</option>
-                                <option value="">Сначала новые4</option>
+                                <option>Сначала новые</option>
+                                <option>Популярные</option>
                             </select>
                             </div>
                             <div class="news__items">
@@ -755,7 +753,7 @@
                                             <span class="news-card__reading">Читать 11 минут</span>
                                         </div>
                                         <h2 class="news-card__title">Испытательная лаборатория ООО «ЦЭБ ГА» провела работы по измерению…</h2>
-                                        <a class="news-card__link" href="">Читать полностью</a>
+                                        <a class="news-card__link" href="article.html">Читать полностью</a>
                                     </div>
                                 </div>
                                 <div class="news-card">
@@ -768,7 +766,7 @@
                                             <span class="news-card__reading">Читать 11 минут</span>
                                         </div>
                                         <h2 class="news-card__title">ООО "ЦЭБ ГА " представило систему мониторинга авиационного шума</h2>
-                                        <a class="news-card__link" href="">Читать полностью</a>
+                                        <a class="news-card__link" href="article.html">Читать полностью</a>
                                     </div>
                                 </div>
                                 <div class="news-card">
@@ -781,7 +779,7 @@
                                             <span class="news-card__reading">Читать 11 минут</span>
                                         </div>
                                         <h2 class="news-card__title">Испытательная лаборатория ООО «ЦЭБ ГА» провела работы по измерению…</h2>
-                                        <a class="news-card__link" href="">Читать полностью</a>
+                                        <a class="news-card__link" href="article.html">Читать полностью</a>
                                     </div>
                                 </div>
                                 <div class="news-card">
@@ -794,7 +792,7 @@
                                             <span class="news-card__reading">Читать 11 минут</span>
                                         </div>
                                         <h2 class="news-card__title">На приаэродромной территории аэродрома Внуково введено …</h2>
-                                        <a class="news-card__link" href="">Читать полностью</a>
+                                        <a class="news-card__link" href="article.html">Читать полностью</a>
                                     </div>
                                 </div>
                             </div>
@@ -816,15 +814,13 @@
                                     </div>
                                     <h2 class="news__card-title">Испытательная лаборатория провела работы при эксплуатации аэродрома Омск (Центральный)</h2>
                                     <p class="news__card-text">Испытательная лаборатория ООО «ЦЭБ ГА» провела работы по измерению авиационного шума при эксплуатации аэродрома Омск (Центральный)</p>
-                                    <a class="news__card-link" href="">Читать полностью</a>
+                                    <a class="news__card-link" href="article.html">Читать полностью</a>
                                 </div>
                             </div>
                             <div class="news__select">
                                 <select class="select">
-                                <option value="">Сначала новые</option>
-                                <option value="">Сначала новые2</option>
-                                <option value="">Сначала новые3</option>
-                                <option value="">Сначала новые4</option>
+                                <option>Сначала новые</option>
+                                <option>Популярные</option>
                             </select>
                             </div>
                             <div class="news__items">
@@ -838,7 +834,7 @@
                                             <span class="news-card__reading">Читать 11 минут</span>
                                         </div>
                                         <h2 class="news-card__title">Испытательная лаборатория ООО «ЦЭБ ГА» провела работы по измерению…</h2>
-                                        <a class="news-card__link" href="">Читать полностью</a>
+                                        <a class="news-card__link" href="article.html">Читать полностью</a>
                                     </div>
                                 </div>
                                 <div class="news-card">
@@ -851,7 +847,7 @@
                                             <span class="news-card__reading">Читать 11 минут</span>
                                         </div>
                                         <h2 class="news-card__title">ООО "ЦЭБ ГА " представило систему мониторинга авиационного шума</h2>
-                                        <a class="news-card__link" href="">Читать полностью</a>
+                                        <a class="news-card__link" href="article.html">Читать полностью</a>
                                     </div>
                                 </div>
                                 <div class="news-card">
@@ -864,7 +860,7 @@
                                             <span class="news-card__reading">Читать 11 минут</span>
                                         </div>
                                         <h2 class="news-card__title">Испытательная лаборатория ООО «ЦЭБ ГА» провела работы по измерению…</h2>
-                                        <a class="news-card__link" href="">Читать полностью</a>
+                                        <a class="news-card__link" href="article.html">Читать полностью</a>
                                     </div>
                                 </div>
                             </div>
@@ -886,15 +882,13 @@
                                     </div>
                                     <h2 class="news__card-title">Испытательная лаборатория провела работы при эксплуатации аэродрома Омск (Центральный)</h2>
                                     <p class="news__card-text">Испытательная лаборатория ООО «ЦЭБ ГА» провела работы по измерению авиационного шума при эксплуатации аэродрома Омск (Центральный)</p>
-                                    <a class="news__card-link" href="">Читать полностью</a>
+                                    <a class="news__card-link" href="article.html">Читать полностью</a>
                                 </div>
                             </div>
                             <div class="news__select">
                                 <select class="select">
-                                <option value="">Сначала новые</option>
-                                <option value="">Сначала новые2</option>
-                                <option value="">Сначала новые3</option>
-                                <option value="">Сначала новые4</option>
+                                <option>Сначала новые</option>
+                                <option>Популярные</option>
                             </select>
                             </div>
                             <div class="news__items">
@@ -908,7 +902,7 @@
                                             <span class="news-card__reading">Читать 11 минут</span>
                                         </div>
                                         <h2 class="news-card__title">Испытательная лаборатория ООО «ЦЭБ ГА» провела работы по измерению…</h2>
-                                        <a class="news-card__link" href="">Читать полностью</a>
+                                        <a class="news-card__link" href="article.html">Читать полностью</a>
                                     </div>
                                 </div>
                                 <div class="news-card">
@@ -921,7 +915,7 @@
                                             <span class="news-card__reading">Читать 11 минут</span>
                                         </div>
                                         <h2 class="news-card__title">ООО "ЦЭБ ГА " представило систему мониторинга авиационного шума</h2>
-                                        <a class="news-card__link" href="">Читать полностью</a>
+                                        <a class="news-card__link" href="article.html">Читать полностью</a>
                                     </div>
                                 </div>
                                 <div class="news-card">
@@ -934,7 +928,7 @@
                                             <span class="news-card__reading">Читать 11 минут</span>
                                         </div>
                                         <h2 class="news-card__title">Испытательная лаборатория ООО «ЦЭБ ГА» провела работы по измерению…</h2>
-                                        <a class="news-card__link" href="">Читать полностью</a>
+                                        <a class="news-card__link" href="article.html">Читать полностью</a>
                                     </div>
                                 </div>
                                 <div class="news-card">
@@ -947,7 +941,7 @@
                                             <span class="news-card__reading">Читать 11 минут</span>
                                         </div>
                                         <h2 class="news-card__title">На приаэродромной территории аэродрома Внуково введено …</h2>
-                                        <a class="news-card__link" href="">Читать полностью</a>
+                                        <a class="news-card__link" href="article.html">Читать полностью</a>
                                     </div>
                                 </div>
                             </div>
@@ -965,20 +959,24 @@
                         <form class="consultation__form">
                             <form action="" class="consultation__form">
                                 <fieldset class='consultation__form-group form-group'>
-                                    <input type='text' placeholder="телефон" />
+                                    <input type='text' placeholder="Имя" />
                                 </fieldset>
                                 <fieldset class='consultation__form-group form-group'>
-                                    <input type='text' placeholder="Имя" />
+                                    <input type='tel' placeholder="телефон" />
                                 </fieldset>
                                 <button class="consultation__btn btn btn-blue">Подробнее</button>
                             </form>
+
                             <div class="consultation__text">
                                 Нажимая на кнопку, вы даете согласие на обработку своих персональных данных и соглашаетесь с <a href="">Политикой конфиденциальности</a>
                             </div>
                         </form>
                     </div>
                     <div class="consultation__right">
-                        <img src="img/consultation-img.png" alt="">
+                        <picture>
+                            <source srcset="img/consultation-img.webp" type="image/webp">
+                            <img src="img/consultation-img.png" alt="">
+                        </picture>
                     </div>
                 </div>
             </div>
@@ -988,14 +986,235 @@
 
     </div>
 
+    <footer class="footer">
+        <div class="footer-top">
+            <div class="footer__info">© Компания «Мой Надзор» – технический надзор в Москве <br> и Подмосковье, 2022</div>
+            <nav class="footer-nav">
+                <div class="footer-nav__item">
+                    <div class="footer-nav__item-show">
+                        <span>Услуги и цены</span>
+                        <svg width="11" height="6" viewBox="0 0 11 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M5.5 6L0.73686 5.64421e-08L10.2631 8.89256e-07L5.5 6Z" fill="#fff"></path>
+                            </svg>
+                    </div>
+                    <div class="footer-nav__item-hidden">
+                        <a href="" class="footer-nav__item-link">Технический надзор</a>
+                        <a href="" class="footer-nav__item-link">Приемка квартир</a>
+                        <a href="" class="footer-nav__item-link">Разовый выезд</a>
+                        <a href="" class="footer-nav__item-link">Проверка смет</a>
+                        <a href="" class="footer-nav__item-link">Проверка дизайн-проекта</a>
+                        <a href="" class="footer-nav__item-link">Тепловизионное обследование</a>
+                    </div>
+                </div>
+                <a href="" class="footer-nav__item">Приёмка квартир</a>
+                <a href="" class="footer-nav__item">Наши проекты</a>
+                <a href="" class="footer-nav__item">Блог</a>
+            </nav>
+        </div>
+        <div class="footer-middle">
+            <div class="footer-middle__left">
+                <div class="footer-middle__left-links">
+                    <button onclick="modal('confModal')">Политика конфиденциальности</button>
+                    <button onclick="modal('confModal2')">Пользовательское соглашение</button>
+                    <button onclick="modal('confModal3')">Защита персональных данных</button>
+                </div>
+            </div>
+            <div class="footer-middle__center">
+                <div class="footer__address">Адрес: г. Москва, Чусовская ул, <br> 7а, офис 201</div>
+                <div class="footer__info2">
+                    ООО "Мой Надзор" <br> ОГРН 118774683265 <br> ИНН 7719482067
+                </div>
+            </div>
+            <div class="footer-middle__right">
+                Отправляя персональную информацию через любые формы на сайте, Вы автоматически подтверждаете свое согласие на ее обработку. Материалы на сайте не являются публичной офертой
+            </div>
+        </div>
+    </footer>
+
+    <div id="confModal" class="modal modal-conf">
+        <div class="modal__mob-top">
+            <button class="modal__close">
+                <img src="img/back.svg" alt="">
+            </button>
+            <button class="modal__close">
+                <img src="img/cancel.svg" alt="">
+            </button>
+        </div>
+        <div class="modal__title">
+            <span>Политика конфиденциальности</span>
+            <button class="modal__close">
+                <img src="img/cancel.svg" alt="">
+            </button>
+        </div>
+        <div class="modal__text">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero, exercitationem sit aut nemo a, molestiae dolore, maxime incidunt ex omnis placeat minus repellendus reprehenderit expedita tempora officia earum eveniet unde vitae non? Sapiente
+                rem velit et. Earum non possimus cupiditate. Et nulla quod qui, non voluptatibus ad. Voluptate reprehenderit placeat quos. Quia, qui tenetur praesentium veniam odit accusamus alias maiores. Lorem ipsum dolor sit amet consectetur adipisicing
+                elit. Tempora voluptate voluptatum sunt alias ab aperiam quos. Id enim cum ducimus labore dolorum. Molestias debitis nam at ullam? Necessitatibus eos vitae iste assumenda vel sunt odit autem accusamus et dolorum, dignissimos aut excepturi
+                ad, quas repellendus eveniet, in voluptatum veritatis tenetur sit molestias ducimus? Id provident quia sit, minus aspernatur fugiat, magnam harum distinctio asperiores veritatis quidem delectus ab vero at nesciunt aliquam quaerat nisi
+                rerum cumque ipsa ipsum accusantium laudantium. Molestias odit voluptatem suscipit eius earum voluptates nulla, atque debitis, iure nisi doloremque, odio molestiae temporibus enim? Adipisci voluptatum quo placeat sequi officiis cumque
+                beatae commodi architecto provident harum molestias veniam facere, corporis aperiam repellendus aliquid id inventore est hic fugit, ex consequuntur, dolores assumenda. Dolore, aliquam sapiente qui dignissimos ut maiores sequi minima, ipsum
+                enim molestias sunt illo excepturi. Voluptatum</p>
+            <p>explicabo eaque qui ea quo, beatae dolorem ullam alias architecto nostrum omnis dicta, ducimus vero sapiente dolor facere eos iste illo. Saepe commodi inventore consequatur velit ab vitae rerum molestiae aut illum a praesentium eveniet reprehenderit
+                placeat, earum tempora explicabo quas qui enim provident sint consequuntur iusto iure beatae aliquam. Autem eaque quasi, officia distinctio accusantium perferendis excepturi, voluptatibus optio possimus ut, quas porro. Saepe distinctio
+                reprehenderit ad vel dolorem sunt laboriosam, minima dolorum perferendis adipisci recusandae soluta magni, eligendi dicta. Aperiam voluptas veniam et iure asperiores repudiandae placeat perferendis officiis nesciunt? Ad, illum iure, libero
+                tenetur repellat est ipsam, molestiae ea provident expedita esse. Labore ea ipsa vitae quae! Animi laudantium eveniet atque cupiditate accusantium rem eum corrupti, quos placeat necessitatibus voluptas deserunt, dolores numquam quae autem
+                delectus possimus dolor harum nostrum nihil neque at qui corporis? Possimus voluptate optio impedit beatae aliquid quae itaque quidem ducimus dignissimos eius modi debitis, fuga ut. Culpa dolor fuga minima provident sapiente nam! Ipsam
+                reiciendis error perferendis earum, nemo blanditiis quam quos expedita commodi quo libero est voluptatem corporis ipsum saepe delectus repellendus rem rerum tempore fugit enim pariatur voluptas? Culpa iure quibusdam dolorem numquam velit?
+                Qui reprehenderit molestiae quia</p>
+            nostrum quibusdam sit incidunt rerum magnam. At quod placeat voluptates? Corrupti incidunt sint voluptatem placeat esse illum numquam quo doloribus debitis qui nam eveniet dolore corporis, ducimus sapiente voluptatum voluptas vero fuga consectetur! Eaque
+            iusto, aut officia omnis dicta ea incidunt delectus aliquid odit quas unde est sequi! Quod, qui blanditiis eum odio in modi necessitatibus recusandae ipsam aliquam quibusdam soluta laudantium obcaecati vel ex neque maxime reprehenderit deserunt
+            perferendis! Facere ducimus sit, eum nam placeat nemo minima, illo asperiores maxime dolore inventore fugiat alias magnam quam sunt similique perferendis. Assumenda blanditiis perferendis consequuntur iusto consectetur, voluptas asperiores
+            architecto ratione doloremque esse animi, facere quidem quae? Aspernatur error impedit commodi deserunt tempora non? Quos maiores, harum dignissimos odio, ut sint obcaecati modi qui necessitatibus quis quas laborum. Reiciendis voluptatibus
+            asperiores possimus iure! Blanditiis esse labore quo a in explicabo, eligendi modi inventore tenetur quisquam voluptas delectus omnis quae! Expedita natus, perferendis temporibus optio voluptatibus quod eligendi, architecto eaque modi consequatur
+            hic eius similique quibusdam tempore, adipisci dolor facere doloribus? Iure corrupti eligendi iusto nobis, voluptates placeat sed dicta illo culpa dignissimos perferendis eius soluta distinctio vel voluptate aliquid doloribus facilis, mollitia
+            libero? Quia rerum dolorum consectetur error corporis fugiat doloremque labore voluptatibus quam! Beatae provident ab quod eius distinctio, doloribus reiciendis! Omnis soluta, enim corporis harum, quaerat laudantium magnam consequuntur iure
+            deleniti non ratione modi voluptatum nisi cupiditate? Beatae, officiis quia unde nam eveniet vel ea in consequatur nobis ducimus officia eum impedit error ullam modi cum nemo, nesciunt facilis aspernatur cumque architecto animi. Nam minus
+            nemo assumenda voluptatibus natus sunt quam nostrum, incidunt eaque nihil eligendi exercitationem deleniti placeat, unde consequatur praesentium. Ipsum consequuntur nisi sit ipsa ut deleniti quod minima iusto, atque aliquid vel, magnam, asperiores
+            dolor facere sapiente deserunt rem esse voluptatum. Sed reiciendis facilis neque corporis, laboriosam dolore quo ut nihil repellendus eius officiis natus voluptates nostrum nulla, ad minima assumenda fugiat eligendi aspernatur illo eos eum.
+            Voluptas, perferendis? Dolore minima qui minus, aliquam laudantium quas. Modi fugit accusamus laboriosam laudantium, quam ex ab iusto officia sit porro consectetur sed voluptas enim fugiat dolorem vel pariatur molestiae sequi praesentium!
+            Veniam quibusdam ad obcaecati nisi error iusto nostrum veritatis possimus mollitia quam quos deserunt, deleniti, incidunt in consectetur, rem laudantium tempore laboriosam eum amet. Nisi tempore aperiam debitis sed beatae necessitatibus cupiditate
+            ducimus, nulla explicabo corporis quas suscipit placeat autem eum iure facilis quia magni repudiandae voluptates cumque! Ab animi ipsum ut vel? Nostrum animi laboriosam eaque impedit, ipsam consectetur quod, doloribus quaerat corrupti minus
+            maxime optio deleniti. Possimus eaque, aspernatur perspiciatis laudantium nihil quia sunt labore ad illo accusamus sit voluptatibus vitae hic officia enim qui distinctio mollitia voluptate! Ab velit, at exercitationem illum tempore consectetur
+            alias itaque aliquam ipsum saepe aut mollitia sunt dicta numquam ullam nostrum. Illum minima distinctio magni illo beatae deleniti iure laboriosam numquam vero perspiciatis perferendis doloribus, suscipit repellendus, labore odio soluta neque
+            quaerat repellat nobis delectus itaque modi. Asperiores provident cupiditate ab ad dolore vel unde veritatis harum rem, sequi a voluptate. Soluta magni ut culpa nobis magnam quo nemo dolore voluptas excepturi reiciendis officiis, necessitatibus
+            odio rem quia. Pariatur earum cupiditate doloribus. Eius accusantium vel quos nobis! Quidem, reprehenderit. Corrupti necessitatibus nisi reprehenderit aspernatur voluptate? Quo quibusdam, recusandae consequatur ab sed aspernatur beatae ad
+            obcaecati aut quasi magni voluptas quia, debitis porro, omnis deleniti commodi? Voluptatem fugiat quidem dolorum facere sequi quis molestias dolores illo, qui quaerat accusamus ipsa magnam dolorem vitae? Maxime ratione totam quae, atque pariatur
+            quisquam eaque optio temporibus corrupti autem aperiam aut repellat eligendi nisi alias eveniet fuga quasi veritatis sequi error ut assumenda inventore recusandae. Officiis consequatur nobis, consequuntur harum sed quo perferendis explicabo
+            provident repellendus amet, eaque possimus aliquid unde atque enim sint aperiam? Vero esse doloribus excepturi! Numquam accusantium quo impedit aperiam excepturi fuga eaque explicabo recusandae iusto, dignissimos odio magnam sit totam alias
+            cumque quisquam dolorum? Consectetur ea odit minima eaque odio veritatis velit asperiores, sint quam tempore corrupti at dicta earum.
+        </div>
+    </div>
+
+    <div id="confModal2" class="modal modal-conf">
+        <div class="modal__mob-top">
+            <button class="modal__close">
+                <img src="img/back.svg" alt="">
+            </button>
+            <button class="modal__close">
+                <img src="img/cancel.svg" alt="">
+            </button>
+        </div>
+        <div class="modal__title">
+            <span>Пользовательское соглашение</span>
+            <button class="modal__close">
+                <img src="img/cancel.svg" alt="">
+            </button>
+        </div>
+        <div class="modal__text">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero, exercitationem sit aut nemo a, molestiae dolore, maxime incidunt ex omnis placeat minus repellendus reprehenderit expedita tempora officia earum eveniet unde vitae non? Sapiente
+                rem velit et. Earum non possimus cupiditate. Et nulla quod qui, non voluptatibus ad. Voluptate reprehenderit placeat quos. Quia, qui tenetur praesentium veniam odit accusamus alias maiores. Lorem ipsum dolor sit amet consectetur adipisicing
+                elit. Tempora voluptate voluptatum sunt alias ab aperiam quos. Id enim cum ducimus labore dolorum. Molestias debitis nam at ullam? Necessitatibus eos vitae iste assumenda vel sunt odit autem accusamus et dolorum, dignissimos aut excepturi
+                ad, quas repellendus eveniet, in voluptatum veritatis tenetur sit molestias ducimus? Id provident quia sit, minus aspernatur fugiat, magnam harum distinctio asperiores veritatis quidem delectus ab vero at nesciunt aliquam quaerat nisi
+                rerum cumque ipsa ipsum accusantium laudantium. Molestias odit voluptatem suscipit eius earum voluptates nulla, atque debitis, iure nisi doloremque, odio molestiae temporibus enim? Adipisci voluptatum quo placeat sequi officiis cumque
+                beatae commodi architecto provident harum molestias veniam facere, corporis aperiam repellendus aliquid id inventore est hic fugit, ex consequuntur, dolores assumenda. Dolore, aliquam sapiente qui dignissimos ut maiores sequi minima, ipsum
+                enim molestias sunt illo excepturi. Voluptatum</p>
+            <p>explicabo eaque qui ea quo, beatae dolorem ullam alias architecto nostrum omnis dicta, ducimus vero sapiente dolor facere eos iste illo. Saepe commodi inventore consequatur velit ab vitae rerum molestiae aut illum a praesentium eveniet reprehenderit
+                placeat, earum tempora explicabo quas qui enim provident sint consequuntur iusto iure beatae aliquam. Autem eaque quasi, officia distinctio accusantium perferendis excepturi, voluptatibus optio possimus ut, quas porro. Saepe distinctio
+                reprehenderit ad vel dolorem sunt laboriosam, minima dolorum perferendis adipisci recusandae soluta magni, eligendi dicta. Aperiam voluptas veniam et iure asperiores repudiandae placeat perferendis officiis nesciunt? Ad, illum iure, libero
+                tenetur repellat est ipsam, molestiae ea provident expedita esse. Labore ea ipsa vitae quae! Animi laudantium eveniet atque cupiditate accusantium rem eum corrupti, quos placeat necessitatibus voluptas deserunt, dolores numquam quae autem
+                delectus possimus dolor harum nostrum nihil neque at qui corporis? Possimus voluptate optio impedit beatae aliquid quae itaque quidem ducimus dignissimos eius modi debitis, fuga ut. Culpa dolor fuga minima provident sapiente nam! Ipsam
+                reiciendis error perferendis earum, nemo blanditiis quam quos expedita commodi quo libero est voluptatem corporis ipsum saepe delectus repellendus rem rerum tempore fugit enim pariatur voluptas? Culpa iure quibusdam dolorem numquam velit?
+                Qui reprehenderit molestiae quia</p>
+            nostrum quibusdam sit incidunt rerum magnam. At quod placeat voluptates? Corrupti incidunt sint voluptatem placeat esse illum numquam quo doloribus debitis qui nam eveniet dolore corporis, ducimus sapiente voluptatum voluptas vero fuga consectetur! Eaque
+            iusto, aut officia omnis dicta ea incidunt delectus aliquid odit quas unde est sequi! Quod, qui blanditiis eum odio in modi necessitatibus recusandae ipsam aliquam quibusdam soluta laudantium obcaecati vel ex neque maxime reprehenderit deserunt
+            perferendis! Facere ducimus sit, eum nam placeat nemo minima, illo asperiores maxime dolore inventore fugiat alias magnam quam sunt similique perferendis. Assumenda blanditiis perferendis consequuntur iusto consectetur, voluptas asperiores
+            architecto ratione doloremque esse animi, facere quidem quae? Aspernatur error impedit commodi deserunt tempora non? Quos maiores, harum dignissimos odio, ut sint obcaecati modi qui necessitatibus quis quas laborum. Reiciendis voluptatibus
+            asperiores possimus iure! Blanditiis esse labore quo a in explicabo, eligendi modi inventore tenetur quisquam voluptas delectus omnis quae! Expedita natus, perferendis temporibus optio voluptatibus quod eligendi, architecto eaque modi consequatur
+            hic eius similique quibusdam tempore, adipisci dolor facere doloribus? Iure corrupti eligendi iusto nobis, voluptates placeat sed dicta illo culpa dignissimos perferendis eius soluta distinctio vel voluptate aliquid doloribus facilis, mollitia
+            libero? Quia rerum dolorum consectetur error corporis fugiat doloremque labore voluptatibus quam! Beatae provident ab quod eius distinctio, doloribus reiciendis! Omnis soluta, enim corporis harum, quaerat laudantium magnam consequuntur iure
+            deleniti non ratione modi voluptatum nisi cupiditate? Beatae, officiis quia unde nam eveniet vel ea in consequatur nobis ducimus officia eum impedit error ullam modi cum nemo, nesciunt facilis aspernatur cumque architecto animi. Nam minus
+            nemo assumenda voluptatibus natus sunt quam nostrum, incidunt eaque nihil eligendi exercitationem deleniti placeat, unde consequatur praesentium. Ipsum consequuntur nisi sit ipsa ut deleniti quod minima iusto, atque aliquid vel, magnam, asperiores
+            dolor facere sapiente deserunt rem esse voluptatum. Sed reiciendis facilis neque corporis, laboriosam dolore quo ut nihil repellendus eius officiis natus voluptates nostrum nulla, ad minima assumenda fugiat eligendi aspernatur illo eos eum.
+            Voluptas, perferendis? Dolore minima qui minus, aliquam laudantium quas. Modi fugit accusamus laboriosam laudantium, quam ex ab iusto officia sit porro consectetur sed voluptas enim fugiat dolorem vel pariatur molestiae sequi praesentium!
+            Veniam quibusdam ad obcaecati nisi error iusto nostrum veritatis possimus mollitia quam quos deserunt, deleniti, incidunt in consectetur, rem laudantium tempore laboriosam eum amet. Nisi tempore aperiam debitis sed beatae necessitatibus cupiditate
+            ducimus, nulla explicabo corporis quas suscipit placeat autem eum iure facilis quia magni repudiandae voluptates cumque! Ab animi ipsum ut vel? Nostrum animi laboriosam eaque impedit, ipsam consectetur quod, doloribus quaerat corrupti minus
+            maxime optio deleniti. Possimus eaque, aspernatur perspiciatis laudantium nihil quia sunt labore ad illo accusamus sit voluptatibus vitae hic officia enim qui distinctio mollitia voluptate! Ab velit, at exercitationem illum tempore consectetur
+            alias itaque aliquam ipsum saepe aut mollitia sunt dicta numquam ullam nostrum. Illum minima distinctio magni illo beatae deleniti iure laboriosam numquam vero perspiciatis perferendis doloribus, suscipit repellendus, labore odio soluta neque
+            quaerat repellat nobis delectus itaque modi. Asperiores provident cupiditate ab ad dolore vel unde veritatis harum rem, sequi a voluptate. Soluta magni ut culpa nobis magnam quo nemo dolore voluptas excepturi reiciendis officiis, necessitatibus
+            odio rem quia. Pariatur earum cupiditate doloribus. Eius accusantium vel quos nobis! Quidem, reprehenderit. Corrupti necessitatibus nisi reprehenderit aspernatur voluptate? Quo quibusdam, recusandae consequatur ab sed aspernatur beatae ad
+            obcaecati aut quasi magni voluptas quia, debitis porro, omnis deleniti commodi? Voluptatem fugiat quidem dolorum facere sequi quis molestias dolores illo, qui quaerat accusamus ipsa magnam dolorem vitae? Maxime ratione totam quae, atque pariatur
+            quisquam eaque optio temporibus corrupti autem aperiam aut repellat eligendi nisi alias eveniet fuga quasi veritatis sequi error ut assumenda inventore recusandae. Officiis consequatur nobis, consequuntur harum sed quo perferendis explicabo
+            provident repellendus amet, eaque possimus aliquid unde atque enim sint aperiam? Vero esse doloribus excepturi! Numquam accusantium quo impedit aperiam excepturi fuga eaque explicabo recusandae iusto, dignissimos odio magnam sit totam alias
+            cumque quisquam dolorum? Consectetur ea odit minima eaque odio veritatis velit asperiores, sint quam tempore corrupti at dicta earum.
+        </div>
+    </div>
+
+    <div id="consultModal1" class="modal-none consult-modal">
+        <div class="consult-modal__mob-top">
+            <button class="consult-modal__close">
+                <img src="img/back.svg" alt="">
+            </button>
+            <button class="consult-modal__close consult-modal__close2">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M5 5L19 19" stroke="#0723DF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M5 19L19 5" stroke="#0723DF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </button>
+        </div>
+        <div class="consult-modal__img">
+            <img src="img/modal.jpg" alt="">
+        </div>
+        <div class="consult-modal__title">Получить бесплатную <br> консультацию инженера</div>
+        <form action="" class="consult-modal__form">
+            <fieldset class='consult-modal__form-group form-group'>
+                <input type='text' placeholder="Имя" />
+            </fieldset>
+            <fieldset class='consult-modal__form-group form-group'>
+                <input type='tel' placeholder="телефон" />
+            </fieldset>
+            <button class="consult-modal__form-btn btn btn-blue">Отправить</button>
+            <div class="consult-modal__hint">Нажимая на кнопку, вы даете согласие на обработку своих персональных данных и <a href="">соглашаетесь с Политикой конфиденциальности</a></div>
+        </form>
+    </div>
+    <div id="consultModal2" class="modal-none consult-modal">
+        <div class="consult-modal__mob-top">
+            <button class="consult-modal__close">
+                <img src="img/back.svg" alt="">
+            </button>
+            <button class="consult-modal__close consult-modal__close2">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M5 5L19 19" stroke="#95A6BF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M5 19L19 5" stroke="#95A6BF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </button>
+        </div>
+        <div class="consult-modal__title">
+            <p><span>Спасибо за обращение</span> <br> в международную инжиниринговую компанию «Атлант» </p>
+            <p>Наш инжерер свяжется с вами <span> <br>в течении 15 минут</span></p>
+        </div>
+
+        <div class="consult-modal__news">
+            <div class="news-card">
+                <div class="news-card__img">
+                    <img src="img/news2.png" alt="">
+                </div>
+                <div class="news-card__desc">
+                    <div class="news-card__time">
+                        <span class="news-card__date">25 Марта, 2021</span>
+                        <span class="news-card__reading">Читать 11 минут</span>
+                    </div>
+                    <h2 class="news-card__title">Испытательная лаборатория ООО «ЦЭБ ГА» провела работы по измерению…</h2>
+                    <a class="news-card__link" href="">Читать полностью</a>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <script src="js/jquery-1.11.3.min.js"></script>
     <script src="js/jquery.maskedinput.min.js"></script>
     <script src="js/jquery.fancybox.min.js"></script>
-    <script src="js/swiper.js"></script>
+    <script src="js/swiper.min.js"></script>
     <script src="js/jquery.nice-select.min.js"></script>
-    <script src="js/index.js"></script>
-
+    <script src="js/global.js"></script>
+    <script>
+        $(".tab-title").click(function() {
+            let path = $(this).attr("data-title-path");
+            $(".tab-title").removeClass("tab-title--active");
+            $(this).addClass("tab-title--active");
+            $(".news__inner-content").removeClass("news__inner-content--active");
+            $(`.news__inner-content[data-title-path="${path}"]`).addClass("news__inner-content--active");
+        })
+    </script>
 </body>
 
 </html>

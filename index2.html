@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="css/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="css/jquery.fancybox.min.css">
+    <link rel="stylesheet" href="css/nice-select.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Главная</title>
+</head>
+
+<body>
+
+    <div class="wrapper">
+        <aside class="sidebar">
+            <div class="sidebar__top">
+                <a href="" class="sidebar__logo">
+                    <img src="img/logo.svg" alt="">
+                </a>
+                <div class="sidebar__top-right">
+                    <a href="tel:+7 (495) 961-31-12" class="sidebar__tel">+7 (495) 961-31-12</a>
+                    <button class="sidebar__burger">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+            </div>
+
+            <div class="sidebar__bottom">
+                <nav class="nav">
+                    <div class="nav__item">
+                        <div class="nav__item-show">
+                            <span>Услуги и цены</span>
+                            <svg width="11" height="6" viewBox="0 0 11 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M5.5 6L0.73686 5.64421e-08L10.2631 8.89256e-07L5.5 6Z" fill="#282828"/>
+                        </svg>
+                        </div>
+                        <div class="nav__item-hidden">
+                            <a href="" class="nav__item-link">Технический надзор</a>
+                            <a href="" class="nav__item-link">Приемка квартир</a>
+                            <a href="" class="nav__item-link">Разовый выезд</a>
+                            <a href="" class="nav__item-link">Проверка смет</a>
+                            <a href="" class="nav__item-link">Проверка дизайн-проекта</a>
+                            <a href="" class="nav__item-link">Тепловизионное обследование</a>
+                        </div>
+                    </div>
+                    <a href="" class="nav__item">Приёмка квартир</a>
+                    <a href="" class="nav__item">Наши проекты</a>
+                    <a href="" class="nav__item">Блог</a>
+                </nav>
+
+                <div class="sidebar__buttons">
+                    <button class="sidebar__btn btn btn-blue" onclick="consultModal('consultModal1', {
+                        title:'Кнопка на сайдбаре',
+                        button: 'Обратный звонок'}
+                        )">Обратный звонок</button>
+                    <button class="sidebar__btn btn btn-blue-outline">Личный кабинет</button>
+                </div>
+
+                <a target="_blank" href="https://docs.yandex.ru/docs/view?tm=1644933042&tld=ru&lang=en&name=mike_barrett-sat_prep_black_book_the_most_effectiv_21.pdf&text=sat%20prep%20black%20book%20pdf&url=https%3A%2F%2Fquicklylearningenglish.files.wordpress.com%2F2015%2F06%2Fmike_barrett-sat_prep_black_book_the_most_effectiv_21.pdf&lr=43&mime=pdf&l10n=ru&sign=ae8eb93081adf6130c1320089e7e1f2a&keyno=0&nosw=1&serpParams=tm%3D1644933042%26tld%3Dru%26lang%3Den%26name%3Dmike_barrett-sat_prep_black_book_the_most_effectiv_21.pdf%26text%3Dsat%2Bprep%2Bblack%2Bbook%2Bpdf%26url%3Dhttps%253A%2F%2Fquicklylearningenglish.files.wordpress.com%2F2015%2F06%2Fmike_barrett-sat_prep_black_book_the_most_effectiv_21.pdf%26lr%3D43%26mime%3Dpdf%26l10n%3Dru%26sign%3Dae8eb93081adf6130c1320089e7e1f2a%26keyno%3D0%26nosw%3D1"
+                    class="sidebar__pdf">
+                    <img src="img/download.svg" alt="Скачать">
+                    <span>Выписка из реестра членов СРО</span>
+                </a>
+
+                <div class="sidebar__link sidebar__phone">
+                    <img src="img/phone.svg" alt="Телефон">
+                    <div>
+                        <a href="tel:+7 (495) 961-31-12" class="sidebar__phone-link">+7 (495) 961-31-12</a>
+                        <span>пн-пт 09:00–19:00</span>
+                    </div>
+                </div>
+                <a href="" class="sidebar__link sidebar__email">
+                    <img src="img/email.svg" alt="Почта">
+                    <span>moinadzor@nadzor.com</span>
+                </a>
+                <div class="sidebar__link">
+                    <img src="img/map-pin.svg" alt="Адрес">
+                    <span>Столярный пер., 3, <br> корп. 13, Москва</span>
+                </div>
+
+                <div class="sidebar__socials">
+                    <a href="" class="sidebar__socials-item btn btn-blue">
+                        <img src="img/instagram.svg" alt="">
+                    </a>
+                    <a href="" class="sidebar__socials-item btn btn-blue">
+                        <img src="img/telegram.svg" alt="">
+                    </a>
+                    <a href="" class="sidebar__socials-item btn btn-blue">
+                        <img src="img/whatsapp.svg" alt="">
+                    </a>
+                </div>
+            </div>
+        </aside>
+
+        <main class="content">
+
+            <div class="main" style="background-image: url(img/main-bg.jpg);">
+                <div class="main__inner">
+                    <h1 class="main__title display1">
+                        Технический <span>надзор</span> <br> за ремонтом квартир <strong>по 370 параметрам</strong>
+                    </h1>
+                    <div class="main__desc">Ремонт в срок: без личного присутствия, <br> переплат и споров со строителями</div>
+                    <div class="main__items">
+                        <div class="main__item">
+                            <div class="main__item-price">
+                                <strong>127 563</strong>
+                                <span>тыс м²</span>
+                            </div>
+                            <div class="main__item-desc">Жилья отремонтировано под нашим контролем</div>
+                        </div>
+                        <div class="main__item">
+                            <div class="main__item-price">
+                                <strong>857 208 520</strong>
+                                <span>₽</span>
+                            </div>
+                            <div class="main__item-desc">Сэкономлено собственникам квартир</div>
+                        </div>
+                    </div>
+                    <div class="main__bottom">
+                        <div class="main__hint">
+                            <svg id="icon1" class="check-icon" width="48" height="48" viewBox="0 0 48 48" fill="none" stroke="#0723DF" stroke-width="3" stroke-dasharray="100">
+                                <path class="icon-path" id="check" d="M 12,22 L 22,31 L 36,13"></path>
+                            </svg>
+                            <span>Мы обеспечим вам комфортное управление ремонтом из любой точки мира</span>
+                        </div>
+                        <button onclick="consultModal('consultModal1', {title:'Технический надзор за ремонтом квартир',button: 'Поставить задачу'})" class="main__btn btn btn-blue">Поставить задачу</button>
+                    </div>
+                    <div class="main__info caveat">
+                        <div class="main__info-title">по 370</div>
+                        <div class="main__info-desc">параметрам</div>
+                        <svg class="main__info-arrow" width="106" height="102" viewBox="0 0 106 102" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M95.3426 0.961512C95.0452 0.496139 94.4269 0.359968 93.9615 0.657367C93.4961 0.954765 93.36 1.57311 93.6574 2.03849L95.3426 0.961512ZM0.753253 93.8349C0.385924 94.2473 0.422475 94.8794 0.834891 95.2467L7.55561 101.233C7.96803 101.6 8.60014 101.564 8.96747 101.151C9.33479 100.739 9.29824 100.107 8.88583 99.7392L2.91186 94.4184L8.23272 88.4444C8.60005 88.032 8.5635 87.3999 8.15109 87.0325C7.73867 86.6652 7.10656 86.7018 6.73923 87.1142L0.753253 93.8349ZM93.6574 2.03849C102.56 15.9698 108.518 37.0976 97.982 55.5159C87.4426 73.9395 60.1477 90.1071 1.44227 93.5017L1.55773 95.4983C60.4523 92.0929 88.6574 75.8438 99.718 56.5091C110.782 37.1691 104.44 15.1969 95.3426 0.961512L93.6574 2.03849Z" fill="#0723DF"/>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container">
+
+                <div class="what-is">
+                    <div class="what-is__title display2">
+                        Что такое <span>технический надзор</span> и для чего он нужен
+                    </div>
+                    <div class="what-is__worker">
+                        <img src="img/man.png" alt="">
+                        <div class="what-is__worker-info">
+                            <div class="what-is__worker-name">Сергей Павлов</div>
+                            <div class="what-is__worker-prof">Главный инженер</div>
+                        </div>
+                    </div>
+                    <div class="what-is__desc">
+                        <p>Наша компания <span>координирует работу</span> строителей и ремонтных бригад в Москве и области. Наша главная задача — предотвратить возможные ошибки при ремонте, а также не допустить ситуацию, когда смета намеренно завышается
+                            строителями.
+                        </p>
+                        <p>Работая с техническим надзором, <span>подрядчику не удастся «схалтурить»,</span> поэтому начинает привлекать более опытных работников, использует более качественные материалы, строго соблюдает сроки и договоренности с заказчиком.
+                            Ведь понимает, что в ином случае работу придется переделывать заново, а это — лишние расходы времени и средств.</p>
+                    </div>
+                </div>
+
+                <div class="quiz">
+                    <div class="quiz-step quiz-step--active" data-step-path="1">
+                        <div class="quiz-step__wrap">
+                            <div class="quiz-step__left">
+                                <div class="quiz-step__title">Ответьте на несколько вопросов, чтобы рассчитать стоимость услуг прямо сейчас</div>
+                                <div class="quiz-step__progress">
+                                    <div class="quiz-step__progress-bar">
+                                        <span style="width: 25%;"></span>
+                                    </div>
+                                    <div class="quiz-step__progress-num">
+                                        <span>1</span>/4
+                                    </div>
+                                </div>
+                                <div class="quiz-step__subtitle">Выберите тип объекта</div>
+                                <div class="quiz-step__questions">
+                                    <div class="quiz-step__question radio">
+                                        <input type='radio' class='radio' id='typeObject1' name='typeObject' />
+                                        <label for='typeObject1'>Квартира</label>
+                                    </div>
+                                    <div class="quiz-step__question radio">
+                                        <input checked type='radio' class='radio' id='typeObject2' name='typeObject' />
+                                        <label for='typeObject2'>Апартаменты </label>
+                                    </div>
+                                    <div class="quiz-step__question radio">
+                                        <input type='radio' class='radio' id='typeObject3' name='typeObject' />
+                                        <label for='typeObject3'>Офис</label>
+                                    </div>
+                                </div>
+                                <div class="quiz-step__nav">
+                                    <button class="quiz-step__next btn btn-blue">Далее</button>
+                                </div>
+                            </div>
+                            <div class="quiz-step__img">
+                                <img src="img/quiz.jpg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="quiz-step" data-step-path="2">
+                        <div class="quiz-step__wrap">
+                            <div class="quiz-step__left">
+                                <div class="quiz-step__title">Ответьте на несколько вопросов, чтобы рассчитать стоимость услуг прямо сейчас</div>
+                                <div class="quiz-step__progress">
+                                    <div class="quiz-step__progress-bar">
+                                        <span style="width: 50%;"></span>
+                                    </div>
+                                    <div class="quiz-step__progress-num">
+                                        <span>2</span>/4
+                                    </div>
+                                </div>
+                                <div class="quiz-step__subtitle">Выберите площадь объекта</div>
+                                <div class="quiz-step__questions">
+                                    <div class="quiz-step__question radio">
+                                        <input type='radio' class='radio' id='objectArea1' name='objectArea' />
+                                        <label for='objectArea1'>до 100м2</label>
+                                    </div>
+                                    <div class="quiz-step__question radio">
+                                        <input checked type='radio' class='radio' id='objectArea2' name='objectArea' />
+                                        <label for='objectArea2'>от 100м2 до 200м2 </label>
+                                    </div>
+                                    <div class="quiz-step__question radio">
+                                        <input type='radio' class='radio' id='objectArea3' name='objectArea' />
+                                        <label for='objectArea3'>от 200м2 до 500м2 </label>
+                                    </div>
+                                    <div class="quiz-step__question radio">
+                                        <input type='radio' class='radio' id='objectArea4' name='objectArea' />
+                                        <label for='objectArea4'>свыше 500м2 </label>
+                                    </div>
+                                </div>
+                                <div class="quiz-step__nav">
+                                    <button class="quiz-step__next btn btn-blue">Далее</button>
+                                    <button class="quiz-step__prev">Назад</button>
+                                </div>
+                            </div>
+                            <div class="quiz-step__img">
+                                <img src="img/quiz2.jpg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="quiz-step" data-step-path="3">
+                        <div class="quiz-step__title">Ответьте на несколько вопросов, чтобы рассчитать стоимость услуг прямо сейчас</div>
+                        <div class="quiz-step__progress">
+                            <div class="quiz-step__progress-bar">
+                                <span style="width: 75%;"></span>
+                            </div>
+                            <div class="quiz-step__progress-num">
+                                <span>3</span>/4
+                            </div>
+                        </div>
+                        <div class="quiz-step__subtitle">Выберите тип объекта</div>
+
+                        <div class="quiz-step__stages">
+                            <div class="quiz-step__stage">
+                                <div class="quiz-step__stage-top">
+                                    <div class="quiz-step__stage-img">
+                                        <img src="img/quiz3.jpg" alt="">
+                                    </div>
+                                    <div class="quiz-step__stage-radio">
+                                        <input checked type='radio' class='radio' id='stage1' name='stage' />
+                                        <label for='stage1'>
+                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M20 6L9 17L4 12" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                            </svg>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="quiz-step__stage-title">Начальная</div>
+                                <div class="quiz-step__stage-desc">Договариваемся с подрядной организацией </div>
+                            </div>
+                            <div class="quiz-step__stage">
+                                <div class="quiz-step__stage-top">
+                                    <div class="quiz-step__stage-img">
+                                        <img src="img/quiz4.jpg" alt="">
+                                    </div>
+                                    <div class="quiz-step__stage-radio">
+                                        <input type='radio' class='radio' id='stage2' name='stage' />
+                                        <label for='stage2'>
+                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M20 6L9 17L4 12" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                            </svg>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="quiz-step__stage-title">В процессе ремонта </div>
+                                <div class="quiz-step__stage-desc">Договариваемся с подрядной организацией </div>
+                            </div>
+                            <div class="quiz-step__stage">
+                                <div class="quiz-step__stage-top">
+                                    <div class="quiz-step__stage-img">
+                                        <img src="img/quiz5.jpg" alt="">
+                                    </div>
+                                    <div class="quiz-step__stage-radio">
+                                        <input type='radio' class='radio' id='stage3' name='stage' />
+                                        <label for='stage3'>
+                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M20 6L9 17L4 12" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                            </svg>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="quiz-step__stage-title">Завершение ремонта </div>
+                                <div class="quiz-step__stage-desc">Договариваемся с подрядной организацией </div>
+                            </div>
+                        </div>
+
+                        <div class="quiz-step__nav">
+                            <button class="quiz-step__next btn btn-blue">Далее</button>
+                            <button class="quiz-step__prev">Назад</button>
+                        </div>
+
+                    </div>
+                    <div class="quiz-step" data-step-path="4">
+                        <div class="quiz-step__wrap">
+                            <div class="quiz-step__left">
+                                <div class="quiz-step__title">Ответьте на несколько вопросов, чтобы рассчитать стоимость услуг прямо сейчас</div>
+                                <div class="quiz-step__progress">
+                                    <div class="quiz-step__progress-bar">
+                                        <span style="width: 100%;"></span>
+                                    </div>
+                                    <div class="quiz-step__progress-num">
+                                        <span>4</span>/4
+                                    </div>
+                                </div>
+                                <div class="quiz-step__subtitle">Ваши потребности</div>
+                                <div class="quiz-step__questions">
+                                    <div class="quiz-step__question check">
+                                        <input type="checkbox" class="checkbox" id="requirement">
+                                        <label for="requirement">Принять недвижимость от застройщика</label>
+                                    </div>
+                                    <div class="quiz-step__question check">
+                                        <input checked type="checkbox" class="checkbox" id="requirement2">
+                                        <label for="requirement2">Технический надзор  на регулярной основе</label>
+                                    </div>
+                                    <div class="quiz-step__question check">
+                                        <input type="checkbox" class="checkbox" id="requirement3">
+                                        <label for="requirement3">Выезд на объект для оценки качества и приемки работ</label>
+                                    </div>
+                                    <div class="quiz-step__question check">
+                                        <input type="checkbox" class="checkbox" id="requirement4">
+                                        <label for="requirement4">Проверить дизайн-проект</label>
+                                    </div>
+                                    <div class="quiz-step__question check">
+                                        <input checked type="checkbox" class="checkbox" id="requirement5">
+                                        <label for="requirement5">Составить безопасный договор с подрядчиком</label>
+                                    </div>
+                                    <div class="quiz-step__question check">
+                                        <input type="checkbox" class="checkbox" id="requirement6">
+                                        <label for="requirement6">Составить безопасный договор с подрядчиком</label>
+                                    </div>
+                                </div>
+                                <div class="quiz-step__nav">
+                                    <button class="quiz-step__next btn btn-blue">Далее</button>
+                                    <button class="quiz-step__prev">Назад</button>
+                                </div>
+                            </div>
+                            <div class="quiz-step__img quiz-step__img--360">
+                                <img src="img/quiz6.jpg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="quiz-step" data-step-path="5">
+                        <div class="consultation">
+                            <div class="consultation__left">
+                                <div class="consultation__title display2">
+                                    <span>Почти готово!</span>
+                                    <strong>Заполните, пожалуйста, Ваши контактные данные, тобы получить расчёт</strong>
+                                </div>
+                                <form class="consultation__form">
+
+                                    <fieldset class="consultation__form-group form-group">
+                                        <input type="text" placeholder="Имя">
+                                    </fieldset>
+                                    <fieldset class="consultation__form-group form-group">
+                                        <input type="tel" placeholder="телефон">
+                                    </fieldset>
+                                    <button class="consultation__btn btn btn-blue">Отправить</button>
+                                </form>
+
+                                <div class="consultation__text">
+                                    Нажимая на кнопку, вы даете согласие на обработку своих персональных данных и соглашаетесь с <a href="">Политикой конфиденциальности</a>
+                                </div>
+                                <div class="quiz-step__nav">
+                                    <button class="quiz-step__prev quiz-step__prev--left">Назад</button>
+                                </div>
+                            </div>
+                            <div class="consultation__right">
+                                <picture>
+                                    <source srcset="img/consultation-img.webp" type="image/webp">
+                                    <img src="img/consultation-img.png" alt="">
+                                </picture>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </main>
+    </div>
+
+    <footer class="footer">
+        <div class="footer__inner">
+            <div class="footer__left">
+                <a href="" class="footer__logo display2">
+                    <span>мой</span> надзор.
+                </a>
+                <a class="footer__pdf" target="_blank" href="https://docs.yandex.ru/docs/view?tm=1644933042&amp;tld=ru&amp;lang=en&amp;name=mike_barrett-sat_prep_black_book_the_most_effectiv_21.pdf&amp;text=sat%20prep%20black%20book%20pdf&amp;url=https%3A%2F%2Fquicklylearningenglish.files.wordpress.com%2F2015%2F06%2Fmike_barrett-sat_prep_black_book_the_most_effectiv_21.pdf&amp;lr=43&amp;mime=pdf&amp;l10n=ru&amp;sign=ae8eb93081adf6130c1320089e7e1f2a&amp;keyno=0&amp;nosw=1&amp;serpParams=tm%3D1644933042%26tld%3Dru%26lang%3Den%26name%3Dmike_barrett-sat_prep_black_book_the_most_effectiv_21.pdf%26text%3Dsat%2Bprep%2Bblack%2Bbook%2Bpdf%26url%3Dhttps%253A%2F%2Fquicklylearningenglish.files.wordpress.com%2F2015%2F06%2Fmike_barrett-sat_prep_black_book_the_most_effectiv_21.pdf%26lr%3D43%26mime%3Dpdf%26l10n%3Dru%26sign%3Dae8eb93081adf6130c1320089e7e1f2a%26keyno%3D0%26nosw%3D1">
+                    <img src="img/download.svg" alt="Скачать">
+                    <span>Выписка из реестра членов СРО</span>
+                </a>
+                <div class="footer__info">© Компания «Мой Надзор» – технический надзор в Москве <br> и Подмосковье, 2022</div>
+                <div class="footer__left-links">
+                    <a href="">Политика конфиденциальности</a>
+                    <a href="">Пользовательское соглашение</a>
+                </div>
+            </div>
+            <div class="footer__right">
+                <nav class="footer-nav">
+                    <div class="footer-nav__item">
+                        <div class="footer-nav__item-show">
+                            <span>Услуги и цены</span>
+                            <svg width="11" height="6" viewBox="0 0 11 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M5.5 6L0.73686 5.64421e-08L10.2631 8.89256e-07L5.5 6Z" fill="#fff"></path>
+                            </svg>
+                        </div>
+                        <div class="footer-nav__item-hidden">
+                            <a href="" class="footer-nav__item-link">Технический надзор</a>
+                            <a href="" class="footer-nav__item-link">Приемка квартир</a>
+                            <a href="" class="footer-nav__item-link">Разовый выезд</a>
+                            <a href="" class="footer-nav__item-link">Проверка смет</a>
+                            <a href="" class="footer-nav__item-link">Проверка дизайн-проекта</a>
+                            <a href="" class="footer-nav__item-link">Тепловизионное обследование</a>
+                        </div>
+                    </div>
+                    <a href="" class="footer-nav__item">Приёмка квартир</a>
+                    <a href="" class="footer-nav__item">Наши проекты</a>
+                    <a href="" class="footer-nav__item">Блог</a>
+                </nav>
+                <div class="footer-middle">
+                    <div class="footer-middle__left">
+                        <div class="footer__contacts">
+                            <div class="footer__contacts-item footer__contacts-item--phone">
+                                <img src="img/phone2.svg" alt="">
+                                <div class="footer__contacts-info">
+                                    <a href="tel:+7 (495) 961-31-12">+7 (495) 961-31-12</a>
+                                    <span>пн-пт 09:00–19:00</span>
+                                </div>
+                            </div>
+                            <div class="footer__contacts-item">
+                                <img src="img/at-sign.svg" alt="">
+                                <div class="footer__contacts-info">
+                                    <a href="">moinadzor@nadzor.com
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="footer__contacts-item">
+                                <img src="img/map-pin3.svg" alt="">
+                                <div class="footer__contacts-info">
+                                    <span>Столярный пер., 3, корп. <br> 13, Москва</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="footer-middle__right">
+                        <div class="footer__socials">
+                            <div class="footer__socials-title">Мы в социальных сетях</div>
+                            <div class="footer__socials-items">
+                                <a href="" class="footer__socials-item">
+                                    <img src="img/instagram2.svg" alt="">
+                                </a>
+                                <a href="" class="footer__socials-item">
+                                    <img src="img/telegram2.svg" alt="">
+                                </a>
+                                <a href="" class="footer__socials-item">
+                                    <img src="img/whatsapp2.svg" alt="">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <div class="footer-bottom__left">
+                        <div class="footer__address">Адрес: г. Москва, Чусовская ул, <br> 7а, офис 201</div>
+                        <div class="footer__info2">
+                            ООО "Мой Надзор" <br> ОГРН 118774683265 <br> ИНН 7719482067
+                        </div>
+                    </div>
+                    <div class="footer-bottom__right">
+                        Отправляя персональную информацию через любые формы на сайте, Вы автоматически подтверждаете свое согласие на ее обработку. Материалы на сайте не являются публичной офертой
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+
+
+    <script src="js/jquery-1.11.3.min.js"></script>
+    <script src="js/jquery.maskedinput.min.js"></script>
+    <script src="js/jquery.fancybox.min.js"></script>
+    <script src="js/swiper.min.js"></script>
+    <script src="js/jquery.nice-select.min.js"></script>
+    <script src="js/global.js"></script>
+    <script src="js/index.js"></script>
+
+</body>
+
+</html>

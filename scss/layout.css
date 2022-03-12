@@ -1,21 +1,21 @@
 /*
 Error: Undefined variable: "$primary".
-        on line 38 of E:\markup\nadzor\scss\layout.scss
+        on line 56 of D:\work\freelance\nadzor\scss\layout.scss
 
-33:         display: flex;
-34:         align-items: center;
-35:         font-weight: 600;
-36:         font-size: 14px;
-37:         line-height: 19px;
-38:         color: $primary;
-39:         img {
-40:             margin-right: 10px;
-41:             flex-shrink: 0;
-42:         }
-43:     }
+51:         -ms-flex-align: center;
+52:         align-items: center;
+53:         font-weight: 600;
+54:         font-size: 14px;
+55:         line-height: 19px;
+56:         color: $primary;
+57:         img {
+58:             margin-right: 10px;
+59:             flex-shrink: 0;
+60:             -webkit-flex-shrink: 0;
+61:             -ms-flex-negative: 0;
 
 Backtrace:
-E:\markup\nadzor\scss\layout.scss:38
+D:\work\freelance\nadzor\scss\layout.scss:56
 C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/script/tree/variable.rb:49:in `_perform'
 C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/script/tree/node.rb:50:in `perform'
 C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:402:in `visit_prop'
@@ -73,4 +73,4 @@ C:/Program Files (x86)/Koala/bin/sass:22:in `<main>'
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Undefined variable: \"$primary\".\A         on line 38 of E:\markup\nadzor\scss\layout.scss\A \A 33:         display: flex;\A 34:         align-items: center;\A 35:         font-weight: 600;\A 36:         font-size: 14px;\A 37:         line-height: 19px;\A 38:         color: $primary;\A 39:         img {\A 40:             margin-right: 10px;\A 41:             flex-shrink: 0;\A 42:         }\A 43:     }"; }
+  content: "Error: Undefined variable: \"$primary\".\A         on line 56 of D:\work\freelance\nadzor\scss\layout.scss\A \A 51:         -ms-flex-align: center;\A 52:         align-items: center;\A 53:         font-weight: 600;\A 54:         font-size: 14px;\A 55:         line-height: 19px;\A 56:         color: $primary;\A 57:         img {\A 58:             margin-right: 10px;\A 59:             flex-shrink: 0;\A 60:             -webkit-flex-shrink: 0;\A 61:             -ms-flex-negative: 0;"; }

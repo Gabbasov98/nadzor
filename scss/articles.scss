@@ -1,10 +1,19 @@
+// Article styles start
 .articles {
     padding-bottom: 95px;
     &__card-time {
+        -ms-flex-wrap: wrap;
         flex-wrap: wrap;
     }
     &__link {
+        display: -webkit-box;
+        display: -moz-flex;
+        display: -ms-flexbox;
+        display: -ms-flex;
+        display: -o-flex;
         display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
         align-items: center;
         span {
             font-weight: 600;
@@ -49,6 +58,11 @@
             width: 724px;
         }
         &-item {
+            display: -webkit-box;
+            display: -moz-flex;
+            display: -ms-flexbox;
+            display: -ms-flex;
+            display: -o-flex;
             display: flex;
             margin-top: 20px;
         }
@@ -85,7 +99,14 @@
         margin-bottom: 25px;
     }
     &__director {
+        display: -webkit-box;
+        display: -moz-flex;
+        display: -ms-flexbox;
+        display: -ms-flex;
+        display: -o-flex;
         display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
         align-items: center;
         &-desc {
             margin-left: 15px;
@@ -126,6 +147,11 @@
             margin-top: 40px;
         }
         &-item {
+            display: -webkit-box;
+            display: -moz-flex;
+            display: -ms-flexbox;
+            display: -ms-flex;
+            display: -o-flex;
             display: flex;
             width: 735px;
             margin-top: 40px;
@@ -159,6 +185,8 @@
                     background: #CDCDCD;
                     top: 50%;
                     left: 0;
+                    -webkit-transform: translate(-50%, -50%);
+                    -ms-transform: translate(-50%, -50%);
                     transform: translate(-50%, -50%);
                     border-radius: 50%;
                 }
@@ -234,6 +262,8 @@
             }
             &-item {
                 width: 100%;
+                -webkit-box-pack: center;
+                -ms-flex-pack: center;
                 justify-content: center;
             }
         }
@@ -394,3 +424,5 @@
         padding-top: 30px;
     }
 }
+
+// Article styles end

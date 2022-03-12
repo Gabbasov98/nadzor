@@ -1,21 +1,21 @@
 /*
 Error: Undefined variable: "$primary".
-        on line 24 of D:\work\freelance\nadzor\scss\index.scss
+        on line 41 of D:\work\freelance\nadzor\scss\index.scss
 
-19:         box-shadow: 18px 15px 39px rgba(0, 0, 0, 0.15);
-20:         border-radius: 15px;
-21:         transform: translate(-30px, 50px) rotate(-14.73deg);
-22:         padding: 15px 20px 20px;
-23:         width: 213px;
-24:         color: $primary;
-25:         &-title {
-26:             font-size: 40.9964px;
-27:         }
-28:         &-desc {
-29:             font-size: 34.9964px;
+36:         -webkit-transform: translate(30px, -60px) rotate(-14.73deg);
+37:         -ms-transform: translate(30px, -60px) rotate(-14.73deg);
+38:         transform: translate(30px, -60px) rotate(-14.73deg);
+39:         padding: 15px 20px 20px;
+40:         width: 213px;
+41:         color: $primary;
+42:         &-title {
+43:             font-size: 40.9964px;
+44:         }
+45:         &-desc {
+46:             font-size: 34.9964px;
 
 Backtrace:
-D:\work\freelance\nadzor\scss\index.scss:24
+D:\work\freelance\nadzor\scss\index.scss:41
 C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/script/tree/variable.rb:49:in `_perform'
 C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/script/tree/node.rb:50:in `perform'
 C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:402:in `visit_prop'
@@ -73,4 +73,4 @@ C:/Program Files (x86)/Koala/bin/sass:22:in `<main>'
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Undefined variable: \"$primary\".\A         on line 24 of D:\work\freelance\nadzor\scss\index.scss\A \A 19:         box-shadow: 18px 15px 39px rgba(0, 0, 0, 0.15);\A 20:         border-radius: 15px;\A 21:         transform: translate(-30px, 50px) rotate(-14.73deg);\A 22:         padding: 15px 20px 20px;\A 23:         width: 213px;\A 24:         color: $primary;\A 25:         &-title {\A 26:             font-size: 40.9964px;\A 27:         }\A 28:         &-desc {\A 29:             font-size: 34.9964px;"; }
+  content: "Error: Undefined variable: \"$primary\".\A         on line 41 of D:\work\freelance\nadzor\scss\index.scss\A \A 36:         -webkit-transform: translate(30px, -60px) rotate(-14.73deg);\A 37:         -ms-transform: translate(30px, -60px) rotate(-14.73deg);\A 38:         transform: translate(30px, -60px) rotate(-14.73deg);\A 39:         padding: 15px 20px 20px;\A 40:         width: 213px;\A 41:         color: $primary;\A 42:         &-title {\A 43:             font-size: 40.9964px;\A 44:         }\A 45:         &-desc {\A 46:             font-size: 34.9964px;"; }

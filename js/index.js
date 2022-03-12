@@ -47,25 +47,15 @@ function qualitySlider() {
     })
 }
 
-function projectSlider2() {
-    var swiper = new Swiper('.project .swiper-container', {
-        spaceBetween: 0,
+function onlineSlider() {
+    var swiper = new Swiper('.online .swiper-container', {
+        slidesPerView: 1,
+        spaceBetween: 10,
         navigation: {
-            nextEl: '.project .swiper-button-next',
-            prevEl: '.project .swiper-button-prev',
+            nextEl: '.online .swiper-button-next',
+            prevEl: '.online .swiper-button-prev',
         },
-        breakpoints: {
-            320: {
-                slidesPerView: 1,
-                allowSlidePrev: true,
-                allowSlideNext: true,
-            },
-            992: {
-                slidesPerView: 'auto',
-                allowSlidePrev: false,
-                allowSlideNext: false,
-            },
-        }
+
     })
 }
 
@@ -80,7 +70,7 @@ function gallery() {
     });
     var swiper2 = new Swiper(".workers .mySwiper2", {
         spaceBetween: 10,
-        effect: 'fade',
+        effect: 'cards',
         navigation: {
             nextEl: ".workers .swiper-button-next",
             prevEl: ".workers .swiper-button-prev",
@@ -91,33 +81,12 @@ function gallery() {
     });
 }
 
-function onlineSlider() {
-    var swiper = new Swiper('.online .swiper-container', {
-        slidesPerView: 1,
-        spaceBetween: 10,
-        navigation: {
-            nextEl: '.online .swiper-button-next',
-            prevEl: '.online .swiper-button-prev',
-        },
-
-    })
-}
-
 $(document).ready(function() {
     trustSlider()
     projectSlider()
-    gallery()
-    projectSlider2()
-    onlineSlider()
 
-    $('.articles__link').click(function() {
-        var $temp = $("<input>");
-        $("body").append($temp);
-        $temp.val($('.articles__link').attr("data-link")).select();
-        document.execCommand("copy");
-        $temp.remove();
-        // $(this).text('Тест скопирован!');
-    });
+    onlineSlider()
+    gallery()
 
     $(window).resize(function() {
         if (window.innerWidth < 1255) {
@@ -134,6 +103,7 @@ $(document).ready(function() {
         }
 
     });
+
     if (window.innerWidth < 1255) {
         $(".services__items").removeClass("services__items--dop")
     }
@@ -144,36 +114,6 @@ $(document).ready(function() {
     if (window.innerWidth < 768) {
         $(".service-detail").removeClass("service-detail--active")
     }
-
-    $(".select").niceSelect()
-    $('input[type="tel"]').mask('+7 (999) 999-9999', { placeholder: '+7 (   )    -    ' });
-
-    $(".nav__item-show").click(function() {
-        $(this).siblings(".nav__item-hidden").slideToggle()
-    })
-
-
-    $(".sidebar__burger").click(function() {
-        $(this).toggleClass("sidebar__burger--active")
-        $("body").toggleClass("fixed-body")
-        $(".sidebar__bottom").toggleClass("sidebar__bottom--active")
-    })
-
-
-
-
-    $(".tab").click(function() {
-        let path = $(this).attr("data-tab-path")
-        let parentTabs = $(this).parent(".tabs")
-        $(parentTabs).children(".tab").removeClass("tab--active")
-        $(this).addClass("tab--active")
-        $(parentTabs).siblings(".tab__content").removeClass("tab__content--active")
-        $(parentTabs).siblings(`.tab__content[data-tab-path='${path}']`).addClass("tab__content--active")
-
-        $('.tabs').animate({ scrollLeft: $(this).position().left }, 500);
-    })
-
-
 
 
     var $whatHelpElements = $('.when-help__item');
@@ -212,8 +152,6 @@ $(document).ready(function() {
         serviceDetail(attr, attr2)
     })
 
-
-
     $(".service-detail__tab").click(function() {
         let path = $(this).attr("data-tab-path")
         let parentTabs = $(this).parent(".service-detail__tabs")
@@ -228,10 +166,12 @@ $(document).ready(function() {
         e.preventDefault();
         consultModal("consultModal2")
     })
+
     $(".consult-modal__form-btn").click(function(e) {
         e.preventDefault();
         consultModal("consultModal2")
     })
+
     $(".consultation__btn").click(function(e) {
         e.preventDefault();
         consultModal("consultModal2")
@@ -255,50 +195,36 @@ $(document).ready(function() {
         $(`.types__group-modal[data-tab-path="${path}"]`).addClass("types__group-modal--active")
     })
 
-    $(".tab-title").click(function() {
-        let path = $(this).attr("data-title-path");
-        $(".tab-title").removeClass("tab-title--active");
-        $(this).addClass("tab-title--active");
-        $(".news__inner-content").removeClass("news__inner-content--active");
-        $(`.news__inner-content[data-title-path="${path}"]`).addClass("news__inner-content--active");
-    })
-
     $(".questions__item-btn").click(function() {
         $(this).toggleClass("questions__item-btn--active")
         $(this).parent(".questions__item-show").siblings(".questions__item-hidden").slideToggle()
     })
 
-    $(".project__gallery-item").click(function() {
-        openGallery()
+    $(".service-detail__mob-btn").click(function() {
+        $(".service-detail").removeClass("service-detail--active")
     })
 
-    $(".project__gallery-btn").click(function() {
-        openGallery()
+    $(".quiz-step__next").click(function() {
+        let step = parseInt($(this).parents(".quiz-step").attr("data-step-path"))
+        console.log(step)
+
+        if (step < 5) {
+            $(`.quiz-step`).removeClass("quiz-step--active")
+            $(`.quiz-step[data-step-path="${step+1}"]`).addClass("quiz-step--active")
+        }
     })
 
+    $(".quiz-step__prev").click(function() {
+        let step = parseInt($(this).parents(".quiz-step").attr("data-step-path"))
+        console.log(step)
 
-    $(".gallery-modal__close").click(function() {
-        $(".gallery-modal").removeClass("gallery-modal--active")
-        $(".backdrop").remove()
-        $("body").removeClass("fixed-body")
+        if (step > 1) {
+            $(`.quiz-step`).removeClass("quiz-step--active")
+            $(`.quiz-step[data-step-path="${step-1}"]`).addClass("quiz-step--active")
+        }
     })
-
-    $('#fancybox-inner').width(400);
-    $('#fancybox-wrap').width(420);
-
 })
 
-function openGallery() {
-    $("body").append(`<div class="backdrop"></div>`)
-    $(".gallery-modal").addClass("gallery-modal--active")
-    $("body").addClass("fixed-body")
-
-    $(".backdrop").click(function() {
-        $(".gallery-modal").removeClass("gallery-modal--active")
-        $(".backdrop").remove()
-        $("body").removeClass("fixed-body")
-    })
-}
 
 
 function serviceDetail(id, dop = false) {
@@ -329,61 +255,7 @@ function serviceDetail(id, dop = false) {
 
     if (window.innerWidth > 768) {
         let scrollTo = $(`#${id}`).offset().top;
-        $(document).scrollTop(scrollTo);
+        // $(document).scrollTop(scrollTo - 200);
     }
-
-}
-
-function modal(id) {
-
-    $("body").append(`<div class="backdrop"></div>`)
-    $("body").addClass("fixed-body")
-    $(".modal").removeClass("modal--active")
-    $(`#${id}`).addClass("modal--active")
-
-    $(".backdrop").click(function() {
-        $(".modal").removeClass("modal--active")
-        $(".backdrop").remove()
-        $("body").removeClass("fixed-body")
-    })
-    $(".modal__close").click(function() {
-        $(".modal").removeClass("modal--active")
-        $(".backdrop").remove()
-        $("body").removeClass("fixed-body")
-    })
-
-
-
-}
-
-
-function consultModal(id, formInfo = null) {
-    $(".modal").removeClass("modal--active")
-    $("body").append(`<div class="backdrop"></div>`)
-    $("body").addClass("fixed-body")
-    $(".consult-modal").removeClass("consult-modal--active")
-    $(`#${id}`).addClass("consult-modal--active")
-
-    $(".backdrop").click(function() {
-        $(".consult-modal").removeClass("consult-modal--active")
-        $(".backdrop").remove()
-        $("body").removeClass("fixed-body")
-    })
-    $(".consult-modal__close").click(function() {
-        $(".consult-modal").removeClass("consult-modal--active")
-        $(".backdrop").remove()
-        $("body").removeClass("fixed-body")
-    })
-
-    if (formInfo) {
-        let insertedInput = `
-            <input type="text" name="formTilte" style="display:none" value="${formInfo.title}">
-            <input type="text" name="formButton" style="display:none" value="${formInfo.button}">
-        `
-        $(".consult-modal__form").prepend(insertedInput)
-    }
-
-
-
 
 }

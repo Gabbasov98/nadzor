@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <link rel="stylesheet" href="css/swiper-bundle.min.css" />
     <link rel="stylesheet" href="css/jquery.fancybox.min.css">
-    <link rel="stylesheet" href="css/nice-select.css">
+    <link rel="stylesheet" href="css/nice-select.min.css">
     <link rel="stylesheet" href="css/style.css">
     <title>Главная</title>
 </head>
@@ -20,12 +20,14 @@
                 <a href="" class="sidebar__logo">
                     <img src="img/logo.svg" alt="">
                 </a>
-                <a href="tel:+7 (495) 961-31-12" class="sidebar__tel">+7 (495) 961-31-12</a>
-                <button class="sidebar__burger">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
+                <div class="sidebar__top-right">
+                    <a href="tel:+7 (495) 961-31-12" class="sidebar__tel">+7 (495) 961-31-12</a>
+                    <button class="sidebar__burger">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
             </div>
 
             <div class="sidebar__bottom">
@@ -38,9 +40,12 @@
                         </svg>
                         </div>
                         <div class="nav__item-hidden">
-                            <a href="" class="nav__item-link">Услуги и цены 2</a>
-                            <a href="" class="nav__item-link">Услуги и цены 3</a>
-                            <a href="" class="nav__item-link">Услуги и цены 4</a>
+                            <a href="" class="nav__item-link">Технический надзор</a>
+                            <a href="" class="nav__item-link">Приемка квартир</a>
+                            <a href="" class="nav__item-link">Разовый выезд</a>
+                            <a href="" class="nav__item-link">Проверка смет</a>
+                            <a href="" class="nav__item-link">Проверка дизайн-проекта</a>
+                            <a href="" class="nav__item-link">Тепловизионное обследование</a>
                         </div>
                     </div>
                     <a href="" class="nav__item">Приёмка квартир</a>
@@ -49,7 +54,10 @@
                 </nav>
 
                 <div class="sidebar__buttons">
-                    <button class="sidebar__btn btn btn-blue">Обратный звонок</button>
+                    <button class="sidebar__btn btn btn-blue" onclick="consultModal('consultModal1', {
+                        title:'Кнопка на сайдбаре',
+                        button: 'Обратный звонок'}
+                        )">Обратный звонок</button>
                     <button class="sidebar__btn btn btn-blue-outline">Личный кабинет</button>
                 </div>
 
@@ -94,7 +102,7 @@
             <div class="main" style="background-image: url(img/main-bg.jpg);">
                 <div class="main__inner">
                     <h1 class="main__title display1">
-                        Технический <span>надзор</span> <br> за ремонтом квартир
+                        Технический <span>надзор</span> <br> за ремонтом квартир <strong>по 370 параметрам</strong>
                     </h1>
                     <div class="main__desc">Ремонт в срок: без личного присутствия, <br> переплат и споров со строителями</div>
                     <div class="main__items">
@@ -268,6 +276,240 @@
                         </p>
                         <p>Работая с техническим надзором, <span>подрядчику не удастся «схалтурить»,</span> поэтому начинает привлекать более опытных работников, использует более качественные материалы, строго соблюдает сроки и договоренности с заказчиком.
                             Ведь понимает, что в ином случае работу придется переделывать заново, а это — лишние расходы времени и средств.</p>
+                    </div>
+                </div>
+
+                <div class="quiz">
+                    <div class="quiz-step quiz-step--active" data-step-path="1">
+                        <div class="quiz-step__wrap">
+                            <div class="quiz-step__left">
+                                <div class="quiz-step__title">Ответьте на несколько вопросов, чтобы рассчитать стоимость услуг прямо сейчас</div>
+                                <div class="quiz-step__progress">
+                                    <div class="quiz-step__progress-bar">
+                                        <span style="width: 25%;"></span>
+                                    </div>
+                                    <div class="quiz-step__progress-num">
+                                        <span>1</span>/4
+                                    </div>
+                                </div>
+                                <div class="quiz-step__subtitle">Выберите тип объекта</div>
+                                <div class="quiz-step__questions">
+                                    <div class="quiz-step__question radio">
+                                        <input type='radio' class='radio' id='typeObject1' name='typeObject' />
+                                        <label for='typeObject1'>Квартира</label>
+                                    </div>
+                                    <div class="quiz-step__question radio">
+                                        <input checked type='radio' class='radio' id='typeObject2' name='typeObject' />
+                                        <label for='typeObject2'>Апартаменты </label>
+                                    </div>
+                                    <div class="quiz-step__question radio">
+                                        <input type='radio' class='radio' id='typeObject3' name='typeObject' />
+                                        <label for='typeObject3'>Офис</label>
+                                    </div>
+                                </div>
+                                <div class="quiz-step__nav">
+                                    <button class="quiz-step__next btn btn-blue">Далее</button>
+                                </div>
+                            </div>
+                            <div class="quiz-step__img">
+                                <img src="img/quiz.jpg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="quiz-step" data-step-path="2">
+                        <div class="quiz-step__wrap">
+                            <div class="quiz-step__left">
+                                <div class="quiz-step__title">Ответьте на несколько вопросов, чтобы рассчитать стоимость услуг прямо сейчас</div>
+                                <div class="quiz-step__progress">
+                                    <div class="quiz-step__progress-bar">
+                                        <span style="width: 50%;"></span>
+                                    </div>
+                                    <div class="quiz-step__progress-num">
+                                        <span>2</span>/4
+                                    </div>
+                                </div>
+                                <div class="quiz-step__subtitle">Выберите площадь объекта</div>
+                                <div class="quiz-step__questions">
+                                    <div class="quiz-step__question radio">
+                                        <input type='radio' class='radio' id='objectArea1' name='objectArea' />
+                                        <label for='objectArea1'>до 100м2</label>
+                                    </div>
+                                    <div class="quiz-step__question radio">
+                                        <input checked type='radio' class='radio' id='objectArea2' name='objectArea' />
+                                        <label for='objectArea2'>от 100м2 до 200м2 </label>
+                                    </div>
+                                    <div class="quiz-step__question radio">
+                                        <input type='radio' class='radio' id='objectArea3' name='objectArea' />
+                                        <label for='objectArea3'>от 200м2 до 500м2 </label>
+                                    </div>
+                                    <div class="quiz-step__question radio">
+                                        <input type='radio' class='radio' id='objectArea4' name='objectArea' />
+                                        <label for='objectArea4'>свыше 500м2 </label>
+                                    </div>
+                                </div>
+                                <div class="quiz-step__nav">
+                                    <button class="quiz-step__next btn btn-blue">Далее</button>
+                                    <button class="quiz-step__prev">Назад</button>
+                                </div>
+                            </div>
+                            <div class="quiz-step__img">
+                                <img src="img/quiz2.jpg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="quiz-step" data-step-path="3">
+                        <div class="quiz-step__title">Ответьте на несколько вопросов, чтобы рассчитать стоимость услуг прямо сейчас</div>
+                        <div class="quiz-step__progress">
+                            <div class="quiz-step__progress-bar">
+                                <span style="width: 75%;"></span>
+                            </div>
+                            <div class="quiz-step__progress-num">
+                                <span>3</span>/4
+                            </div>
+                        </div>
+                        <div class="quiz-step__subtitle">Выберите тип объекта</div>
+
+                        <div class="quiz-step__stages">
+                            <div class="quiz-step__stage">
+                                <div class="quiz-step__stage-top">
+                                    <div class="quiz-step__stage-img">
+                                        <img src="img/quiz3.jpg" alt="">
+                                    </div>
+                                    <div class="quiz-step__stage-radio">
+                                        <input checked type='radio' class='radio' id='stage1' name='stage' />
+                                        <label for='stage1'>
+                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M20 6L9 17L4 12" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                            </svg>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="quiz-step__stage-title">Начальная</div>
+                                <div class="quiz-step__stage-desc">Договариваемся с подрядной организацией </div>
+                            </div>
+                            <div class="quiz-step__stage">
+                                <div class="quiz-step__stage-top">
+                                    <div class="quiz-step__stage-img">
+                                        <img src="img/quiz4.jpg" alt="">
+                                    </div>
+                                    <div class="quiz-step__stage-radio">
+                                        <input type='radio' class='radio' id='stage2' name='stage' />
+                                        <label for='stage2'>
+                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M20 6L9 17L4 12" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                            </svg>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="quiz-step__stage-title">В процессе ремонта </div>
+                                <div class="quiz-step__stage-desc">Договариваемся с подрядной организацией </div>
+                            </div>
+                            <div class="quiz-step__stage">
+                                <div class="quiz-step__stage-top">
+                                    <div class="quiz-step__stage-img">
+                                        <img src="img/quiz5.jpg" alt="">
+                                    </div>
+                                    <div class="quiz-step__stage-radio">
+                                        <input type='radio' class='radio' id='stage3' name='stage' />
+                                        <label for='stage3'>
+                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M20 6L9 17L4 12" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                            </svg>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="quiz-step__stage-title">Завершение ремонта </div>
+                                <div class="quiz-step__stage-desc">Договариваемся с подрядной организацией </div>
+                            </div>
+                        </div>
+
+                        <div class="quiz-step__nav">
+                            <button class="quiz-step__next btn btn-blue">Далее</button>
+                            <button class="quiz-step__prev">Назад</button>
+                        </div>
+
+                    </div>
+                    <div class="quiz-step" data-step-path="4">
+                        <div class="quiz-step__wrap">
+                            <div class="quiz-step__left">
+                                <div class="quiz-step__title">Ответьте на несколько вопросов, чтобы рассчитать стоимость услуг прямо сейчас</div>
+                                <div class="quiz-step__progress">
+                                    <div class="quiz-step__progress-bar">
+                                        <span style="width: 100%;"></span>
+                                    </div>
+                                    <div class="quiz-step__progress-num">
+                                        <span>4</span>/4
+                                    </div>
+                                </div>
+                                <div class="quiz-step__subtitle">Ваши потребности</div>
+                                <div class="quiz-step__questions">
+                                    <div class="quiz-step__question check">
+                                        <input type="checkbox" class="checkbox" id="requirement">
+                                        <label for="requirement">Принять недвижимость от застройщика</label>
+                                    </div>
+                                    <div class="quiz-step__question check">
+                                        <input checked type="checkbox" class="checkbox" id="requirement2">
+                                        <label for="requirement2">Технический надзор  на регулярной основе</label>
+                                    </div>
+                                    <div class="quiz-step__question check">
+                                        <input type="checkbox" class="checkbox" id="requirement3">
+                                        <label for="requirement3">Выезд на объект для оценки качества и приемки работ</label>
+                                    </div>
+                                    <div class="quiz-step__question check">
+                                        <input type="checkbox" class="checkbox" id="requirement4">
+                                        <label for="requirement4">Проверить дизайн-проект</label>
+                                    </div>
+                                    <div class="quiz-step__question check">
+                                        <input type="checkbox" class="checkbox" id="requirement5">
+                                        <label for="requirement5">Составить безопасный договор с подрядчиком</label>
+                                    </div>
+                                    <div class="quiz-step__question check">
+                                        <input type="checkbox" class="checkbox" id="requirement6">
+                                        <label for="requirement6">Составить безопасный договор с подрядчиком</label>
+                                    </div>
+                                </div>
+                                <div class="quiz-step__nav">
+                                    <button class="quiz-step__next btn btn-blue">Далее</button>
+                                    <button class="quiz-step__prev">Назад</button>
+                                </div>
+                            </div>
+                            <div class="quiz-step__img quiz-step__img--360">
+                                <img src="img/quiz6.jpg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="quiz-step" data-step-path="5">
+                        <div class="consultation">
+                            <div class="consultation__left">
+                                <div class="consultation__title display2">
+                                    <span>Почти готово!</span>
+                                    <strong>Заполните, пожалуйста, Ваши контактные данные, тобы получить расчёт</strong>
+                                </div>
+                                <form class="consultation__form">
+
+                                    <fieldset class="consultation__form-group form-group">
+                                        <input type="text" placeholder="Имя">
+                                    </fieldset>
+                                    <fieldset class="consultation__form-group form-group">
+                                        <input type="tel" placeholder="телефон">
+                                    </fieldset>
+                                    <button class="consultation__btn btn btn-blue">Отправить</button>
+                                </form>
+
+                                <div class="consultation__text">
+                                    Нажимая на кнопку, вы даете согласие на обработку своих персональных данных и соглашаетесь с <a href="">Политикой конфиденциальности</a>
+                                </div>
+                                <div class="quiz-step__nav">
+                                    <button class="quiz-step__prev quiz-step__prev--left">Назад</button>
+                                </div>
+                            </div>
+                            <div class="consultation__right">
+                                <picture>
+                                    <source srcset="img/consultation-img.webp" type="image/webp">
+                                    <img src="img/consultation-img.png" alt="">
+                                </picture>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
@@ -473,7 +715,7 @@
                             </div>
                         </div>
                     </div>
-                    <div id="serviceDetail1" class="service-detail service-detail--active">
+                    <div id="serviceDetail1" class="modal-none service-detail  service-detail--active">
                         <div class="service-detail__mob">
                             <div class="service-detail__mob-top">
                                 <button class="service-detail__close">
@@ -483,7 +725,10 @@
                                     <img src="img/cancel.svg" alt="">
                                 </button>
                                 <div class="service-detail__mob-block">
-                                    <button class="service-detail__mob-btn btn btn-blue">Получить консультацию</button>
+                                    <button onclick="consultModal('consultModal1', {
+                                        title:'Кнопка на модалке услуг',
+                                        button: 'Получить консультацию'}
+                                        )" class="service-detail__mob-btn btn btn-blue">Получить консультацию</button>
                                 </div>
                             </div>
                             <div class="service-detail__mob-title">Разовый выезд. Проверка качества работ</div>
@@ -587,7 +832,7 @@
                             </form>
                         </div>
                     </div>
-                    <div id="serviceDetail2" class="service-detail">
+                    <div id="serviceDetail2" class="modal-none service-detail service-detail--right">
                         <div class="service-detail__mob">
                             <div class="service-detail__mob-top">
                                 <button class="service-detail__close">
@@ -597,7 +842,10 @@
                                     <img src="img/cancel.svg" alt="">
                                 </button>
                                 <div class="service-detail__mob-block">
-                                    <button class="service-detail__mob-btn btn btn-blue">Получить консультацию</button>
+                                    <button onclick="consultModal('consultModal1', {
+                                        title:'Кнопка на модалке услуг',
+                                        button: 'Получить консультацию'}
+                                        )" class="service-detail__mob-btn btn btn-blue">Получить консультацию</button>
                                 </div>
 
                             </div>
@@ -851,7 +1099,7 @@
                             </div>
                         </div>
                     </div>
-                    <div id="serviceDetail3" class="service-detail">
+                    <div id="serviceDetail3" class="modal-none service-detail">
                         <div class="service-detail__mob">
                             <div class="service-detail__mob-top">
                                 <button class="service-detail__close">
@@ -861,7 +1109,10 @@
                                     <img src="img/cancel.svg" alt="">
                                 </button>
                                 <div class="service-detail__mob-block">
-                                    <button class="service-detail__mob-btn btn btn-blue">Получить консультацию</button>
+                                    <button onclick="consultModal('consultModal1', {
+                                        title:'Кнопка на модалке услуг',
+                                        button: 'Получить консультацию'}
+                                        )" class="service-detail__mob-btn btn btn-blue">Получить консультацию</button>
                                 </div>
 
                             </div>
@@ -948,42 +1199,42 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="service-detail__right">
+                            <div class="service-detail__right service-detail__right--330">
                                 <div class="service-detail__table">
                                     <table>
                                         <thead>
                                             <tr>
-                                                <th>Вид работ</th>
+                                                <th>Приемка квартир</th>
                                                 <th>Стоимость</th>
                                             </tr>
                                         </thead>
                                         <tbody>
                                             <tr>
-                                                <td>Обследование квартиры без отделки</td>
+                                                <td>Без отделки</td>
                                                 <td>
                                                     <span class="blue-text">от 50 р./м²</span>
                                                 </td>
                                             </tr>
                                             <tr>
-                                                <td>Обследование квартиры с предчистовой отделкой </td>
+                                                <td>White box</td>
                                                 <td>
                                                     <span class="blue-text">от 60 р./м²</span>
                                                 </td>
                                             </tr>
                                             <tr>
-                                                <td>Обследование с отделкой</td>
-                                                <td>
-                                                    <span class="blue-text">от 60 р./м²</span>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>Тепловизионное обследование</td>
+                                                <td>С отделкой</td>
                                                 <td>
                                                     <span class="blue-text">от 60 р./м²</span>
                                                 </td>
                                             </tr>
                                             <tr>
                                                 <td>Проверка площади квартиры</td>
+                                                <td>
+                                                    <span class="blue-text">от 60 р./м²</span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>Тепловизионное обследование</td>
                                                 <td>
                                                     <span class="blue-text">от 60 р./м²</span>
                                                 </td>
@@ -1011,7 +1262,7 @@
                             </form>
                         </div>
                     </div>
-                    <div id="serviceDetail4" class="service-detail">
+                    <!-- <div id="serviceDetail4" class="modal-none service-detail service-detail--right">
                         <div class="service-detail__mob">
                             <div class="service-detail__mob-top">
                                 <button class="service-detail__close">
@@ -1021,7 +1272,10 @@
                                     <img src="img/cancel.svg" alt="">
                                 </button>
                                 <div class="service-detail__mob-block">
-                                    <button class="service-detail__mob-btn btn btn-blue">Получить консультацию</button>
+                                    <button onclick="consultModal('consultModal1', {
+                                        title:'Кнопка на модалке услуг',
+                                        button: 'Получить консультацию'}
+                                        )" class="service-detail__mob-btn btn btn-blue">Получить консультацию</button>
                                 </div>
 
                             </div>
@@ -1108,30 +1362,36 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="service-detail__right">
+                            <div class="service-detail__right service-detail__right--330">
                                 <div class="service-detail__table">
                                     <table>
                                         <thead>
                                             <tr>
-                                                <th>Вид работ</th>
+                                                <th>Приемка квартир</th>
                                                 <th>Стоимость</th>
                                             </tr>
                                         </thead>
                                         <tbody>
                                             <tr>
-                                                <td>Обследование квартиры без отделки</td>
+                                                <td>Без отделки</td>
                                                 <td>
                                                     <span class="blue-text">от 50 р./м²</span>
                                                 </td>
                                             </tr>
                                             <tr>
-                                                <td>Обследование квартиры с предчистовой отделкой </td>
+                                                <td>White box</td>
                                                 <td>
                                                     <span class="blue-text">от 60 р./м²</span>
                                                 </td>
                                             </tr>
                                             <tr>
-                                                <td>Обследование с отделкой</td>
+                                                <td>С отделкой</td>
+                                                <td>
+                                                    <span class="blue-text">от 60 р./м²</span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>Проверка площади квартиры</td>
                                                 <td>
                                                     <span class="blue-text">от 60 р./м²</span>
                                                 </td>
@@ -1142,10 +1402,180 @@
                                                     <span class="blue-text">от 60 р./м²</span>
                                                 </td>
                                             </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="service-detail__bottom">
+                            <div class="service-detail__bottom-title">
+                                <span>Пригласите нашего инженера</span> для независимого надзора за качеством Вашего ремонта
+                            </div>
+                            <form action="" class="service-detail__form">
+                                <svg id="icon1" class="check-icon" width="48" height="48" viewBox="0 0 48 48" fill="none" stroke="#0723DF" stroke-width="3" stroke-dasharray="100">
+                                    <path class="icon-path" id="check" d="M 12,22 L 22,31 L 36,13"></path>
+                                </svg>
+                                <fieldset class='service-detail__form-group form-group'>
+                                    <input type='text' placeholder="телефон" />
+                                </fieldset>
+                                <fieldset class='service-detail__form-group form-group'>
+                                    <input type='text' placeholder="Ваше имя" />
+                                </fieldset>
+                                <button class="service-detail__btn btn btn-blue">Оставить заявку</button>
+                            </form>
+                        </div>
+                    </div> -->
+                    <div id="serviceDetail4" class="modal-none service-detail service-detail--right">
+                        <div class="service-detail__mob">
+                            <div class="service-detail__mob-top">
+                                <button class="service-detail__close">
+                                    <img src="img/back.svg" alt="">
+                                </button>
+                                <button class="service-detail__close">
+                                    <img src="img/cancel.svg" alt="">
+                                </button>
+                                <div class="service-detail__mob-block">
+                                    <button onclick="consultModal('consultModal1', {
+                                        title:'Кнопка на модалке услуг',
+                                        button: 'Получить консультацию'}
+                                        )" class="service-detail__mob-btn btn btn-blue">Получить консультацию</button>
+                                </div>
+
+                            </div>
+                            <div class="service-detail__mob-title">Управление ремонтом «от идеи до новоселья»</div>
+                        </div>
+                        <div class="service-detail__top">
+                            <div class="service-detail__left">
+                                <div class="service-detail__tabs">
+                                    <div class="service-detail__tab service-detail__tab--active" data-tab-path="1">Что включает</div>
+                                    <div class="service-detail__tab" data-tab-path="2">Результат надзора</div>
+                                </div>
+                                <div class="service-detail__tab-content service-detail__tab-content--active" data-tab-path="1">
+                                    <div class="service-detail__items">
+                                        <div class="service-detail__item">
+                                            <img src="img/file-check-2.svg" alt="">
+                                            <span>Изучение проектной документации</span>
+                                        </div>
+                                        <div class="service-detail__item">
+                                            <img src="img/briefcase.svg" alt="">
+                                            <span>Подготовка рекомендации и контроль</span>
+                                        </div>
+                                        <div class="service-detail__item">
+                                            <img src="img/bar-chart-2.svg" alt="">
+                                            <span>Проверка сметной стоимости работ на предмет необоснованного завышения</span>
+                                        </div>
+                                        <div class="service-detail__item">
+                                            <img src="img/check-square.svg" alt="">
+                                            <span>Проверка объема выполненных работ перед оплатой строителям, 2-3 в неделю</span>
+                                        </div>
+                                        <div class="service-detail__item">
+                                            <img src="img/coins.svg" alt="">
+                                            <span>Проверка сметы на материалы на предмет необосноанного завышения</span>
+                                        </div>
+                                        <div class="service-detail__item">
+                                            <img src="img/camera.svg" alt="">
+                                            <span>Еженедельный фото- и видеоотчеты о проделанной работе</span>
+                                        </div>
+                                        <div class="service-detail__item">
+                                            <img src="img/help-circle.svg" alt="">
+                                            <span>Помощь в заключении юридически грамотного договора с подрядчиками</span>
+                                        </div>
+                                        <div class="service-detail__item">
+                                            <img src="img/smartphone.svg" alt="">
+                                            <span>Вся информация о ходе ремонта доступна в приложении со смартфона</span>
+                                        </div>
+                                        <div class="service-detail__item">
+                                            <img src="img/car.svg" alt="">
+                                            <span>Выезд на объект на основании договора, технического задания</span>
+                                        </div>
+                                        <div class="service-detail__item">
+                                            <img src="img/package.svg" alt="">
+                                            <span>Отслеживаем установленные сметой поставки и качество материалов</span>
+                                        </div>
+                                        <div class="service-detail__item">
+                                            <img src="img/shield-check.svg" alt="">
+                                            <span>Контроль реализации проекта в соответствии с техническим заданием</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="service-detail__tab-content" data-tab-path="2">
+                                    <div class="service-detail__items2">
+                                        <div class="service-detail__item2">
+                                            <img src="img/russian-ruble.svg" alt="">
+                                            <div class="service-detail__item2-content">
+                                                <div class="service-detail__item2-title">До 30% бюджета</div>
+                                                <div class="service-detail__item2-desc">Экономии на строительных работах, исключив демонтаж и потерю времени</div>
+                                            </div>
+                                        </div>
+                                        <div class="service-detail__item2">
+                                            <img src="img/search.svg" alt="">
+                                            <div class="service-detail__item2-content">
+                                                <div class="service-detail__item2-title">Честная смета</div>
+                                                <div class="service-detail__item2-desc">Проверяем сметы на предмет намеренного завышения стоимости работ и объема строительных материалов</div>
+                                            </div>
+                                        </div>
+                                        <div class="service-detail__item2">
+                                            <img src="img/home.svg" alt="">
+                                            <div class="service-detail__item2-content">
+                                                <div class="service-detail__item2-title">Ведение под ключ</div>
+                                                <div class="service-detail__item2-desc">Контролируем реализацию проекта в соответствии с техническим заданием, пока вы отсутствуете</div>
+                                            </div>
+                                        </div>
+                                        <div class="service-detail__item2">
+                                            <img src="img/hammer.svg" alt="">
+                                            <div class="service-detail__item2-content">
+                                                <div class="service-detail__item2-title">Входной контроль материалов</div>
+                                                <div class="service-detail__item2-desc">Отслеживаем установленные сметой поставки, качество материалов и сохранность оборудования</div>
+                                            </div>
+                                        </div>
+                                        <div class="service-detail__item2">
+                                            <img src="img/file-text.svg" alt="">
+                                            <div class="service-detail__item2-content">
+                                                <div class="service-detail__item2-title">Документация</div>
+                                                <div class="service-detail__item2-desc">Фиксируем акты завершенных этапов работ с указаеним нарушений, дефектов и отклонений. Остлеживаем их исправление.</div>
+                                            </div>
+                                        </div>
+                                        <div class="service-detail__item2">
+                                            <img src="img/clock-4.svg" alt="">
+                                            <div class="service-detail__item2-content">
+                                                <div class="service-detail__item2-title">Сохраним нервы и время</div>
+                                                <div class="service-detail__item2-desc">Все вопросы со строителями мы берём на себя</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="service-detail__right">
+                                <div class="service-detail__table">
+                                    <table>
+                                        <thead>
                                             <tr>
-                                                <td>Проверка площади квартиры</td>
-                                                <td>
-                                                    <span class="blue-text">от 60 р./м²</span>
+                                                <th>Площадь</th>
+                                                <th>Визиты</th>
+                                                <th>Стоимость</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>до 50</td>
+                                                <td>1</td>
+                                                <td>4500</td>
+                                            </tr>
+                                            <tr>
+                                                <td>от 50 до 70</td>
+                                                <td>1</td>
+                                                <td>6500</td>
+                                            </tr>
+                                            <tr>
+                                                <td>от 70 до 100</td>
+                                                <td>1</td>
+                                                <td>8500</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Более 100</td>
+                                                <td colspan="2">
+                                                    <span class="blue-text">Индивидуальный расчёт</span>
                                                 </td>
                                             </tr>
                                         </tbody>
@@ -1306,7 +1736,7 @@
                             </div>
                         </div>
                     </div>
-                    <div id="serviceDetail5" class="service-detail">
+                    <div id="serviceDetail5" class="modal-none service-detail">
                         <div class="service-detail__mob">
                             <div class="service-detail__mob-top">
                                 <button class="service-detail__close">
@@ -1316,7 +1746,10 @@
                                     <img src="img/cancel.svg" alt="">
                                 </button>
                                 <div class="service-detail__mob-block">
-                                    <button class="service-detail__mob-btn btn btn-blue">Получить консультацию</button>
+                                    <button onclick="consultModal('consultModal1', {
+                                        title:'Кнопка на модалке услуг',
+                                        button: 'Получить консультацию'}
+                                        )" class="service-detail__mob-btn btn btn-blue">Получить консультацию</button>
                                 </div>
 
                             </div>
@@ -1373,7 +1806,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="service-detail__right">
+                            <div class="service-detail__right service-detail__right--440">
                                 <div class="service-detail__table">
                                     <table>
                                         <thead>
@@ -1436,7 +1869,7 @@
                             </form>
                         </div>
                     </div>
-                    <div id="serviceDetail6" class="service-detail">
+                    <div id="serviceDetail6" class="modal-none service-detail service-detail--center">
                         <div class="service-detail__mob">
                             <div class="service-detail__mob-top">
                                 <button class="service-detail__close">
@@ -1446,7 +1879,10 @@
                                     <img src="img/cancel.svg" alt="">
                                 </button>
                                 <div class="service-detail__mob-block">
-                                    <button class="service-detail__mob-btn btn btn-blue">Получить консультацию</button>
+                                    <button onclick="consultModal('consultModal1', {
+                                        title:'Кнопка на модалке услуг',
+                                        button: 'Получить консультацию'}
+                                        )" class="service-detail__mob-btn btn btn-blue">Получить консультацию</button>
                                 </div>
 
                             </div>
@@ -1503,7 +1939,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="service-detail__right">
+                            <div class="service-detail__right service-detail__right--440">
                                 <div class="service-detail__table">
                                     <table>
                                         <thead>
@@ -1566,7 +2002,7 @@
                             </form>
                         </div>
                     </div>
-                    <div id="serviceDetail7" class="service-detail">
+                    <div id="serviceDetail7" class="modal-none service-detail  service-detail--right">
                         <div class="service-detail__mob">
                             <div class="service-detail__mob-top">
                                 <button class="service-detail__close">
@@ -1576,7 +2012,10 @@
                                     <img src="img/cancel.svg" alt="">
                                 </button>
                                 <div class="service-detail__mob-block">
-                                    <button class="service-detail__mob-btn btn btn-blue">Получить консультацию</button>
+                                    <button onclick="consultModal('consultModal1', {
+                                        title:'Кнопка на модалке услуг',
+                                        button: 'Получить консультацию'}
+                                        )" class="service-detail__mob-btn btn btn-blue">Получить консультацию</button>
                                 </div>
                             </div>
                             <div class="service-detail__mob-title">Тепловизионное обследование</div>
@@ -1694,51 +2133,77 @@
                                 <div class='swiper-wrapper'>
                                     <div onclick="modal('qualityModal1')" class="swiper-slide quality__item">
                                         <div class="quality__item-img">
-                                            <img src="img/quality1.png" alt="">
+                                            <picture>
+                                                <source srcset="img/quality1.webp" type="image/webp">
+                                                <img src="img/quality1.png" alt="">
+                                            </picture>
                                         </div>
                                         <div class="quality__item-title">Гигрометр </div>
                                     </div>
                                     <div onclick="modal('qualityModal2')" class="swiper-slide quality__item">
                                         <div class="quality__item-img">
-                                            <img src="img/quality2.png" alt="">
+                                            <picture>
+                                                <source srcset="img/quality2.webp" type="image/webp">
+                                                <img src="img/quality2.png" alt="">
+                                            </picture>
                                         </div>
                                         <div class="quality__item-title">Гигрометр </div>
                                     </div>
                                     <div onclick="modal('qualityModal3')" class="swiper-slide quality__item">
                                         <div class="quality__item-img">
-                                            <img src="img/quality3.png" alt="">
+                                            <picture>
+                                                <source srcset="img/quality3.webp" type="image/webp">
+                                                <img src="img/quality3.png" alt="">
+                                            </picture>
                                         </div>
                                         <div class="quality__item-title"> Анимометр</div>
                                     </div>
                                     <div onclick="modal('qualityModal4')" class="swiper-slide quality__item">
                                         <div class="quality__item-img">
-                                            <img src="img/quality4.png" alt="">
+                                            <picture>
+                                                <source srcset="img/quality4.webp" type="image/webp">
+                                                <img src="img/quality4.png" alt="">
+                                            </picture>
                                         </div>
                                         <div class="quality__item-title">Влагомер</div>
                                     </div>
                                     <div onclick="modal('qualityModal5')" class="swiper-slide quality__item">
                                         <div class="quality__item-img">
-                                            <img src="img/quality5.png" alt="">
+                                            <picture>
+                                                <source srcset="img/quality5.webp" type="image/webp">
+                                                <img src="img/quality5.png" alt="">
+                                            </picture>
                                         </div>
                                         <div class="quality__item-title">Тестер разеток УЗО</div>
                                     </div>
                                     <div onclick="modal('qualityModal6')" class="swiper-slide quality__item">
                                         <div class="quality__item-img">
-                                            <img src="img/quality6.png" alt="">
+                                            <picture>
+                                                <source srcset="img/quality6.webp" type="image/webp">
+                                                <img src="img/quality6.png" alt="">
+                                            </picture>
                                         </div>
                                         <div class="quality__item-title">Тепловизор</div>
                                     </div>
                                     <div onclick="modal('qualityModal7')" class="swiper-slide quality__item">
                                         <div class="quality__item-img">
-                                            <img src="img/quality7.png" alt="">
+                                            <picture>
+                                                <source srcset="img/quality7.webp" type="image/webp">
+                                                <img src="img/quality7.png" alt="">
+                                            </picture>
                                         </div>
                                         <div class="quality__item-title">Гигрометр </div>
                                     </div>
                                     <div onclick="modal('qualityModal8')" class="swiper-slide quality__item">
                                         <div class="quality__item-img">
-                                            <img src="img/quality8.png" alt="">
+                                            <picture>
+                                                <source srcset="img/quality8.webp" type="image/webp">
+                                                <img src="img/quality8.png" alt="">
+                                            </picture>
                                         </div>
                                         <div class="quality__item-title">Малярная лампа</div>
+                                    </div>
+                                    <div class="swiper-slide">
                                     </div>
                                 </div>
                             </div>
@@ -1926,11 +2391,23 @@
                                 </div>
                             </div>
                         </div>
+                        <div class="types__group types__group9">
+                            <div class="types__group-point" data-tab-path="8"></div>
+                            <div class="types__group-modal types__group-modal9" data-tab-path="8">
+                                <div class="types__group-title">Стены и потолки</div>
+                                <div class="types__group-items">
+                                    <div class="types__group-item">
+                                        <span class="blue-text">01.</span> Проверяем на наличие трещин, наплывов, неровностей, пустот, демонтаж маяков, проверка на отклонение по вертикали/горизонтали, проверка углов, проверка дверных проемов по размерам,
+                                        а также по вертикали/горизонтали
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
                 <div class="types-mob">
-                    <div class="types-mob__title display2">Технический надзор <br> за ремонтом квартиры </div>
+                    <div class="types-mob__title display2">Виды проверяемых работ</div>
                     <div class="types-mob__wrap">
                         <div class="types-mob__item" onclick="modal('mobTypesModal')">
                             <div class="types-mob__item-icon">
@@ -1986,7 +2463,7 @@
                 <div class="online">
                     <div class="online__left">
                         <div class="online__title display2">
-                            Обращаясь к нам, <span>вы управляете своим ремонтом <br> из любой точки мира. </span>
+                            Обращаясь к нам, <span>вы управляете своим ремонтом  из любой точки мира. </span>
                         </div>
                         <div class="online__desc">
                             Вся информация о результатах, сроках и замечаниях <br> доступна в приложении 24/7
@@ -2022,13 +2499,22 @@
                                 <div class='swiper-container'>
                                     <div class='swiper-wrapper'>
                                         <div class='swiper-slide'>
-                                            <img src="img/articles-img.png" alt="">
+                                            <picture>
+                                                <source srcset="img/articles-img.webp" type="image/webp">
+                                                <img src="img/articles-img.png" alt="alt изображения">
+                                            </picture>
                                         </div>
                                         <div class='swiper-slide'>
-                                            <img src="img/articles-img2.png" alt="">
+                                            <picture>
+                                                <source srcset="img/articles-img2.webp" type="image/webp">
+                                                <img src="img/articles-img2.png" alt="alt изображения">
+                                            </picture>
                                         </div>
                                         <div class='swiper-slide'>
-                                            <img src="img/articles-img3.png" alt="">
+                                            <picture>
+                                                <source srcset="img/articles-img3.webp" type="image/webp">
+                                                <img src="img/articles-img3.png" alt="alt изображения">
+                                            </picture>
                                         </div>
                                     </div>
                                 </div>
@@ -2084,7 +2570,7 @@
                                             </div>
                                             <p class="projects-card__text">Технический надзор и контроль за производствам отделочных работ</p>
                                             <span class="projects-card__violation">Выявлено нарушений на 20 000 ₽</span>
-                                            <button class="projects__btn btn btn-blue">Открыть</button>
+                                            <a href="project-item.html" class="projects__btn btn btn-blue">Открыть</a>
                                         </div>
                                     </div>
                                 </div>
@@ -2099,7 +2585,7 @@
                                             </div>
                                             <p class="projects-card__text">Технический надзор и контроль за производствам отделочных работ</p>
                                             <span class="projects-card__violation">Выявлено нарушений на 20 000 ₽</span>
-                                            <button class="projects__btn btn btn-blue">Открыть</button>
+                                            <a href="project-item.html" class="projects__btn btn btn-blue">Открыть</a>
                                         </div>
                                     </div>
                                 </div>
@@ -2114,7 +2600,7 @@
                                             </div>
                                             <p class="projects-card__text">Технический надзор и контроль за производствам отделочных работ</p>
                                             <span class="projects-card__violation">Выявлено нарушений на 20 000 ₽</span>
-                                            <button class="projects__btn btn btn-blue">Открыть</button>
+                                            <a href="project-item.html" class="projects__btn btn btn-blue">Открыть</a>
                                         </div>
                                     </div>
                                 </div>
@@ -2129,7 +2615,7 @@
                                             </div>
                                             <p class="projects-card__text">Технический надзор и контроль за производствам отделочных работ</p>
                                             <span class="projects-card__violation">Выявлено нарушений на 20 000 ₽</span>
-                                            <button class="projects__btn btn btn-blue">Открыть</button>
+                                            <a href="project-item.html" class="projects__btn btn btn-blue">Открыть</a>
                                         </div>
                                     </div>
                                 </div>
@@ -2144,7 +2630,7 @@
                                             </div>
                                             <p class="projects-card__text">Технический надзор и контроль за производствам отделочных работ</p>
                                             <span class="projects-card__violation">Выявлено нарушений на 20 000 ₽</span>
-                                            <button class="projects__btn btn btn-blue">Открыть</button>
+                                            <a href="project-item.html" class="projects__btn btn btn-blue">Открыть</a>
                                         </div>
                                     </div>
                                 </div>
@@ -2163,8 +2649,8 @@
                                         <img src="img/worker.png" alt="">
                                     </div>
                                     <div class="workers__item-content">
-                                        <div class="workers__item-prof">Проектный менеджер</div>
                                         <div class="workers__item-name">Виталий Пеньков</div>
+                                        <div class="workers__item-prof">Проектный менеджер</div>
                                         <div class="workers__item-desc">Эмпирическая история искусств вероятна. Рецептивная эстетика, следовательно, образует композиционный мимезис</div>
                                     </div>
                                 </div>
@@ -2173,8 +2659,8 @@
                                         <img src="img/worker2.png" alt="">
                                     </div>
                                     <div class="workers__item-content">
-                                        <div class="workers__item-prof">Исполнительный директор</div>
                                         <div class="workers__item-name">Алексей Ермаков</div>
+                                        <div class="workers__item-prof">Исполнительный директор</div>
                                         <div class="workers__item-desc">Эмпирическая история искусств вероятна. Рецептивная эстетика, следовательно, образует композиционный мимезис</div>
                                     </div>
                                 </div>
@@ -2183,8 +2669,8 @@
                                         <img src="img/worker3.png" alt="">
                                     </div>
                                     <div class="workers__item-content">
-                                        <div class="workers__item-prof">Проектный менеджер</div>
                                         <div class="workers__item-name">Виталий Пеньков 2</div>
+                                        <div class="workers__item-prof">Проектный менеджер</div>
                                         <div class="workers__item-desc">Эмпирическая история искусств вероятна. Рецептивная эстетика, следовательно, образует композиционный мимезис</div>
                                     </div>
                                 </div>
@@ -2193,8 +2679,8 @@
                                         <img src="img/worker4.png" alt="">
                                     </div>
                                     <div class="workers__item-content">
-                                        <div class="workers__item-prof">Исполнительный директор</div>
                                         <div class="workers__item-name">Алексей Ермаков 2</div>
+                                        <div class="workers__item-prof">Исполнительный директор</div>
                                         <div class="workers__item-desc">Эмпирическая история искусств вероятна. Рецептивная эстетика, следовательно, образует композиционный мимезис</div>
                                     </div>
                                 </div>
@@ -2203,8 +2689,8 @@
                                         <img src="img/worker.png" alt="">
                                     </div>
                                     <div class="workers__item-content">
-                                        <div class="workers__item-prof">Проектный менеджер</div>
                                         <div class="workers__item-name">Виталий Пеньков</div>
+                                        <div class="workers__item-prof">Проектный менеджер</div>
                                         <div class="workers__item-desc">Эмпирическая история искусств вероятна. Рецептивная эстетика, следовательно, образует композиционный мимезис</div>
                                     </div>
                                 </div>
@@ -2213,8 +2699,8 @@
                                         <img src="img/worker2.png" alt="">
                                     </div>
                                     <div class="workers__item-content">
-                                        <div class="workers__item-prof">Исполнительный директор</div>
                                         <div class="workers__item-name">Алексей Ермаков</div>
+                                        <div class="workers__item-prof">Исполнительный директор</div>
                                         <div class="workers__item-desc">Эмпирическая история искусств вероятна. Рецептивная эстетика, следовательно, образует композиционный мимезис</div>
                                     </div>
                                 </div>
@@ -2394,10 +2880,10 @@
                         <form class="consultation__form">
                             <form action="" class="consultation__form">
                                 <fieldset class='consultation__form-group form-group'>
-                                    <input type='text' placeholder="телефон" />
+                                    <input type='text' placeholder="Имя" />
                                 </fieldset>
                                 <fieldset class='consultation__form-group form-group'>
-                                    <input type='text' placeholder="Имя" />
+                                    <input type='tel' placeholder="телефон" />
                                 </fieldset>
                                 <button class="consultation__btn btn btn-blue">Подробнее</button>
                             </form>
@@ -2408,10 +2894,58 @@
                         </form>
                     </div>
                     <div class="consultation__right">
-                        <img src="img/consultation-img.png" alt="">
+                        <picture>
+                            <source srcset="img/consultation-img.webp" type="image/webp">
+                            <img src="img/consultation-img.png" alt="">
+                        </picture>
                     </div>
                 </div>
             </div>
+
+            <footer class="footer">
+                <div class="footer-top">
+                    <div class="footer__info">© Компания «Мой Надзор» – технический надзор в Москве <br> и Подмосковье, 2022</div>
+                    <nav class="footer-nav">
+                        <div class="footer-nav__item">
+                            <div class="footer-nav__item-show">
+                                <span>Услуги и цены</span>
+                                <svg width="11" height="6" viewBox="0 0 11 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M5.5 6L0.73686 5.64421e-08L10.2631 8.89256e-07L5.5 6Z" fill="#fff"></path>
+                                    </svg>
+                            </div>
+                            <div class="footer-nav__item-hidden">
+                                <a href="" class="footer-nav__item-link">Технический надзор</a>
+                                <a href="" class="footer-nav__item-link">Приемка квартир</a>
+                                <a href="" class="footer-nav__item-link">Разовый выезд</a>
+                                <a href="" class="footer-nav__item-link">Проверка смет</a>
+                                <a href="" class="footer-nav__item-link">Проверка дизайн-проекта</a>
+                                <a href="" class="footer-nav__item-link">Тепловизионное обследование</a>
+                            </div>
+                        </div>
+                        <a href="" class="footer-nav__item">Приёмка квартир</a>
+                        <a href="" class="footer-nav__item">Наши проекты</a>
+                        <a href="" class="footer-nav__item">Блог</a>
+                    </nav>
+                </div>
+                <div class="footer-middle">
+                    <div class="footer-middle__left">
+                        <div class="footer-middle__left-links">
+                            <button onclick="modal('confModal')">Политика конфиденциальности</button>
+                            <button onclick="modal('confModal2')">Пользовательское соглашение</button>
+                            <button onclick="modal('confModal3')">Защита персональных данных</button>
+                        </div>
+                    </div>
+                    <div class="footer-middle__center">
+                        <div class="footer__address">Адрес: г. Москва, Чусовская ул, <br> 7а, офис 201</div>
+                        <div class="footer__info2">
+                            ООО "Мой Надзор" <br> ОГРН 118774683265 <br> ИНН 7719482067
+                        </div>
+                    </div>
+                    <div class="footer-middle__right">
+                        Отправляя персональную информацию через любые формы на сайте, Вы автоматически подтверждаете свое согласие на ее обработку. Материалы на сайте не являются публичной офертой
+                    </div>
+                </div>
+            </footer>
 
         </main>
 
@@ -2419,7 +2953,9 @@
 
     </div>
 
-    <div id="qualityModal1" class="modal">
+
+
+    <div id="confModal" class="modal modal-conf">
         <div class="modal__mob-top">
             <button class="modal__close">
                 <img src="img/back.svg" alt="">
@@ -2428,7 +2964,120 @@
                 <img src="img/cancel.svg" alt="">
             </button>
         </div>
-        <div class="modal__title">Гигрометр</div>
+        <div class="modal__title">
+            <span>Политика конфиденциальности</span>
+            <button class="modal__close">
+                <img src="img/cancel.svg" alt="">
+            </button>
+        </div>
+        <div class="modal__text">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero, exercitationem sit aut nemo a, molestiae dolore, maxime incidunt ex omnis placeat minus repellendus reprehenderit expedita tempora officia earum eveniet unde vitae non? Sapiente
+                rem velit et. Earum non possimus cupiditate. Et nulla quod qui, non voluptatibus ad. Voluptate reprehenderit placeat quos. Quia, qui tenetur praesentium veniam odit accusamus alias maiores. Lorem ipsum dolor sit amet consectetur adipisicing
+                elit. Tempora voluptate voluptatum sunt alias ab aperiam quos. Id enim cum ducimus labore dolorum. Molestias debitis nam at ullam? Necessitatibus eos vitae iste assumenda vel sunt odit autem accusamus et dolorum, dignissimos aut excepturi
+                ad, quas repellendus eveniet, in voluptatum veritatis tenetur sit molestias ducimus? Id provident quia sit, minus aspernatur fugiat, magnam harum distinctio asperiores veritatis quidem delectus ab vero at nesciunt aliquam quaerat nisi
+                rerum cumque ipsa ipsum accusantium laudantium. Molestias odit voluptatem suscipit eius earum voluptates nulla, atque debitis, iure nisi doloremque, odio molestiae temporibus enim? Adipisci voluptatum quo placeat sequi officiis cumque
+                beatae commodi architecto provident harum molestias veniam facere, corporis aperiam repellendus aliquid id inventore est hic fugit, ex consequuntur, dolores assumenda. Dolore, aliquam sapiente qui dignissimos ut maiores sequi minima, ipsum
+                enim molestias sunt illo excepturi. Voluptatum</p>
+            <p>explicabo eaque qui ea quo, beatae dolorem ullam alias architecto nostrum omnis dicta, ducimus vero sapiente dolor facere eos iste illo. Saepe commodi inventore consequatur velit ab vitae rerum molestiae aut illum a praesentium eveniet reprehenderit
+                placeat, earum tempora explicabo quas qui enim provident sint consequuntur iusto iure beatae aliquam. Autem eaque quasi, officia distinctio accusantium perferendis excepturi, voluptatibus optio possimus ut, quas porro. Saepe distinctio
+                reprehenderit ad vel dolorem sunt laboriosam, minima dolorum perferendis adipisci recusandae soluta magni, eligendi dicta. Aperiam voluptas veniam et iure asperiores repudiandae placeat perferendis officiis nesciunt? Ad, illum iure, libero
+                tenetur repellat est ipsam, molestiae ea provident expedita esse. Labore ea ipsa vitae quae! Animi laudantium eveniet atque cupiditate accusantium rem eum corrupti, quos placeat necessitatibus voluptas deserunt, dolores numquam quae autem
+                delectus possimus dolor harum nostrum nihil neque at qui corporis? Possimus voluptate optio impedit beatae aliquid quae itaque quidem ducimus dignissimos eius modi debitis, fuga ut. Culpa dolor fuga minima provident sapiente nam! Ipsam
+                reiciendis error perferendis earum, nemo blanditiis quam quos expedita commodi quo libero est voluptatem corporis ipsum saepe delectus repellendus rem rerum tempore fugit enim pariatur voluptas? Culpa iure quibusdam dolorem numquam velit?
+                Qui reprehenderit molestiae quia</p>
+            nostrum quibusdam sit incidunt rerum magnam. At quod placeat voluptates? Corrupti incidunt sint voluptatem placeat esse illum numquam quo doloribus debitis qui nam eveniet dolore corporis, ducimus sapiente voluptatum voluptas vero fuga consectetur! Eaque
+            iusto, aut officia omnis dicta ea incidunt delectus aliquid odit quas unde est sequi! Quod, qui blanditiis eum odio in modi necessitatibus recusandae ipsam aliquam quibusdam soluta laudantium obcaecati vel ex neque maxime reprehenderit deserunt
+            perferendis! Facere ducimus sit, eum nam placeat nemo minima, illo asperiores maxime dolore inventore fugiat alias magnam quam sunt similique perferendis. Assumenda blanditiis perferendis consequuntur iusto consectetur, voluptas asperiores
+            architecto ratione doloremque esse animi, facere quidem quae? Aspernatur error impedit commodi deserunt tempora non? Quos maiores, harum dignissimos odio, ut sint obcaecati modi qui necessitatibus quis quas laborum. Reiciendis voluptatibus
+            asperiores possimus iure! Blanditiis esse labore quo a in explicabo, eligendi modi inventore tenetur quisquam voluptas delectus omnis quae! Expedita natus, perferendis temporibus optio voluptatibus quod eligendi, architecto eaque modi consequatur
+            hic eius similique quibusdam tempore, adipisci dolor facere doloribus? Iure corrupti eligendi iusto nobis, voluptates placeat sed dicta illo culpa dignissimos perferendis eius soluta distinctio vel voluptate aliquid doloribus facilis, mollitia
+            libero? Quia rerum dolorum consectetur error corporis fugiat doloremque labore voluptatibus quam! Beatae provident ab quod eius distinctio, doloribus reiciendis! Omnis soluta, enim corporis harum, quaerat laudantium magnam consequuntur iure
+            deleniti non ratione modi voluptatum nisi cupiditate? Beatae, officiis quia unde nam eveniet vel ea in consequatur nobis ducimus officia eum impedit error ullam modi cum nemo, nesciunt facilis aspernatur cumque architecto animi. Nam minus
+            nemo assumenda voluptatibus natus sunt quam nostrum, incidunt eaque nihil eligendi exercitationem deleniti placeat, unde consequatur praesentium. Ipsum consequuntur nisi sit ipsa ut deleniti quod minima iusto, atque aliquid vel, magnam, asperiores
+            dolor facere sapiente deserunt rem esse voluptatum. Sed reiciendis facilis neque corporis, laboriosam dolore quo ut nihil repellendus eius officiis natus voluptates nostrum nulla, ad minima assumenda fugiat eligendi aspernatur illo eos eum.
+            Voluptas, perferendis? Dolore minima qui minus, aliquam laudantium quas. Modi fugit accusamus laboriosam laudantium, quam ex ab iusto officia sit porro consectetur sed voluptas enim fugiat dolorem vel pariatur molestiae sequi praesentium!
+            Veniam quibusdam ad obcaecati nisi error iusto nostrum veritatis possimus mollitia quam quos deserunt, deleniti, incidunt in consectetur, rem laudantium tempore laboriosam eum amet. Nisi tempore aperiam debitis sed beatae necessitatibus cupiditate
+            ducimus, nulla explicabo corporis quas suscipit placeat autem eum iure facilis quia magni repudiandae voluptates cumque! Ab animi ipsum ut vel? Nostrum animi laboriosam eaque impedit, ipsam consectetur quod, doloribus quaerat corrupti minus
+            maxime optio deleniti. Possimus eaque, aspernatur perspiciatis laudantium nihil quia sunt labore ad illo accusamus sit voluptatibus vitae hic officia enim qui distinctio mollitia voluptate! Ab velit, at exercitationem illum tempore consectetur
+            alias itaque aliquam ipsum saepe aut mollitia sunt dicta numquam ullam nostrum. Illum minima distinctio magni illo beatae deleniti iure laboriosam numquam vero perspiciatis perferendis doloribus, suscipit repellendus, labore odio soluta neque
+            quaerat repellat nobis delectus itaque modi. Asperiores provident cupiditate ab ad dolore vel unde veritatis harum rem, sequi a voluptate. Soluta magni ut culpa nobis magnam quo nemo dolore voluptas excepturi reiciendis officiis, necessitatibus
+            odio rem quia. Pariatur earum cupiditate doloribus. Eius accusantium vel quos nobis! Quidem, reprehenderit. Corrupti necessitatibus nisi reprehenderit aspernatur voluptate? Quo quibusdam, recusandae consequatur ab sed aspernatur beatae ad
+            obcaecati aut quasi magni voluptas quia, debitis porro, omnis deleniti commodi? Voluptatem fugiat quidem dolorum facere sequi quis molestias dolores illo, qui quaerat accusamus ipsa magnam dolorem vitae? Maxime ratione totam quae, atque pariatur
+            quisquam eaque optio temporibus corrupti autem aperiam aut repellat eligendi nisi alias eveniet fuga quasi veritatis sequi error ut assumenda inventore recusandae. Officiis consequatur nobis, consequuntur harum sed quo perferendis explicabo
+            provident repellendus amet, eaque possimus aliquid unde atque enim sint aperiam? Vero esse doloribus excepturi! Numquam accusantium quo impedit aperiam excepturi fuga eaque explicabo recusandae iusto, dignissimos odio magnam sit totam alias
+            cumque quisquam dolorum? Consectetur ea odit minima eaque odio veritatis velit asperiores, sint quam tempore corrupti at dicta earum.
+        </div>
+    </div>
+
+    <div id="confModal2" class="modal modal-conf">
+        <div class="modal__mob-top">
+            <button class="modal__close">
+                <img src="img/back.svg" alt="">
+            </button>
+            <button class="modal__close">
+                <img src="img/cancel.svg" alt="">
+            </button>
+        </div>
+        <div class="modal__title">
+            <span>Пользовательское соглашение</span>
+            <button class="modal__close">
+                <img src="img/cancel.svg" alt="">
+            </button>
+        </div>
+        <div class="modal__text">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero, exercitationem sit aut nemo a, molestiae dolore, maxime incidunt ex omnis placeat minus repellendus reprehenderit expedita tempora officia earum eveniet unde vitae non? Sapiente
+                rem velit et. Earum non possimus cupiditate. Et nulla quod qui, non voluptatibus ad. Voluptate reprehenderit placeat quos. Quia, qui tenetur praesentium veniam odit accusamus alias maiores. Lorem ipsum dolor sit amet consectetur adipisicing
+                elit. Tempora voluptate voluptatum sunt alias ab aperiam quos. Id enim cum ducimus labore dolorum. Molestias debitis nam at ullam? Necessitatibus eos vitae iste assumenda vel sunt odit autem accusamus et dolorum, dignissimos aut excepturi
+                ad, quas repellendus eveniet, in voluptatum veritatis tenetur sit molestias ducimus? Id provident quia sit, minus aspernatur fugiat, magnam harum distinctio asperiores veritatis quidem delectus ab vero at nesciunt aliquam quaerat nisi
+                rerum cumque ipsa ipsum accusantium laudantium. Molestias odit voluptatem suscipit eius earum voluptates nulla, atque debitis, iure nisi doloremque, odio molestiae temporibus enim? Adipisci voluptatum quo placeat sequi officiis cumque
+                beatae commodi architecto provident harum molestias veniam facere, corporis aperiam repellendus aliquid id inventore est hic fugit, ex consequuntur, dolores assumenda. Dolore, aliquam sapiente qui dignissimos ut maiores sequi minima, ipsum
+                enim molestias sunt illo excepturi. Voluptatum</p>
+            <p>explicabo eaque qui ea quo, beatae dolorem ullam alias architecto nostrum omnis dicta, ducimus vero sapiente dolor facere eos iste illo. Saepe commodi inventore consequatur velit ab vitae rerum molestiae aut illum a praesentium eveniet reprehenderit
+                placeat, earum tempora explicabo quas qui enim provident sint consequuntur iusto iure beatae aliquam. Autem eaque quasi, officia distinctio accusantium perferendis excepturi, voluptatibus optio possimus ut, quas porro. Saepe distinctio
+                reprehenderit ad vel dolorem sunt laboriosam, minima dolorum perferendis adipisci recusandae soluta magni, eligendi dicta. Aperiam voluptas veniam et iure asperiores repudiandae placeat perferendis officiis nesciunt? Ad, illum iure, libero
+                tenetur repellat est ipsam, molestiae ea provident expedita esse. Labore ea ipsa vitae quae! Animi laudantium eveniet atque cupiditate accusantium rem eum corrupti, quos placeat necessitatibus voluptas deserunt, dolores numquam quae autem
+                delectus possimus dolor harum nostrum nihil neque at qui corporis? Possimus voluptate optio impedit beatae aliquid quae itaque quidem ducimus dignissimos eius modi debitis, fuga ut. Culpa dolor fuga minima provident sapiente nam! Ipsam
+                reiciendis error perferendis earum, nemo blanditiis quam quos expedita commodi quo libero est voluptatem corporis ipsum saepe delectus repellendus rem rerum tempore fugit enim pariatur voluptas? Culpa iure quibusdam dolorem numquam velit?
+                Qui reprehenderit molestiae quia</p>
+            nostrum quibusdam sit incidunt rerum magnam. At quod placeat voluptates? Corrupti incidunt sint voluptatem placeat esse illum numquam quo doloribus debitis qui nam eveniet dolore corporis, ducimus sapiente voluptatum voluptas vero fuga consectetur! Eaque
+            iusto, aut officia omnis dicta ea incidunt delectus aliquid odit quas unde est sequi! Quod, qui blanditiis eum odio in modi necessitatibus recusandae ipsam aliquam quibusdam soluta laudantium obcaecati vel ex neque maxime reprehenderit deserunt
+            perferendis! Facere ducimus sit, eum nam placeat nemo minima, illo asperiores maxime dolore inventore fugiat alias magnam quam sunt similique perferendis. Assumenda blanditiis perferendis consequuntur iusto consectetur, voluptas asperiores
+            architecto ratione doloremque esse animi, facere quidem quae? Aspernatur error impedit commodi deserunt tempora non? Quos maiores, harum dignissimos odio, ut sint obcaecati modi qui necessitatibus quis quas laborum. Reiciendis voluptatibus
+            asperiores possimus iure! Blanditiis esse labore quo a in explicabo, eligendi modi inventore tenetur quisquam voluptas delectus omnis quae! Expedita natus, perferendis temporibus optio voluptatibus quod eligendi, architecto eaque modi consequatur
+            hic eius similique quibusdam tempore, adipisci dolor facere doloribus? Iure corrupti eligendi iusto nobis, voluptates placeat sed dicta illo culpa dignissimos perferendis eius soluta distinctio vel voluptate aliquid doloribus facilis, mollitia
+            libero? Quia rerum dolorum consectetur error corporis fugiat doloremque labore voluptatibus quam! Beatae provident ab quod eius distinctio, doloribus reiciendis! Omnis soluta, enim corporis harum, quaerat laudantium magnam consequuntur iure
+            deleniti non ratione modi voluptatum nisi cupiditate? Beatae, officiis quia unde nam eveniet vel ea in consequatur nobis ducimus officia eum impedit error ullam modi cum nemo, nesciunt facilis aspernatur cumque architecto animi. Nam minus
+            nemo assumenda voluptatibus natus sunt quam nostrum, incidunt eaque nihil eligendi exercitationem deleniti placeat, unde consequatur praesentium. Ipsum consequuntur nisi sit ipsa ut deleniti quod minima iusto, atque aliquid vel, magnam, asperiores
+            dolor facere sapiente deserunt rem esse voluptatum. Sed reiciendis facilis neque corporis, laboriosam dolore quo ut nihil repellendus eius officiis natus voluptates nostrum nulla, ad minima assumenda fugiat eligendi aspernatur illo eos eum.
+            Voluptas, perferendis? Dolore minima qui minus, aliquam laudantium quas. Modi fugit accusamus laboriosam laudantium, quam ex ab iusto officia sit porro consectetur sed voluptas enim fugiat dolorem vel pariatur molestiae sequi praesentium!
+            Veniam quibusdam ad obcaecati nisi error iusto nostrum veritatis possimus mollitia quam quos deserunt, deleniti, incidunt in consectetur, rem laudantium tempore laboriosam eum amet. Nisi tempore aperiam debitis sed beatae necessitatibus cupiditate
+            ducimus, nulla explicabo corporis quas suscipit placeat autem eum iure facilis quia magni repudiandae voluptates cumque! Ab animi ipsum ut vel? Nostrum animi laboriosam eaque impedit, ipsam consectetur quod, doloribus quaerat corrupti minus
+            maxime optio deleniti. Possimus eaque, aspernatur perspiciatis laudantium nihil quia sunt labore ad illo accusamus sit voluptatibus vitae hic officia enim qui distinctio mollitia voluptate! Ab velit, at exercitationem illum tempore consectetur
+            alias itaque aliquam ipsum saepe aut mollitia sunt dicta numquam ullam nostrum. Illum minima distinctio magni illo beatae deleniti iure laboriosam numquam vero perspiciatis perferendis doloribus, suscipit repellendus, labore odio soluta neque
+            quaerat repellat nobis delectus itaque modi. Asperiores provident cupiditate ab ad dolore vel unde veritatis harum rem, sequi a voluptate. Soluta magni ut culpa nobis magnam quo nemo dolore voluptas excepturi reiciendis officiis, necessitatibus
+            odio rem quia. Pariatur earum cupiditate doloribus. Eius accusantium vel quos nobis! Quidem, reprehenderit. Corrupti necessitatibus nisi reprehenderit aspernatur voluptate? Quo quibusdam, recusandae consequatur ab sed aspernatur beatae ad
+            obcaecati aut quasi magni voluptas quia, debitis porro, omnis deleniti commodi? Voluptatem fugiat quidem dolorum facere sequi quis molestias dolores illo, qui quaerat accusamus ipsa magnam dolorem vitae? Maxime ratione totam quae, atque pariatur
+            quisquam eaque optio temporibus corrupti autem aperiam aut repellat eligendi nisi alias eveniet fuga quasi veritatis sequi error ut assumenda inventore recusandae. Officiis consequatur nobis, consequuntur harum sed quo perferendis explicabo
+            provident repellendus amet, eaque possimus aliquid unde atque enim sint aperiam? Vero esse doloribus excepturi! Numquam accusantium quo impedit aperiam excepturi fuga eaque explicabo recusandae iusto, dignissimos odio magnam sit totam alias
+            cumque quisquam dolorum? Consectetur ea odit minima eaque odio veritatis velit asperiores, sint quam tempore corrupti at dicta earum.
+        </div>
+    </div>
+
+    <div id="qualityModal1" class="modal modal-none quality-modal">
+        <div class="modal__mob-top">
+            <button class="modal__close">
+                <img src="img/back.svg" alt="">
+            </button>
+            <button class="modal__close">
+                <img src="img/cancel.svg" alt="">
+            </button>
+        </div>
+        <div class="modal__title">
+            <span>Гигрометр</span>
+            <button class="modal__close">
+                <img src="img/cancel.svg" alt="">
+            </button>
+        </div>
         <div class="modal__wrap">
             <div class="modal__img">
                 <img src="img/quality1.png" alt="">
@@ -2463,8 +3112,11 @@
                 <button class="modal__btn btn btn-blue">Оставить заявку</button>
             </form>
         </div>
+        <div class="quality-modal__fix">
+            <button class="quality-modal__btn btn btn-blue">Оставить заявку</button>
+        </div>
     </div>
-    <div id="qualityModal2" class="modal">
+    <div id="qualityModal2" class="modal modal-none quality-modal">
         <div class="modal__mob-top">
             <button class="modal__close">
                 <img src="img/back.svg" alt="">
@@ -2473,7 +3125,12 @@
                 <img src="img/cancel.svg" alt="">
             </button>
         </div>
-        <div class="modal__title">Гигрометр</div>
+        <div class="modal__title">
+            <span>Гигрометр</span>
+            <button class="modal__close">
+                <img src="img/cancel.svg" alt="">
+            </button>
+        </div>
         <div class="modal__wrap">
             <div class="modal__img">
                 <img src="img/quality2.png" alt="">
@@ -2508,8 +3165,11 @@
                 <button class="modal__btn btn btn-blue">Оставить заявку</button>
             </form>
         </div>
+        <div class="quality-modal__fix">
+            <button class="quality-modal__btn btn btn-blue">Оставить заявку</button>
+        </div>
     </div>
-    <div id="qualityModal3" class="modal">
+    <div id="qualityModal3" class="modal modal-none quality-modal">
         <div class="modal__mob-top">
             <button class="modal__close">
                 <img src="img/back.svg" alt="">
@@ -2518,7 +3178,12 @@
                 <img src="img/cancel.svg" alt="">
             </button>
         </div>
-        <div class="modal__title">Анимометр</div>
+        <div class="modal__title">
+            <span>Анимометр</span>
+            <button class="modal__close">
+                <img src="img/cancel.svg" alt="">
+            </button>
+        </div>
         <div class="modal__wrap">
             <div class="modal__img">
                 <img src="img/quality3.png" alt="">
@@ -2553,8 +3218,11 @@
                 <button class="modal__btn btn btn-blue">Оставить заявку</button>
             </form>
         </div>
+        <div class="quality-modal__fix">
+            <button class="quality-modal__btn btn btn-blue">Оставить заявку</button>
+        </div>
     </div>
-    <div id="qualityModal4" class="modal">
+    <div id="qualityModal4" class="modal modal-none quality-modal">
         <div class="modal__mob-top">
             <button class="modal__close">
                 <img src="img/back.svg" alt="">
@@ -2563,7 +3231,12 @@
                 <img src="img/cancel.svg" alt="">
             </button>
         </div>
-        <div class="modal__title">Влагомер</div>
+        <div class="modal__title">
+            <span>Влагомер</span>
+            <button class="modal__close">
+                <img src="img/cancel.svg" alt="">
+            </button>
+        </div>
         <div class="modal__wrap">
             <div class="modal__img">
                 <img src="img/quality4.png" alt="">
@@ -2598,8 +3271,11 @@
                 <button class="modal__btn btn btn-blue">Оставить заявку</button>
             </form>
         </div>
+        <div class="quality-modal__fix">
+            <button class="quality-modal__btn btn btn-blue">Оставить заявку</button>
+        </div>
     </div>
-    <div id="qualityModal5" class="modal">
+    <div id="qualityModal5" class="modal modal-none quality-modal">
         <div class="modal__mob-top">
             <button class="modal__close">
                 <img src="img/back.svg" alt="">
@@ -2608,7 +3284,12 @@
                 <img src="img/cancel.svg" alt="">
             </button>
         </div>
-        <div class="modal__title">Тестер разеток УЗО</div>
+        <div class="modal__title">
+            <span>Тестер разеток УЗО</span>
+            <button class="modal__close">
+                <img src="img/cancel.svg" alt="">
+            </button>
+        </div>
         <div class="modal__wrap">
             <div class="modal__img">
                 <img src="img/quality5.png" alt="">
@@ -2643,8 +3324,11 @@
                 <button class="modal__btn btn btn-blue">Оставить заявку</button>
             </form>
         </div>
+        <div class="quality-modal__fix">
+            <button class="quality-modal__btn btn btn-blue">Оставить заявку</button>
+        </div>
     </div>
-    <div id="qualityModal6" class="modal">
+    <div id="qualityModal6" class="modal modal-none quality-modal">
         <div class="modal__mob-top">
             <button class="modal__close">
                 <img src="img/back.svg" alt="">
@@ -2653,7 +3337,12 @@
                 <img src="img/cancel.svg" alt="">
             </button>
         </div>
-        <div class="modal__title">Тепловизор</div>
+        <div class="modal__title">
+            <span>Тепловизор</span>
+            <button class="modal__close">
+                <img src="img/cancel.svg" alt="">
+            </button>
+        </div>
         <div class="modal__wrap">
             <div class="modal__img">
                 <img src="img/quality6.png" alt="">
@@ -2688,8 +3377,11 @@
                 <button class="modal__btn btn btn-blue">Оставить заявку</button>
             </form>
         </div>
+        <div class="quality-modal__fix">
+            <button class="quality-modal__btn btn btn-blue">Оставить заявку</button>
+        </div>
     </div>
-    <div id="qualityModal7" class="modal">
+    <div id="qualityModal7" class="modal modal-none quality-modal">
         <div class="modal__mob-top">
             <button class="modal__close">
                 <img src="img/back.svg" alt="">
@@ -2698,7 +3390,12 @@
                 <img src="img/cancel.svg" alt="">
             </button>
         </div>
-        <div class="modal__title">Гигрометр</div>
+        <div class="modal__title">
+            <span>Гигрометр</span>
+            <button class="modal__close">
+                <img src="img/cancel.svg" alt="">
+            </button>
+        </div>
         <div class="modal__wrap">
             <div class="modal__img">
                 <img src="img/quality7.png" alt="">
@@ -2733,8 +3430,11 @@
                 <button class="modal__btn btn btn-blue">Оставить заявку</button>
             </form>
         </div>
+        <div class="quality-modal__fix">
+            <button class="quality-modal__btn btn btn-blue">Оставить заявку</button>
+        </div>
     </div>
-    <div id="qualityModal8" class="modal">
+    <div id="qualityModal8" class="modal modal-none quality-modal">
         <div class="modal__mob-top">
             <button class="modal__close">
                 <img src="img/back.svg" alt="">
@@ -2743,7 +3443,12 @@
                 <img src="img/cancel.svg" alt="">
             </button>
         </div>
-        <div class="modal__title">Малярная лампа</div>
+        <div class="modal__title">
+            <span>Малярная лампа</span>
+            <button class="modal__close">
+                <img src="img/cancel.svg" alt="">
+            </button>
+        </div>
         <div class="modal__wrap">
             <div class="modal__img">
                 <img src="img/quality8.png" alt="">
@@ -2778,8 +3483,11 @@
                 <button class="modal__btn btn btn-blue">Оставить заявку</button>
             </form>
         </div>
+        <div class="quality-modal__fix">
+            <button class="quality-modal__btn btn btn-blue">Оставить заявку</button>
+        </div>
     </div>
-    <div id="consultModal1" class="consult-modal">
+    <div id="consultModal1" class="consult-modal modal-none">
         <div class="consult-modal__mob-top">
             <button class="consult-modal__close">
                 <img src="img/back.svg" alt="">
@@ -2797,16 +3505,16 @@
         <div class="consult-modal__title">Получить бесплатную <br> консультацию инженера</div>
         <form action="" class="consult-modal__form">
             <fieldset class='consult-modal__form-group form-group'>
-                <input type='text' placeholder="телефон" />
+                <input type='text' placeholder="Имя" />
             </fieldset>
             <fieldset class='consult-modal__form-group form-group'>
-                <input type='text' placeholder="Имя" />
+                <input type='tel' placeholder="телефон" />
             </fieldset>
             <button class="consult-modal__form-btn btn btn-blue">Отправить</button>
             <div class="consult-modal__hint">Нажимая на кнопку, вы даете согласие на обработку своих персональных данных и <a href="">соглашаетесь с Политикой конфиденциальности</a></div>
         </form>
     </div>
-    <div id="consultModal2" class="consult-modal">
+    <div id="consultModal2" class="consult-modal modal-none">
         <div class="consult-modal__mob-top">
             <button class="consult-modal__close">
                 <img src="img/back.svg" alt="">
@@ -2818,28 +3526,30 @@
                 </svg>
             </button>
         </div>
-        <div class="consult-modal__title">
-            <p><span>Спасибо за обращение</span> <br> в международную инжиниринговую компанию «Атлант» </p>
-            <p>Наш инжерер свяжется с вами <span> <br>в течении 15 минут</span></p>
-        </div>
-
-        <div class="consult-modal__news">
-            <div class="news-card">
-                <div class="news-card__img">
-                    <img src="img/news2.png" alt="">
-                </div>
-                <div class="news-card__desc">
-                    <div class="news-card__time">
-                        <span class="news-card__date">25 Марта, 2021</span>
-                        <span class="news-card__reading">Читать 11 минут</span>
-                    </div>
-                    <h2 class="news-card__title">Испытательная лаборатория ООО «ЦЭБ ГА» провела работы по измерению…</h2>
-                    <a class="news-card__link" href="">Читать полностью</a>
-                </div>
+        <div class="modal__wrap">
+            <div class="consult-modal__title">
+                <p><span>Спасибо за обращение</span> <br> в международную инжиниринговую компанию «Атлант» </p>
+                <p>Наш инжерер свяжется с вами <span> <br>в течении 15 минут</span></p>
             </div>
+
+            <a href="" class="consult-modal__news">
+                <div class="news-card">
+                    <div class="news-card__img">
+                        <img src="img/news2.png" alt="">
+                    </div>
+                    <div class="news-card__desc">
+                        <div class="news-card__time">
+                            <span class="news-card__date">25 Марта, 2021</span>
+                            <span class="news-card__reading">Читать 11 минут</span>
+                        </div>
+                        <h2 class="news-card__title">Испытательная лаборатория ООО «ЦЭБ ГА» провела работы по измерению…</h2>
+                        <span class="news-card__link" href="">Читать полностью</span>
+                    </div>
+                </div>
+            </a>
         </div>
     </div>
-    <div id="mobTypesModal" class="types-modal modal">
+    <div id="mobTypesModal" class="types-modal modal modal-none">
         <div class="modal__mob-top">
             <button class="modal__close">
                 <img src="img/back.svg" alt="">
@@ -2848,38 +3558,40 @@
                 <img src="img/cancel.svg" alt="">
             </button>
         </div>
-        <div class="modal__title">Электрика</div>
-        <div class="types-modal__img">
-            <img src="img/quality1.png" alt="">
-        </div>
-        <div class="types-modal__text">
-            <div class="types-modal__text-title">Что мы проверяем?</div>
-            <div class="types-modal__list">
-                <div class="types-modal__item">
-                    <span>1.</span>
-                    <span>Контроль за распределением электроточек согласно проекту.</span>
-                </div>
-                <div class="types-modal__item">
-                    <span>2.</span>
-                    <span>Проверяем наличие напряжения и заземления во всех электроточках.</span>
-                </div>
-                <div class="types-modal__item">
-                    <span>3.</span>
-                    <span>Проверяем правильность монтажа проводки, распределительного узла, УЗО и автоматов на предмет работоспособности.</span>
-                </div>
+        <div class="modal__wrap">
+            <div class="modal__title">Электрика</div>
+            <div class="types-modal__img">
+                <img src="img/quality1.png" alt="">
             </div>
+            <div class="types-modal__text">
+                <div class="types-modal__text-title">Что мы проверяем?</div>
+                <div class="types-modal__list">
+                    <div class="types-modal__item">
+                        <span>1.</span>
+                        <span>Контроль за распределением электроточек согласно проекту.</span>
+                    </div>
+                    <div class="types-modal__item">
+                        <span>2.</span>
+                        <span>Проверяем наличие напряжения и заземления во всех электроточках.</span>
+                    </div>
+                    <div class="types-modal__item">
+                        <span>3.</span>
+                        <span>Проверяем правильность монтажа проводки, распределительного узла, УЗО и автоматов на предмет работоспособности.</span>
+                    </div>
+                </div>
 
+            </div>
         </div>
         <button onclick="consultModal('consultModal1', {title:'Технический надзор за ремонтом квартир',button: 'Заказать проверку  профессиональным инструментом'})" class="types-modal__btn btn btn-blue">Заказать проверку  профессиональным инструментом</button>
     </div>
 
-    <!-- <div class="backdrop"></div> -->
 
     <script src="js/jquery-1.11.3.min.js"></script>
     <script src="js/jquery.maskedinput.min.js"></script>
     <script src="js/jquery.fancybox.min.js"></script>
-    <script src="js/swiper.js"></script>
+    <script src="js/swiper.min.js"></script>
     <script src="js/jquery.nice-select.min.js"></script>
+    <script src="js/global.js"></script>
     <script src="js/index.js"></script>
 
 </body>

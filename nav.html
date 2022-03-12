@@ -5,7 +5,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="css/jquery.fancybox.min.css">
+    <link rel="stylesheet" href="css/nice-select.min.css">
     <link rel="stylesheet" href="css/style.css">
     <title>Навигация</title>
 </head>
@@ -40,10 +42,85 @@
         <a href="project-item.html" style="display: block; margin-bottom: 20px;">
             Страница проекта
         </a>
+
+        <button onclick="consultModal('consultModal3', {title:'',button: ''})" class="main__btn btn btn-blue">Новая модалка</button>
+    </div>
+
+    <!-- <div class="backdrop"></div> -->
+
+    <div id="consultModal3" class="consult-modal consult-modal2">
+        <div class="consult-modal__mob-top">
+            <button class="consult-modal__close">
+                <img src="img/back.svg" alt="">
+            </button>
+            <button class="consult-modal__close consult-modal__close2">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M5 5L19 19" stroke="#0723DF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                    <path d="M5 19L19 5" stroke="#0723DF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                </svg>
+            </button>
+        </div>
+        <div class="consult-modal__title">Получить бесплатную консультацию инженера</div>
+        <form action="" class="consult-modal2__form">
+            <div class="consult-modal2__form-grid">
+                <fieldset class="consult-modal2__form-group form-group">
+                    <input type="tel" placeholder="телефон">
+                </fieldset>
+                <fieldset class="consult-modal2__form-group form-group">
+                    <input type="text" placeholder="Имя">
+                </fieldset>
+                <!-- <fieldset class="consult-modal2__form-group consult-modal2__form-group--big form-group">
+                    <input type="text" placeholder="Напишите ваш запрос">
+                </fieldset> -->
+            </div>
+            <div class="consult-modal2__form-wrap">
+                <div class="consult-modal2__form-left">
+                    <div class="consult-modal2__form-subtitle">Выберите ваши потребности</div>
+                    <div class="consult-modal2__form-check">
+                        <input type='checkbox' class='checkbox' id='c' />
+                        <label for='c'>Принять недвижимость от застройщика</label>
+                    </div>
+                    <div class="consult-modal2__form-check">
+                        <input type='checkbox' class='checkbox' id='c2' />
+                        <label for='c2'>Технический надзор  на регулярной основе</label>
+                    </div>
+                    <div class="consult-modal2__form-check">
+                        <input type='checkbox' class='checkbox' id='c3' />
+                        <label for='c3'>Выезд на объект для оценки качества и приемки работ</label>
+                    </div>
+                    <div class="consult-modal2__form-check">
+                        <input type='checkbox' class='checkbox' id='c4' />
+                        <label for='c4'>Проверить дизайн-проект</label>
+                    </div>
+                    <div class="consult-modal2__form-check">
+                        <input type='checkbox' class='checkbox' id='c5' />
+                        <label for='c5'>Составить безопасный договор с подрядчиком</label>
+                    </div>
+                    <div class="consult-modal2__form-check">
+                        <input type='checkbox' class='checkbox' id='c6' />
+                        <label for='c6'>Составить безопасный договор с подрядчиком</label>
+                    </div>
+                </div>
+                <div class="consult-modal2__form-right">
+                    <img src="img/form-bg.jpg" alt="">
+                </div>
+            </div>
+            <div class="consult-modal2__form-bottom">
+                <div class="consult-modal__form-btn-block">
+                    <button class="consult-modal__form-btn btn btn-blue">Отправить</button>
+                </div>
+                <div class="consult-modal__hint">Нажимая на кнопку, вы даете согласие на обработку своих персональных данных и <a href="">соглашаетесь с Политикой конфиденциальности</a></div>
+            </div>
+        </form>
     </div>
 
 
-
+    <script src="js/jquery-1.11.3.min.js"></script>
+    <script src="js/jquery.maskedinput.min.js"></script>
+    <script src="js/jquery.fancybox.min.js"></script>
+    <script src="js/swiper.min.js"></script>
+    <script src="js/jquery.nice-select.min.js"></script>
+    <script src="js/global.js"></script>
 </body>
 
 </html>

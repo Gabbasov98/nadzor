@@ -1,3 +1,4 @@
+// Projects styles start
 .projects {
     padding-bottom: 60px;
     &__title {
@@ -16,6 +17,8 @@
 }
 
 .tabs__item {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     margin-top: 50px;
     overflow-y: hidden;
@@ -29,9 +32,11 @@
             display: grid;
             grid-template-columns: 54% 23% 23%;
             gap: 10px;
+            max-height: 476px;
         }
         &-item {
             overflow: hidden;
+            max-width: 264px;
             &:hover {
                 cursor: pointer;
                 &::before {
@@ -48,14 +53,17 @@
                 left: 0;
                 top: 0;
                 opacity: 0;
+                -webkit-transition: all .3s;
+                -o-transition: all .3s;
                 transition: all .3s;
             }
             img {
                 width: 100%;
-                min-height: 100%;
+                height: 100%;
             }
             &:nth-child(1) {
                 grid-row: 1/4;
+                max-width: 648px;
             }
             &:nth-child(6) {
                 grid-column: 3/4;
@@ -89,6 +97,8 @@
     }
     &__badges {
         margin-top: 40px;
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
     }
     &__badge {
@@ -100,12 +110,17 @@
         color: $primary;
     }
     &__wrap {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
         justify-content: space-between;
         margin-top: 20px;
     }
     &__right {
         width: 350px;
+        -ms-flex-negative: 0;
         flex-shrink: 0;
         margin-left: 25px;
         @media screen and (max-width: 1200px) {
@@ -117,12 +132,17 @@
     }
     &__address {
         margin-top: 20px;
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
         align-items: center;
         font-size: 16px;
         line-height: 130%;
         img {
             margin-right: 8px;
+            -ms-flex-negative: 0;
             flex-shrink: 0;
         }
     }
@@ -135,7 +155,11 @@
         }
     }
     &__items {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
         justify-content: space-between;
         padding: 35px 0;
         border-top: 1px solid rgba(#000000, 0.1);
@@ -162,7 +186,11 @@
         }
     }
     &__items2 {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
         justify-content: space-between;
         padding: 35px 0;
         border-bottom: 1px solid rgba(#000000, 0.1);
@@ -217,15 +245,23 @@
     }
     &__card {
         background: #FFFFFF;
+        -webkit-box-shadow: 11px 10px 36px rgba(0, 0, 0, 0.05);
         box-shadow: 11px 10px 36px rgba(0, 0, 0, 0.05);
         border-radius: 12px;
         padding: 0 20px 20px;
+        position: -webkit-sticky;
         position: sticky;
         top: 55px;
         &-item {
             padding: 30px 0;
+            display: -webkit-box;
+            display: -ms-flexbox;
             display: flex;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
             align-items: center;
+            -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
             justify-content: space-between;
             &-title,
             &-num {
@@ -233,7 +269,11 @@
                 font-size: 14px;
                 line-height: 120%;
                 color: #909090;
+                display: -webkit-box;
+                display: -ms-flexbox;
                 display: flex;
+                -webkit-box-align: center;
+                -ms-flex-align: center;
                 align-items: center;
                 svg {
                     margin-right: 6px;
@@ -282,6 +322,8 @@
     overflow-y: auto;
     opacity: 0;
     pointer-events: none;
+    -webkit-transition: all .3s;
+    -o-transition: all .3s;
     transition: all .3s;
     &--active {
         pointer-events: unset;
@@ -290,33 +332,46 @@
     &__inner {
         max-width: 1200px;
         margin: 0 auto;
-        padding: 72px 24px 24px;
+        padding: 0px 24px 24px;
     }
     &__top {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
         align-items: center;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
         justify-content: space-between;
+        position: -webkit-sticky;
         position: sticky;
         background-color: #fff;
         padding: 24px;
-        top: 0px;
-        position: fixed;
+        // top: 0px;
         top: 0;
         left: 0;
         width: 100%;
     }
     &__items {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 10px;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
     }
     &__item {
+        width: calc(50% - 5px);
+        margin-top: 10px;
         img {
             width: 100%;
             min-height: 100%;
         }
         &:nth-child(1) {
-            grid-column: 1/3;
+            width: 100%;
+            margin: 0;
+        }
+        @media screen and (max-width: 992px) {
+            margin-top: 5px;
+            width: calc(50% - 2.5px);
         }
     }
 }
@@ -339,6 +394,9 @@
             grid-template-columns: 1fr;
             margin-top: 30px;
             gap: 20px;
+            .projects-card__img {
+                height: unset;
+            }
         }
         &__btn {
             width: 100px;
@@ -349,6 +407,8 @@
     }
     .project {
         .swiper-wrapper {
+            display: -webkit-box;
+            display: -ms-flexbox;
             display: flex;
             gap: unset;
         }
@@ -358,6 +418,7 @@
             margin-left: -16px;
             &-item {
                 height: 450px;
+                max-width: 100% !important;
                 &:nth-child(n+7) {
                     opacity: 1;
                     pointer-events: unset;
@@ -384,7 +445,11 @@
                 }
             }
             &-nav {
+                display: -webkit-box;
+                display: -ms-flexbox;
                 display: flex;
+                -webkit-box-align: center;
+                -ms-flex-align: center;
                 align-items: center;
                 bottom: 0;
                 right: 0;
@@ -412,11 +477,14 @@
         }
     }
     .gallery-modal {
+        // overflow-y: unset;
+        @include scroll();
         top: unset;
         bottom: -100%;
         bottom: 0;
         height: calc(100vh - 140px);
         border-radius: 16px 16px 0px 0px;
+        padding-bottom: 70px;
         &--active {
             bottom: 0;
         }
@@ -425,11 +493,12 @@
         }
         &__top {
             padding: 16px;
-            top: 108px;
             border-radius: 16px 16px 0px 0px;
         }
         &__items {
-            gap: 5px;
+            height: calc(100% - 86px);
+            overflow-y: auto;
+            @include scroll();
         }
     }
 }
@@ -464,6 +533,8 @@
                     font-size: 12px;
                 }
                 &--blue {
+                    display: -webkit-box;
+                    display: -ms-flexbox;
                     display: flex;
                     padding: 0;
                     border: none;
@@ -475,6 +546,7 @@
                     img {
                         width: 16px;
                         margin-right: 6px;
+                        -ms-flex-negative: 0;
                         flex-shrink: 0;
                         display: unset;
                     }
@@ -493,11 +565,13 @@
                 width: 100%;
                 padding: 10px 36px 16px;
                 height: 90px;
+                -webkit-box-shadow: 0px -2px 16px rgba(0, 0, 0, 0.07);
                 box-shadow: 0px -2px 16px rgba(0, 0, 0, 0.07);
             }
         }
         &__info {
             background: #FFFFFF;
+            -webkit-box-shadow: 11px 10px 36px rgba(0, 0, 0, 0.05);
             box-shadow: 11px 10px 36px rgba(0, 0, 0, 0.05);
             border-radius: 12px;
             margin-top: 24px;
@@ -508,16 +582,23 @@
                 margin-bottom: 10px;
             }
             &-text {
-                overflow: hidden;
-                display: -webkit-box;
-                -webkit-line-clamp: 2;
-                -webkit-box-orient: vertical;
                 span {
+                    overflow: hidden;
+                    display: -webkit-box;
+                    -webkit-line-clamp: 2;
+                    -webkit-box-orient: vertical;
                     font-size: 10px;
+                    &:not(:first-child) {
+                        display: none;
+                    }
                 }
             }
             &-btn {
+                display: -webkit-box;
+                display: -ms-flexbox;
                 display: flex;
+                -webkit-box-align: center;
+                -ms-flex-align: center;
                 align-items: center;
                 color: $primary;
                 font-weight: 600;
@@ -553,6 +634,12 @@
             margin-top: 24px;
             padding: 16px 0;
         }
+        &__item {
+            &-num {
+                font-size: 18px;
+                line-height: 100%;
+            }
+        }
         &__items2 {
             padding: 10px 0;
         }
@@ -576,12 +663,19 @@
 
 @media screen and (max-width: 576px) {
     .project {
+        &__item2 {
+            width: 50%;
+        }
         &__item {
+            width: 50%;
             &:nth-child(3) {
                 display: none;
             }
             &-num {
                 font-size: 18px;
+                span {
+                    font-size: 10px;
+                }
             }
             &-title {
                 font-size: 8px;
@@ -590,3 +684,5 @@
         }
     }
 }
+
+// Projects styles end
